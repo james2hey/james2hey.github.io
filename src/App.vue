@@ -62,8 +62,7 @@
       <div class="card">
         <img src="./assets/clubhub.png" alt="html5" class="img-thumbnail" >
       </div>
-      <p>I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look until the recruiting world totally embraces handsomely formatted e-resumes.</p>
-
+      <p>Last year I was an intern at ClubHub Software Services Ltd in St Heliers, where I developed websites for sports clubs in New Zealand and Dubai. This also involved meeting with clients to discuss the requirements of their website and how they wanted it to look. Being able to help these clubs with websites that I was creating gave me a great sense of achievement. I really enjoyed each of the different challenges that clients would have with how they wanted their websites laid out and information portrayed. </p>
       <br>
 
       <h3 id="contact">Contact</h3>
