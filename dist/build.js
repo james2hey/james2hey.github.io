@@ -177,26 +177,71 @@ module.exports = g;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'app',
-  data() {
-    return {
-      msg: ''
-    };
-  },
-  mounted: function () {
-    //this.tester();
-  },
+    name: 'app',
+    data() {
+        return {
+            msg: ''
+        };
+    },
+    mounted: function () {
+        //this.tester();
+    },
 
-  methods: {
-    tester: function () {
-      setInterval(function () {
-        this.msg += "1";
-        console.log("called");
-      }, 3000);
+    methods: {
+        tester: function () {
+            setInterval(function () {
+                this.msg += "1";
+                console.log("called");
+            }, 3000);
+        }
     }
-  }
 });
 
 /***/ }),
@@ -207,7 +252,7 @@ module.exports = g;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_smooth_scroll__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_smooth_scroll__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_smooth_scroll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_smooth_scroll__);
 
 
@@ -11618,7 +11663,7 @@ process.umask = function() { return 0; };
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(1);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_75095d82_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7803bf3c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(14);
 function injectStyle (ssrContext) {
   __webpack_require__(8)
 }
@@ -11638,7 +11683,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_75095d82_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7803bf3c_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -11659,7 +11704,7 @@ var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(11)("ff9c88e2", content, true, {});
+var update = __webpack_require__(11)("7524c3f2", content, true, {});
 
 /***/ }),
 /* 9 */
@@ -11670,7 +11715,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, "#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#2c3e50;margin-top:60px}#app,h1{text-align:center}h1{font-family:Helvetica}h1,h2{font-weight:400}h5{color:grey}ul{list-style-type:none;padding:0}card{border-color:transparent}li{display:inline-block;margin:0 10px;color:#000}a{color:green}nav{background-color:transparent}form{margin-left:auto;margin-right:auto}", ""]);
+exports.push([module.i, "#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#2c3e50;margin-top:60px}#app,h1{text-align:center}h1{font-family:Helvetica}h1,h2{font-weight:400}h5{color:grey}ul{list-style-type:none;padding:0}card{border-color:transparent}li{display:inline-block;margin:0 10px;color:#000}a{color:#1e90ff}nav{background-color:transparent}form{margin-left:auto;margin-right:auto}", ""]);
 
 // exports
 
@@ -12132,8 +12177,8 @@ module.exports = function normalizeComponent (
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('nav',{staticClass:"navbar navbar-expand-lg navbar-light bg-light"},[_c('a',{staticClass:"navbar-brand",attrs:{"href":"#"}}),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#about"}},[_vm._v("About Me")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#skills"}},[_vm._v("My Skills")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#work"}},[_vm._v("Work Experience")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#contact"}},[_vm._v("Contact")])])])]),_vm._v(" "),_c('br'),_vm._v(" "),_c('div',{staticClass:"card",staticStyle:{"width":"30rem","margin-left":"auto","margin-right":"auto","border-color":"transparent"}},[_c('h1',[_vm._v("Hi, I'm James")]),_vm._v(" "),_c('img',{staticClass:"card-img-top",attrs:{"src":__webpack_require__(15),"alt":"Card image cap"}}),_c('br'),_vm._v(" "),_c('h3',{attrs:{"id":"about"}},[_vm._v("About Me")]),_vm._v(" "),_c('p',[_vm._v("The plain text resume (or ASCII resume) is an online document constructed without formatting in plain text file format. A plain text resume is most often sent by e-mail, but can also be sent by fax, postal mail, or courier.")]),_vm._v(" "),_c('p',[_vm._v("Plain text resumes are heading into the sunset, but you may be stuck with the plain look until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('h3',{attrs:{"id":"skills"}},[_vm._v("My Skills")]),_vm._v(" "),_c('h5',[_vm._v("Front End Development")]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(16),"alt":"html5"}})]),_vm._v(" "),_c('p',[_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Back End Development")]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(17),"alt":"html5"}})]),_vm._v(" "),_c('p',[_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Relational Databases")]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(18),"alt":"html5"}})]),_vm._v(" "),_c('p',[_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Computer Graphics")]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(19),"alt":"html5"}})]),_vm._v(" "),_c('p',[_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('br'),_vm._v(" "),_c('h3',{attrs:{"id":"work"}},[_vm._v("Work Experience")]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(20),"alt":"html5"}})]),_vm._v(" "),_c('p',[_vm._v("Last year I was an intern at ClubHub Software Services Ltd in St Heliers, where I developed websites for sports clubs in New Zealand and Dubai. This also involved meeting with clients to discuss the requirements of their website and how they wanted it to look. Being able to help these clubs with websites that I was creating gave me a great sense of achievement. I really enjoyed each of the different challenges that clients would have with how they wanted their websites laid out and information portrayed. ")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h3',{attrs:{"id":"contact"}},[_vm._v("Contact")]),_vm._v(" "),_c('p',[_vm._v("Feel free to contact me ...")]),_vm._v(" "),_c('p',[_c('a',{attrs:{"href":"mailto:jamestoohey97@gmail.com"}},[_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"30px","height":"30px"},attrs:{"src":__webpack_require__(21),"alt":"html5"}}),_vm._v(" jamestoohey97@gmail.com")])]),_vm._v(" "),_c('p',[_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"30px","height":"30px"},attrs:{"src":__webpack_require__(22),"alt":"html5"}}),_vm._v(" 021 265 9668")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h3',[_vm._v("Legal Stuff")]),_vm._v(" "),_c('div',[_vm._v("Icons made by "),_c('a',{attrs:{"href":"https://www.flaticon.com/authors/zurb","title":"Phone receiver"}},[_vm._v("Phone receiver")]),_vm._v(" from "),_c('a',{attrs:{"href":"https://www.flaticon.com/","title":"Flaticon"}},[_vm._v("www.flaticon.com")]),_vm._v(" is licensed by "),_c('a',{attrs:{"href":"http://creativecommons.org/licenses/by/3.0/","title":"Creative Commons BY 3.0","target":"_blank"}},[_vm._v("CC 3.0 BY")])]),_vm._v(" "),_c('br')])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('nav',{staticClass:"navbar navbar-expand-lg navbar-light bg-light"},[_c('a',{staticClass:"navbar-brand",attrs:{"href":"#"}}),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('li',{staticClass:"nav-item"},[_c('a',{directives:[{name:"smooth-scroll",rawName:"v-smooth-scroll",value:({ duration: 1000, offset: -50 }),expression:"{ duration: 1000, offset: -50 }"}],staticClass:"nav-link",attrs:{"href":"#about"}},[_vm._v("About Me")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{directives:[{name:"smooth-scroll",rawName:"v-smooth-scroll",value:({ duration: 1000, offset: -50 }),expression:"{ duration: 1000, offset: -50 }"}],staticClass:"nav-link",attrs:{"href":"#skills"}},[_vm._v("My Skills")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{directives:[{name:"smooth-scroll",rawName:"v-smooth-scroll",value:({ duration: 1000, offset: -50 }),expression:"{ duration: 1000, offset: -50 }"}],staticClass:"nav-link",attrs:{"href":"#work"}},[_vm._v("Work Experience")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{directives:[{name:"smooth-scroll",rawName:"v-smooth-scroll",value:({ duration: 1000, offset: -50 }),expression:"{ duration: 1000, offset: -50 }"}],staticClass:"nav-link",attrs:{"href":"#contact"}},[_vm._v("Contact")])])])]),_vm._v(" "),_c('br'),_vm._v(" "),_vm._m(0)])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card",staticStyle:{"width":"30rem","margin-left":"auto","margin-right":"auto","border-color":"transparent"}},[_c('h1',[_vm._v("James Toohey")]),_vm._v(" "),_c('img',{staticClass:"card-img-top",attrs:{"src":__webpack_require__(15),"alt":"Card image cap"}}),_c('br'),_vm._v(" "),_c('h3',{attrs:{"id":"about"}},[_vm._v("About Me")]),_vm._v(" "),_c('p',[_vm._v("Hi, I'm James - a student in my penultimate year of study seeking employment over the 2018/19 summer. From studying\n            software engineering and computer science papers, I have become very keen to get into the workforce and\n            apply my knowledge. I'm aiming to pursue a career related to developing either financial or medical\n            software, and am\n            interested to see what software requirements are necessary for these sectors.")]),_vm._v(" "),_c('p',[_vm._v("Throughout my study, I have particularly enjoyed working on team projects where we have been developing\n            software using agile methodologies under the Scrum framework. The challenges we've faced from these\n            projects have been very useful in relation to my problem-solving skills and helping me further enjoying\n            working as a software developer. I am therefore looking for a job where similar techniques are carried\n            out so that I can apply my knowledge effectively and productively.")]),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"skills"}},[_vm._v("My Skills")]),_vm._v(" "),_c('h5',[_vm._v("Front End Development")]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(16),"alt":"html5"}})]),_vm._v(" "),_c('p',[_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look\n            until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Back End Development")]),_vm._v(" "),_c('p',[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(17),"alt":"html5","align":"right","width":"200px","height":"200px"}}),_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look\n            until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Relational Databases")]),_vm._v(" "),_c('p',[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(18),"alt":"html5","align":"left","width":"200px","height":"200px"}}),_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look\n            until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Computer Graphics")]),_vm._v(" "),_c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(19),"alt":"html5"}})]),_vm._v(" "),_c('p',[_vm._v("I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look\n            until the recruiting world totally embraces handsomely formatted e-resumes.")]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"work"}},[_vm._v("Work Experience")]),_vm._v(" "),_c('h5',[_vm._v("ClubHub Software Services Ltd")]),_vm._v(" "),_c('p',[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(20),"alt":"html5","align":"left","width":"200px","height":"200px"}}),_vm._v("Last year I was an intern at "),_c('a',{attrs:{"href":"https://clubhubssl.com"}},[_vm._v("ClubHub Software Services Ltd")]),_vm._v(" in St\n            Heliers, where I developed websites for\n            sports clubs in New Zealand and Dubai. This also involved meeting with clients to discuss the\n            requirements of their website and how they wanted it to look. Being able to help these clubs with\n            websites that I was creating gave me a great sense of achievement. I really enjoyed each of the\n            different challenges that clients would have with how they wanted their websites laid out and\n            information portrayed. ")]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Mt Albert YMCA")]),_vm._v(" "),_c('p',[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(21),"alt":"html5","align":"right","width":"180px","height":"180px"}}),_vm._v("Throughout my school years I was a volunteer at the Mt Albert YMCA as a Raise Up member. This is where a\n            team of us met up each week to organise community events. This program built on my leadership skills,\n            and gave me a passion for working productively in team environments. These skills have been essential\n            during my university group projects and I am looking forward to applying them in a real world context.\n            An article about my time at the YMCA can be found "),_c('a',{attrs:{"href":"https://www.ymcaauckland.org.nz/news/james-toohey-raising-up"}},[_vm._v("here")])]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"contact"}},[_vm._v("Contact")]),_vm._v(" "),_c('p',[_vm._v("Feel free to contact me")]),_vm._v(" "),_c('table',{staticStyle:{"width":"100%"}},[_c('tr',[_c('td',[_c('p',[_c('a',{attrs:{"href":"mailto:jamestoohey97@gmail.com"}},[_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"30px","height":"30px"},attrs:{"src":__webpack_require__(22),"alt":"html5"}}),_vm._v("\n                    jamestoohey97@gmail.com")])])]),_vm._v(" "),_c('td',[_c('a',{attrs:{"href":"https://github.com/james2hey"}},[_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"30px","height":"30px"},attrs:{"src":__webpack_require__(23),"alt":"html5"}}),_vm._v(" GitHub")])])]),_vm._v(" "),_c('tr',[_c('td',[_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"30px","height":"30px"},attrs:{"src":__webpack_require__(24),"alt":"html5"}}),_vm._v(" 021 265\n                    9668")]),_vm._v(" "),_c('td',[_c('a',{attrs:{"href":"https://www.linkedin.com/in/james-toohey-01997"}},[_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"30px","height":"30px"},attrs:{"src":__webpack_require__(25),"alt":"html5"}}),_vm._v(" LinkedIn")])])])]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',[_vm._v("Legal Stuff")]),_vm._v(" "),_c('div',[_vm._v("Icons made by "),_c('a',{attrs:{"href":"https://www.flaticon.com/authors/zurb","title":"Phone receiver"}},[_vm._v("Phone receiver")]),_vm._v("\n            from "),_c('a',{attrs:{"href":"https://www.flaticon.com/","title":"Flaticon"}},[_vm._v("www.flaticon.com")]),_vm._v(" is licensed by "),_c('a',{attrs:{"href":"http://creativecommons.org/licenses/by/3.0/","title":"Creative Commons BY 3.0","target":"_blank"}},[_vm._v("CC 3.0 BY")])]),_vm._v(" "),_c('br')])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -12177,16 +12222,34 @@ module.exports = __webpack_require__.p + "clubhub.png?2642b877782ce7ff9db4ec5643
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "email.png?d67f47aa8ece0aba6bfa03d40170a25b";
+module.exports = __webpack_require__.p + "ymca.jpg?c2267baf6686ece226047117b2066cec";
 
 /***/ }),
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "phone.png?d5a751b7520da9a06e89904135716857";
+module.exports = __webpack_require__.p + "email.png?d67f47aa8ece0aba6bfa03d40170a25b";
 
 /***/ }),
 /* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "github.png?a83841c50aa67da6144860bd5031cc53";
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "phone.png?d5a751b7520da9a06e89904135716857";
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "linkedin.png?b3d5f2438de47f35b153080b34f8e7a4";
+
+/***/ }),
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 !function(e,t){ true?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.VueSmoothScroll=t():e.VueSmoothScroll=t()}(this,function(){return function(e){function t(n){if(o[n])return o[n].exports;var i=o[n]={exports:{},id:n,loaded:!1};return e[n].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var o={};return t.m=e,t.c=o,t.p="",t(0)}([function(e,t){"use strict";function o(e){return e<.5?4*e*e*e:(e-1)*(2*e-2)*(2*e-2)+1}var n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};e.exports={install:function(e){e.directive("smooth-scroll",{inserted:function(e,t){"object"===("undefined"==typeof window?"undefined":n(window))&&void 0!==window.pageYOffset&&e.addEventListener("click",function(e){var n=document.getElementById(this.hash.substring(1));if(n){e.preventDefault(),window.history.pushState&&location.hash!==this.hash&&window.history.pushState("","",this.hash);var i=t.value&&t.value.duration?t.value.duration:500,r=t.value&&t.value.offset?t.value.offset:0,u=Date.now(),f="HTML"===n.nodeName?-window.pageYOffset:n.getBoundingClientRect().top+window.pageYOffset;f+=r;var a=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||function(e){window.setTimeout(e,15)},s=function e(){var t=Date.now()-u,r=f;t<i?(r=window.pageYOffset+(f-window.pageYOffset)*o(t/i),a(e)):location.replace("#"+n.id),window.scroll(0,r)};s()}})}})}}}])});

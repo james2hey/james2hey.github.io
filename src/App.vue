@@ -4,31 +4,40 @@
             <a class="navbar-brand" href="#"></a>
             <form class="form-inline">
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About Me</a>
+                    <!--<a class="nav-link" href="#about">About Me</a>-->
+                    <a class="nav-link" href="#about" v-smooth-scroll="{ duration: 1000, offset: -50 }">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#skills">My Skills</a>
+                    <!--<a class="nav-link" href="#skills">My Skills</a>-->
+                    <a class="nav-link" href="#skills" v-smooth-scroll="{ duration: 1000, offset: -50 }">My Skills</a>
                 </li>
                 <li class="nav-item">
-                    <!--<a class="nav-link" href="#work" v-smooth-scroll="{ duration: 1000, offset: -50 }">Work Experience</a>-->
-                    <a class="nav-link" href="#work">Work Experience</a>
+                    <a class="nav-link" href="#work" v-smooth-scroll="{ duration: 1000, offset: -50 }">Work Experience</a>
+                    <!--<a class="nav-link" href="#work">Work Experience</a>-->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact" v-smooth-scroll="{ duration: 1000, offset: -50 }">Contact</a>
+                    <!--<a class="nav-link" href="#contact">Contact</a>-->
                 </li>
             </form>
         </nav>
         <br>
 
         <div class="card" style="width: 30rem; margin-left:auto; margin-right:auto; border-color: transparent">
-            <h1>Hi, I'm James</h1>
+            <h1>James Toohey</h1>
             <img class="card-img-top" src="./assets/portrait.jpg" alt="Card image cap"><br>
             <h3 id="about">About Me</h3>
-            <p>The plain text resume (or ASCII resume) is an online document constructed without formatting in plain
-                text file format. A plain text resume is most often sent by e-mail, but can also be sent by fax, postal
-                mail, or courier.</p>
-            <p>Plain text resumes are heading into the sunset, but you may be stuck with the plain look until the
-                recruiting world totally embraces handsomely formatted e-resumes.</p>
+            <p>Hi, I'm James - a student in my penultimate year of study seeking employment over the 2018/19 summer. From studying
+                software engineering and computer science papers, I have become very keen to get into the workforce and
+                apply my knowledge. I'm aiming to pursue a career related to developing either financial or medical
+                software, and am
+                interested to see what software requirements are necessary for these sectors.</p>
+
+            <p>Throughout my study, I have particularly enjoyed working on team projects where we have been developing
+                software using agile methodologies under the Scrum framework. The challenges we've faced from these
+                projects have been very useful in relation to my problem-solving skills and helping me further enjoying
+                working as a software developer. I am therefore looking for a job where similar techniques are carried
+                out so that I can apply my knowledge effectively and productively.</p><hr />
 
             <h3 id="skills">My Skills</h3>
             <h5>Front End Development</h5>
@@ -40,18 +49,12 @@
             <br>
 
             <h5>Back End Development</h5>
-            <div class="card">
-                <img src="./assets/nodejs.png" alt="html5" class="img-thumbnail">
-            </div>
-            <p>I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
+            <p><img src="./assets/nodejs.png" alt="html5" class="img-thumbnail" align="right" width="200px" height="200px">I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
                 until the recruiting world totally embraces handsomely formatted e-resumes.</p>
             <br>
 
             <h5>Relational Databases</h5>
-            <div class="card">
-                <img src="./assets/db.png" alt="html5" class="img-thumbnail">
-            </div>
-            <p>I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
+            <p><img src="./assets/db.png" alt="html5" class="img-thumbnail" align="left" width="200px" height="200px">I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
                 until the recruiting world totally embraces handsomely formatted e-resumes.</p>
             <br>
 
@@ -62,14 +65,12 @@
             <p>I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
                 until the recruiting world totally embraces handsomely formatted e-resumes.</p>
 
-            <br>
-            <br>
+            <hr />
 
             <h3 id="work">Work Experience</h3>
-            <div class="card">
-                <img src="./assets/clubhub.png" alt="html5" class="img-thumbnail">
-            </div>
-            <p>Last year I was an intern at ClubHub Software Services Ltd in St Heliers, where I developed websites for
+            <h5>ClubHub Software Services Ltd</h5>
+            <p><img src="./assets/clubhub.png" alt="html5" class="img-thumbnail" align="left" width="200px" height="200px">Last year I was an intern at <a href="https://clubhubssl.com">ClubHub Software Services Ltd</a> in St
+                Heliers, where I developed websites for
                 sports clubs in New Zealand and Dubai. This also involved meeting with clients to discuss the
                 requirements of their website and how they wanted it to look. Being able to help these clubs with
                 websites that I was creating gave me a great sense of achievement. I really enjoyed each of the
@@ -77,16 +78,42 @@
                 information portrayed. </p>
             <br>
 
+            <h5>Mt Albert YMCA</h5>
+            <p><img src="./assets/ymca.jpg" alt="html5" class="img-thumbnail" align="right" width="180px" height="180px">Throughout my school years I was a volunteer at the Mt Albert YMCA as a Raise Up member. This is where a
+                team of us met up each week to organise community events. This program built on my leadership skills,
+                and gave me a passion for working productively in team environments. These skills have been essential
+                during my university group projects and I am looking forward to applying them in a real world context.
+                An article about my time at the YMCA can be found <a
+                        href="https://www.ymcaauckland.org.nz/news/james-toohey-raising-up">here</a>
+            </p>
+
+
+                <hr />
+
             <h3 id="contact">Contact</h3>
-            <p>Feel free to contact me ...</p>
+            <p>Feel free to contact me</p>
 
-            <p><a href="mailto:jamestoohey97@gmail.com"><img src="./assets/email.png" alt="html5" class="img-thumbnail"
-                                                             style="width:30px; height:30px;">
-                jamestoohey97@gmail.com</a></p>
-            <p><img src="./assets/phone.png" alt="html5" class="img-thumbnail" style="width:30px; height:30px;"> 021 265
-                9668</p>
 
-            <br/>
+            <table style="width:100%">
+                <tr>
+                    <td><p><a href="mailto:jamestoohey97@gmail.com"><img src="./assets/email.png" alt="html5" class="img-thumbnail"
+                                                                         style="width:30px; height:30px;">
+                        jamestoohey97@gmail.com</a></p></td>
+                    <td><a href="https://github.com/james2hey"><img src="./assets/github.png" alt="html5" class="img-thumbnail"
+                                                                    style="width:30px; height:30px;"> GitHub</a></td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/phone.png" alt="html5" class="img-thumbnail" style="width:30px; height:30px;"> 021 265
+                        9668</td>
+                    <td><a href="https://www.linkedin.com/in/james-toohey-01997"><img src="./assets/linkedin.png" alt="html5" class="img-thumbnail"
+                                                                                      style="width:30px; height:30px;"> LinkedIn</a></td>
+                </tr>
+
+            </table>
+            <hr />
+
+            <!--<h3>Other Hobbies</h3>TODO write about playing football?-->
+            <!--<hr/>-->
             <h3>Legal Stuff</h3>
             <div>Icons made by <a href="https://www.flaticon.com/authors/zurb" title="Phone receiver">Phone receiver</a>
                 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
@@ -161,7 +188,7 @@
     }
 
     a {
-        color: green;
+        color: dodgerblue;
     }
 
     nav {
