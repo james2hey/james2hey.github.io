@@ -44,26 +44,29 @@
             <div class="card">
                 <img src="./assets/front-end.png" alt="html5" class="img-thumbnail">
             </div>
-            <p>I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
-                until the recruiting world totally embraces handsomely formatted e-resumes.</p>
+            <p>In the last two years I have been involved with front end development and have grown to really enjoy it.
+            I've been using Vue.js for the front end development, so evidently I have experience with MVVC. In various
+            Java projects, I have also used the MVC model with fxml's.</p>
             <br>
 
             <h5>Back End Development</h5>
-            <p><img src="./assets/nodejs.png" alt="html5" class="img-thumbnail" align="right" width="200px" height="200px">I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
-                until the recruiting world totally embraces handsomely formatted e-resumes.</p>
+            <p><img src="./assets/nodejs.png" alt="html5" class="img-thumbnail" align="right" width="200px" height="200px">This year
+                I have learn how to write RESTful API's so that a server can communicate with multiple clients. I have created different servers
+            using Node.js and Java's spring boot framework.</p>
             <br>
 
             <h5>Relational Databases</h5>
-            <p><img src="./assets/db.png" alt="html5" class="img-thumbnail" align="left" width="200px" height="200px">I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
-                until the recruiting world totally embraces handsomely formatted e-resumes.</p>
+            <p><img src="./assets/db.png" alt="html5" class="rounded float-left" width="200px" height="200px">I have had a lot of exposure
+            to relational databases, using things like SQLite and MySQL. This is a topic that I find really enjoyable and I love
+            learning about how databases can handle large amounts of queries.</p>
             <br>
 
             <h5>Computer Graphics</h5>
             <div class="card">
                 <img src="./assets/opengl.png" alt="html5" class="img-thumbnail">
             </div>
-            <p>I've done blah Plain text resumes are heading into the sunset, but you may be stuck with the plain look
-                until the recruiting world totally embraces handsomely formatted e-resumes.</p>
+            <p>Using OpenGL has been a very fun way for me to get into computer graphics, and really brought out my creative side.
+            Since I was never very good at drawing when I was younger, I love the fact that I can use a computer to do it for me.</p>
 
             <hr />
 
