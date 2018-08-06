@@ -57,13 +57,13 @@
 
             <h5>Relational Databases</h5>
             <p><img src="./assets/db.png" alt="html5" class="rounded float-left" width="200px" height="200px">I have had a lot of exposure
-            to relational databases, using things like SQLite and MySQL. This is a topic that I find really enjoyable and I love
-            learning about how databases can handle large amounts of queries.</p>
+            to relational databases, using management tools like SQLite and MySQL. This is a topic that I find really enjoyable - I love
+            learning about query optimization how databases can handle large amounts of data.</p>
             <br>
 
             <h5>Computer Graphics</h5>
             <div class="card">
-                <img src="./assets/opengl.png" alt="html5" class="img-thumbnail">
+                <img src="./assets/opengl.png" alt="html5" class="img-fluid">
             </div>
             <p>Using OpenGL has been a very fun way for me to get into computer graphics, and really brought out my creative side.
             Since I was never very good at drawing when I was younger, I love the fact that I can use a computer to do it for me.</p>
@@ -72,7 +72,7 @@
 
             <h3 id="work">Work Experience</h3>
             <h5>ClubHub Software Services Ltd</h5>
-            <p><img src="./assets/clubhub.png" alt="html5" class="img-thumbnail" align="left" width="200px" height="200px">Last year I was an intern at <a href="https://clubhubssl.com">ClubHub Software Services Ltd</a> in St
+            <p><img src="./assets/clubhub.png" alt="html5" class="rounded float-left" align="left" width="200px" height="200px">Last year I was an intern at <a href="https://clubhubssl.com" target="_blank">ClubHub Software Services Ltd</a> in St
                 Heliers, where I developed websites for
                 sports clubs in New Zealand and Dubai. This also involved meeting with clients to discuss the
                 requirements of their website and how they wanted it to look. Being able to help these clubs with
@@ -82,12 +82,12 @@
             <br>
 
             <h5>Mt Albert YMCA</h5>
-            <p><img src="./assets/ymca.jpg" alt="html5" class="img-thumbnail" align="right" width="180px" height="180px">Throughout my school years I was a volunteer at the Mt Albert YMCA as a Raise Up member. This is where a
+            <p><img src="./assets/ymca.jpg" alt="html5" class="rounded float-right" align="right" width="180px" height="220px">Throughout my school years I was a volunteer at the Mt Albert YMCA as a Raise Up member. This is where a
                 team of us met up each week to organise community events. This program built on my leadership skills,
                 and gave me a passion for working productively in team environments. These skills have been essential
                 during my university group projects and I am looking forward to applying them in a real world context.
                 An article about my time at the YMCA can be found <a
-                        href="https://www.ymcaauckland.org.nz/news/james-toohey-raising-up">here</a>
+                        href="https://www.ymcaauckland.org.nz/news/james-toohey-raising-up" target="_blank">here</a>
             </p>
 
 
@@ -99,17 +99,17 @@
 
             <table style="width:100%">
                 <tr>
-                    <td><p><a href="mailto:jamestoohey97@gmail.com"><img src="./assets/email.png" alt="html5" class="img-thumbnail"
-                                                                         style="width:30px; height:30px;">
+                    <td><p><a href="mailto:jamestoohey97@gmail.com"><img src="./assets/email.png" alt="html5" class="rounded float"
+                                                                         style="width:20px; height:20px;">
                         jamestoohey97@gmail.com</a></p></td>
-                    <td><a href="https://github.com/james2hey"><img src="./assets/github.png" alt="html5" class="img-thumbnail"
-                                                                    style="width:30px; height:30px;"> GitHub</a></td>
+                    <td><a href="https://github.com/james2hey" target="_blank"><img src="./assets/github.png" alt="html5" class="rounded float"
+                                                                    style="width:20px; height:20px;"> GitHub</a></td>
                 </tr>
                 <tr>
-                    <td><img src="./assets/phone.png" alt="html5" class="img-thumbnail" style="width:30px; height:30px;"> 021 265
+                    <td><img src="./assets/phone.png" alt="html5" class="rounded float" style="width:20px; height:20px;"> 021 265
                         9668</td>
-                    <td><a href="https://www.linkedin.com/in/james-toohey-01997"><img src="./assets/linkedin.png" alt="html5" class="img-thumbnail"
-                                                                                      style="width:30px; height:30px;"> LinkedIn</a></td>
+                    <td><a href="https://www.linkedin.com/in/james-toohey-01997" target="_blank"><img src="./assets/linkedin.png" alt="html5" class="rounded float"
+                                                                                      style="width:20px; height:20px;"> LinkedIn</a></td>
                 </tr>
 
             </table>
