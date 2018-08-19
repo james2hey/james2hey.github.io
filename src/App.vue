@@ -82,7 +82,8 @@
             <p><img src="./assets/clubhub.png" alt="html5" class="rounded float-left" align="left" width="200px"
                     height="200px">Last year I was an intern at <a href="https://clubhubssl.com" target="_blank">ClubHub
                 Software Services Ltd</a>
-                in St Heliers, where I developed websites for sports clubs in New Zealand and Dubai. This also involved
+                in St Heliers, where I developed websites for sports clubs in New Zealand, Australia, and Asia . This
+                also involved
                 meeting with clients to discuss the requirements of their website and how they wanted it to look. Being
                 able to help these clubs with websites that I was creating gave me a great sense of achievement. I
                 really enjoyed each of the different challenges that clients would have with how they wanted their
@@ -169,8 +170,8 @@
 <style lang="scss">
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
-         -webkit-font-smoothing: antialiased;
-         -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
