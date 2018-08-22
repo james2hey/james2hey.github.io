@@ -4,21 +4,21 @@
             <a class="navbar-brand" href="#"></a>
             <form class="form-inline">
                 <li class="nav-item">
-                    <!--<a class="nav-link" href="#about">About Me</a>-->
-                    <a class="nav-link" href="#about" v-smooth-scroll="{ duration: 1000, offset: -50 }">About Me</a>
+                    <a class="nav-link" href="#about">About Me</a>
+                    <!--<a class="nav-link" href="#about" v-smooth-scroll="{ duration: 1000, offset: -50 }">About Me</a>-->
                 </li>
                 <li class="nav-item">
-                    <!--<a class="nav-link" href="#skills">My Skills</a>-->
-                    <a class="nav-link" href="#skills" v-smooth-scroll="{ duration: 1000, offset: -50 }">My Skills</a>
+                    <a class="nav-link" href="#skills">My Skills</a>
+                    <!--<a class="nav-link" href="#skills" v-smooth-scroll="{ duration: 1000, offset: -50 }">My Skills</a>-->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#work" v-smooth-scroll="{ duration: 1000, offset: -50 }">Work
-                        Experience</a>
-                    <!--<a class="nav-link" href="#work">Work Experience</a>-->
+                    <!--<a class="nav-link" href="#work" v-smooth-scroll="{ duration: 1000, offset: -50 }">Work-->
+                        <!--Experience</a>-->
+                    <a class="nav-link" href="#work">Work Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact" v-smooth-scroll="{ duration: 1000, offset: -50 }">Contact</a>
-                    <!--<a class="nav-link" href="#contact">Contact</a>-->
+                    <!--<a class="nav-link" href="#contact" v-smooth-scroll="{ duration: 1000, offset: -50 }">Contact</a>-->
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </form>
         </nav>
