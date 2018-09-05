@@ -48,12 +48,11 @@
                 <img src="./assets/front-end.png" alt="html5" class="img-thumbnail">
             </div>
 
-                <h5><router-link to="/home">Auction Website project<br/></router-link></h5>
+
             <p>
                 In the last two years, I have been involved with front-end development and have grown to really enjoy it.
-                I've been using Vue.js for the front-end development, so evidently, I have experience with MVVC. In
+                I've been using Vue.js for the front-end development, so evidently, I have experience with MVVC. An example auctions website I have developed using Vue.js can be found <router-link to="/home">here</router-link>. In
                 various Java projects, I have also used the MVC architecture with fxml.</p>
-            <br>
 
             <h5>Back End Development</h5>
             <p><img src="./assets/nodejs.png" alt="html5" class="img-thumbnail" align="right" width="200px"
@@ -65,7 +64,7 @@
 
             <h5>Relational Databases</h5>
             <p><img src="./assets/db.png" alt="html5" class="rounded float-left" width="200px" height="200px">I have had
-                a lot of exposure to relational databases, using management tools like SQLite and MySQL. This is a topic
+                a lot of exposure to relational databases, using management tools like SQLite and MySQL. This knowledge has been essential for my implementation of servers. Databases are a topic
                 that I find really enjoyable - I love learning about query optimization how databases can handle large
                 quantities of data.</p>
             <br>
@@ -85,7 +84,7 @@
             <p><img src="./assets/clubhub.png" alt="html5" class="rounded float-left" align="left" width="200px"
                     height="200px">Last year I was an intern at <a href="https://clubhubssl.com" target="_blank">ClubHub
                 Software Services Ltd</a>
-                in St Heliers, where I developed websites for sports clubs in New Zealand, Australia, and Asia . This
+                in St Heliers, where I developed websites for sports clubs in New Zealand, Australia, and Asia. This
                 also involved
                 meeting with clients to discuss the requirements of their website and how they wanted it to look. Being
                 able to help these clubs with websites that I was creating gave me a great sense of achievement. I
@@ -100,7 +99,7 @@
                 my leadership skills and gave me a passion for working productively in team environments. These skills
                 have been essential during my university group projects and I am looking forward to applying them in a
                 real-world context. An article about my time at the YMCA can be found <a
-                        href="https://www.ymcaauckland.org.nz/news/james-toohey-raising-up" target="_blank">here</a>
+                        href="https://www.ymcaauckland.org.nz/news/james-toohey-raising-up" target="_blank">here</a>.
             </p>
 
 
@@ -132,14 +131,21 @@
             </table>
             <hr/>
 
-            <!--<h3>Other Hobbies</h3>TODO write about playing football?-->
-            <!--<hr/>-->
-            <h3>Legal Stuff</h3>
-            <p>Icons made by <a href="https://www.flaticon.com/authors/zurb" title="Phone receiver">Phone receiver</a>
+            <h3>Hobbies</h3>
+            <img class="card-img-top" src="./assets/football.jpg" alt="Cardgage cap"><br>
+            <p>
+            I have competitively been playing football since a young age and am currently playing at Christchurch
+            United in the mens first team. I really enjoy being a part of a team and playing under a team environment.
+            Some of my games have articles written about them, for example <a href="http://cufc.co.nz/christchurch-united-with-a-solid-win-against-burwood-afc/"
+                                                                             target="_blank">this</a> one from the 2017
+            season.
+            </p>
+
+            <hr/>
+            <p style="font-size: 12px">Icons made by <a href="https://www.flaticon.com/authors/zurb" title="Phone receiver">Phone receiver</a>
                 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
                         href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
                         target="_blank">CC 3.0 BY</a></p>
-            <br/>
         </div>
     </div>
 
@@ -173,6 +179,9 @@
 
     nav {
         margin-top: -60px;
+        background-color: transparent;
+        /*margin: 0;*/
+        /*padding: 0;*/
     }
 
     h1 {
@@ -182,6 +191,7 @@
     }
     h2 {
         font-weight: normal;
+
     }
     h5 {
         color: grey;
@@ -201,9 +211,7 @@
     a {
         color: dodgerblue;
     }
-    nav {
-        background-color: transparent;
-    }
+
     form {
         margin-left: auto;
         margin-right: auto;
