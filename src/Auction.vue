@@ -227,6 +227,7 @@
         categories: [],
         catId: 0,
         loggedIn: false,
+        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
 
       }
     },
@@ -239,7 +240,7 @@
     methods: {
 
       getSingleAuction: function () {
-        this.$http.get('http://localhost:4941/api/v1/auctions/' + this.id)
+        this.$http.get(this.apiUrl + '/api/v1/auctions/' + this.id)
           .then(response => {
             this.auction = response.data;
             this.nextBid = Math.round(this.convertPrice(this.auction.currentBid) + 1);
@@ -263,7 +264,7 @@
         } else {
           console.log("valid bid");
           console.log(this.nextBid);
-          this.$http.post('http://localhost:4941/api/v1/auctions/' + this.id + "/bids?amount=" + this.nextBid * 100, {},
+          this.$http.post(this.apiUrl + '/api/v1/auctions/' + this.id + "/bids?amount=" + this.nextBid * 100, {},
             {
               headers: {
                 'X-Authorization': localStorage.getItem('token')
@@ -285,7 +286,7 @@
 
       getSellerDetails: function () {
         if (this.loggedIn) {
-          this.$http.get('http://localhost:4941/api/v1/users/' + this.auction.seller.id,
+          this.$http.get(this.apiUrl + '/api/v1/users/' + this.auction.seller.id,
             {
               headers: {
                 'X-Authorization': localStorage.getItem('token')
@@ -320,7 +321,7 @@
       },
 
       getAllCategories: function () {
-        this.$http.get('http://localhost:4941/api/v1/categories')
+        this.$http.get(this.apiUrl + '/api/v1/categories')
           .then(response => {
             this.categories = response.data;
             this.categories.push({categoryId: 0, categoryTitle: "all", categoryDescription: "All categories"});
@@ -347,7 +348,7 @@
       },
 
       logout: function () {
-        this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+        this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           }

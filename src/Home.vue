@@ -84,6 +84,7 @@
         password: "",
         message: "",
         invalidUser: false,
+        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
       }
     },
 
@@ -112,7 +113,7 @@
         this.validateCreation();
         // console.log(this.emptyFields);
         if (!this.invalidUser) {
-          this.$http.post('http://localhost:4941/api/v1/users', this.userData)
+          this.$http.post(this.apiUrl + '/api/v1/users', this.userData)
             .then(response => {
               console.dir(response.data);
               console.log("Successfully created user id = " + response.data["id"]);
@@ -143,7 +144,7 @@
       },
 
       login: function (body) {
-        this.$http.post('http://localhost:4941/api/v1/users/login', body)
+        this.$http.post(this.apiUrl + '/api/v1/users/login', body)
           .then(response => {
             localStorage.setItem("token", response.data["token"]);
             localStorage.setItem("id", response.data["id"]);

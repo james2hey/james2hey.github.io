@@ -169,6 +169,7 @@
           photo: null,
           photoMessage: "",
           helpMessage: "",
+          apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
           // filtered: false;
         }
       },
@@ -183,7 +184,7 @@
           let validAuction = this.validateAuction();
           if(validAuction) {
 
-            this.$http.post('http://localhost:4941/api/v1/auctions', this.currentAuction,
+            this.$http.post(this.apiUrl + '/api/v1/auctions', this.currentAuction,
               {
                 headers : {
                   'X-Authorization': localStorage.getItem('token')
@@ -209,7 +210,7 @@
           let validAuction = this.validateAuction();
           if(validAuction) {
 
-            this.$http.patch('http://localhost:4941/api/v1/auctions/' + this.currentAuctionId, this.currentAuction,
+            this.$http.patch(this.apiUrl + '/api/v1/auctions/' + this.currentAuctionId, this.currentAuction,
               {
                 headers : {
                   'X-Authorization': localStorage.getItem('token')
@@ -245,7 +246,7 @@
 
         getAuctionDetails: function(id) {
           this.editing = true;
-          this.$http.get('http://localhost:4941/api/v1/auctions/' + id)
+          this.$http.get(this.apiUrl + '/api/v1/auctions/' + id)
             .then(response => {
               this.currentAuction = response.data;
               this.parseDatesToISO();
@@ -275,7 +276,7 @@
 
         getActiveAuctions: function() {
           this.noAuctions = false;
-          this.$http.get('http://localhost:4941/api/v1/auctions?status=active&seller=' + localStorage.getItem('id'))
+          this.$http.get(this.apiUrl + '/api/v1/auctions?status=active&seller=' + localStorage.getItem('id'))
             .then(response => {
               this.auctions = response.data;
               this.message = "Auctions you have created that are yet to complete.";
@@ -290,7 +291,7 @@
 
         getSoldAuctions: function() {
           this.noAuctions = false;
-          this.$http.get('http://localhost:4941/api/v1/auctions?status=won&seller=' + localStorage.getItem('id'))
+          this.$http.get(this.apiUrl + '/api/v1/auctions?status=won&seller=' + localStorage.getItem('id'))
             .then(response => {
               this.auctions = response.data;
               this.message = "Auctions you have created that completed with a winning bid.";
@@ -305,7 +306,7 @@
 
         getUnsoldAuctions: function() {
           this.noAuctions = false;
-          this.$http.get('http://localhost:4941/api/v1/auctions?status=expired&seller=' + localStorage.getItem('id'))
+          this.$http.get(this.apiUrl + '/api/v1/auctions?status=expired&seller=' + localStorage.getItem('id'))
             .then(response => {
               this.auctions = response.data;
               this.message = "Auctions you have created that completed without a winning bid.";
@@ -320,7 +321,7 @@
 
         getUpcomingAuctions: function() {
           this.noAuctions = false;
-          this.$http.get('http://localhost:4941/api/v1/auctions?status=upcoming&seller=' + localStorage.getItem('id'))
+          this.$http.get(this.apiUrl + '/api/v1/auctions?status=upcoming&seller=' + localStorage.getItem('id'))
             .then(response => {
               this.auctions = response.data;
               this.message = "Auctions you have created that haven't started - you can edit these.";
@@ -340,7 +341,7 @@
         },
 
         onUpload: function() {
-          this.$http.post('http://localhost:4941/api/v1/auctions/' + this.currentAuctionId + '/photos', this.photo,
+          this.$http.post(this.apiUrl + '/api/v1/auctions/' + this.currentAuctionId + '/photos', this.photo,
             {
               headers: {
                 "X-Authorization": localStorage.getItem('token'),
@@ -359,7 +360,7 @@
 
         deletePhoto: function() {
           this.photo = null;
-          this.$http.delete('http://localhost:4941/api/v1/auctions/' + this.currentAuctionId + '/photos',
+          this.$http.delete(this.apiUrl + '/api/v1/auctions/' + this.currentAuctionId + '/photos',
             {
               headers: {
                 "X-Authorization": localStorage.getItem('token'),
@@ -399,7 +400,7 @@
         },
 
         getAllCategories: function() {
-          this.$http.get('http://localhost:4941/api/v1/categories')
+          this.$http.get(this.apiUrl + '/api/v1/categories')
             .then(response => {
               this.categories = response.data;
               this.categories.sort((a, b) => parseInt(a.categoryId) - parseInt(b.categoryId));
@@ -459,7 +460,7 @@
         },
 
         logout: function () {
-          this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+          this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
             headers: {
               'X-Authorization': localStorage.getItem('token')
             }

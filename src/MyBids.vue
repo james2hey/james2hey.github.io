@@ -89,7 +89,8 @@
         bidChoices: [{value: 'active'}, {value: 'won'}],
         bidChoice: 'active',
         noBids: false,
-        noWins: false
+        noWins: false,
+        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
       }
     },
     mounted: function () {
@@ -103,7 +104,7 @@
       },
 
       getActiveAuctions: function () {
-        this.$http.get('http://localhost:4941/api/v1/auctions?status=active&bidder=' + localStorage.getItem("id"))
+        this.$http.get(this.apiUrl + '/api/v1/auctions?status=active&bidder=' + localStorage.getItem("id"))
           .then(response => {
             this.auctions = response.data;
             if (this.auctions.length < 1) {
@@ -117,7 +118,7 @@
       },
 
       getWonAuctions() {
-        this.$http.get('http://localhost:4941/api/v1/my_won_auctions',
+        this.$http.get(this.apiUrl + '/api/v1/my_won_auctions',
           {
             headers: {
               'X-Authorization': localStorage.getItem('token')
@@ -155,7 +156,7 @@
       },
 
       logout: function () {
-        this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+        this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           }

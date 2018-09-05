@@ -118,6 +118,7 @@
         loggedIn: false,
         pageArray: [],
         searched: false,
+        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
       }
     },
     mounted: function () {
@@ -130,7 +131,7 @@
       getAuctions: function () {
         this.pageArray = [];
         let query = this.buildQuery();
-        this.$http.get('http://localhost:4941/api/v1/auctions?' + query)
+        this.$http.get(this.apiUrl + '/api/v1/auctions?' + query)
           .then(response => {
             this.auctions = response.data;
             this.setPages();
@@ -175,7 +176,7 @@
       },
 
       getAllCategories: function () {
-        this.$http.get('http://localhost:4941/api/v1/categories')
+        this.$http.get(this.apiUrl + '/api/v1/categories')
           .then(response => {
             this.categories = response.data;
             this.categories.push({categoryId: 0, categoryTitle: "all", categoryDescription: "All categories"});
@@ -210,7 +211,7 @@
       },
 
       logout: function () {
-        this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+        this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           }

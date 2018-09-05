@@ -84,7 +84,8 @@
         emptyFields: false,
         id: 0,
         updateStatus: 0,
-        message: ""
+        message: "",
+        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
       }
     },
     mounted: function () {
@@ -93,7 +94,7 @@
     },
     methods: {
       getUserDetails: function () {
-        this.$http.get('http://localhost:4941/api/v1/users/' + localStorage.getItem('id'),
+        this.$http.get(this.apiUrl + '/api/v1/users/' + localStorage.getItem('id'),
           {
             headers: {
               'X-Authorization': localStorage.getItem('token')
@@ -120,7 +121,7 @@
 
           let body = {'givenName': this.givenName, 'familyName': this.familyName};
 
-          this.$http.patch('http://localhost:4941/api/v1/users/' + localStorage.getItem('id'), body,
+          this.$http.patch(this.apiUrl + '/api/v1/users/' + localStorage.getItem('id'), body,
             {
               headers: {
                 'X-Authorization': localStorage.getItem('token')
@@ -137,7 +138,7 @@
         }
       },
       logout: function () {
-        this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+        this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           }
