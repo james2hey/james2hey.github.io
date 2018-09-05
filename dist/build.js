@@ -801,7 +801,8 @@ module.exports = g;
       email: "",
       password: "",
       message: "",
-      invalidUser: false
+      invalidUser: false,
+      apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
     };
   },
 
@@ -829,7 +830,7 @@ module.exports = g;
       this.validateCreation();
       // console.log(this.emptyFields);
       if (!this.invalidUser) {
-        this.$http.post('http://localhost:4941/api/v1/users', this.userData).then(response => {
+        this.$http.post(this.apiUrl + '/api/v1/users', this.userData).then(response => {
           console.dir(response.data);
           console.log("Successfully created user id = " + response.data["id"]);
           this.login({ username: this.userData.username, password: this.userData.password });
@@ -858,7 +859,7 @@ module.exports = g;
     },
 
     login: function (body) {
-      this.$http.post('http://localhost:4941/api/v1/users/login', body).then(response => {
+      this.$http.post(this.apiUrl + '/api/v1/users/login', body).then(response => {
         localStorage.setItem("token", response.data["token"]);
         localStorage.setItem("id", response.data["id"]);
         this.$router.push({ name: "Auctions" });
@@ -1003,7 +1004,8 @@ module.exports = g;
       totalPages: [],
       loggedIn: false,
       pageArray: [],
-      searched: false
+      searched: false,
+      apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
     };
   },
   mounted: function () {
@@ -1016,7 +1018,7 @@ module.exports = g;
     getAuctions: function () {
       this.pageArray = [];
       let query = this.buildQuery();
-      this.$http.get('http://localhost:4941/api/v1/auctions?' + query).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions?' + query).then(response => {
         this.auctions = response.data;
         this.setPages();
         this.setVisibleAuctions(1);
@@ -1058,7 +1060,7 @@ module.exports = g;
     },
 
     getAllCategories: function () {
-      this.$http.get('http://localhost:4941/api/v1/categories').then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/categories').then(response => {
         this.categories = response.data;
         this.categories.push({ categoryId: 0, categoryTitle: "all", categoryDescription: "All categories" });
         this.categories.sort((a, b) => parseInt(a.categoryId) - parseInt(b.categoryId));
@@ -1090,7 +1092,7 @@ module.exports = g;
     },
 
     logout: function () {
-      this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+      this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
         headers: {
           'X-Authorization': localStorage.getItem('token')
         }
@@ -1196,7 +1198,8 @@ module.exports = g;
       emptyFields: false,
       id: 0,
       updateStatus: 0,
-      message: ""
+      message: "",
+      apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
     };
   },
   mounted: function () {
@@ -1204,7 +1207,7 @@ module.exports = g;
   },
   methods: {
     getUserDetails: function () {
-      this.$http.get('http://localhost:4941/api/v1/users/' + localStorage.getItem('id'), {
+      this.$http.get(this.apiUrl + '/api/v1/users/' + localStorage.getItem('id'), {
         headers: {
           'X-Authorization': localStorage.getItem('token')
         }
@@ -1226,7 +1229,7 @@ module.exports = g;
 
         let body = { 'givenName': this.givenName, 'familyName': this.familyName };
 
-        this.$http.patch('http://localhost:4941/api/v1/users/' + localStorage.getItem('id'), body, {
+        this.$http.patch(this.apiUrl + '/api/v1/users/' + localStorage.getItem('id'), body, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           }
@@ -1238,7 +1241,7 @@ module.exports = g;
       }
     },
     logout: function () {
-      this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+      this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
         headers: {
           'X-Authorization': localStorage.getItem('token')
         }
@@ -1348,7 +1351,8 @@ module.exports = g;
       bidChoices: [{ value: 'active' }, { value: 'won' }],
       bidChoice: 'active',
       noBids: false,
-      noWins: false
+      noWins: false,
+      apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
     };
   },
   mounted: function () {
@@ -1361,7 +1365,7 @@ module.exports = g;
     },
 
     getActiveAuctions: function () {
-      this.$http.get('http://localhost:4941/api/v1/auctions?status=active&bidder=' + localStorage.getItem("id")).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions?status=active&bidder=' + localStorage.getItem("id")).then(response => {
         this.auctions = response.data;
         if (this.auctions.length < 1) {
           this.noBids = true;
@@ -1373,7 +1377,7 @@ module.exports = g;
     },
 
     getWonAuctions() {
-      this.$http.get('http://localhost:4941/api/v1/my_won_auctions', {
+      this.$http.get(this.apiUrl + '/api/v1/my_won_auctions', {
         headers: {
           'X-Authorization': localStorage.getItem('token')
         }
@@ -1406,7 +1410,7 @@ module.exports = g;
     },
 
     logout: function () {
-      this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+      this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
         headers: {
           'X-Authorization': localStorage.getItem('token')
         }
@@ -1595,7 +1599,8 @@ module.exports = g;
       currentAuctionId: null,
       photo: null,
       photoMessage: "",
-      helpMessage: ""
+      helpMessage: "",
+      apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
       // filtered: false;
     };
   },
@@ -1610,7 +1615,7 @@ module.exports = g;
       let validAuction = this.validateAuction();
       if (validAuction) {
 
-        this.$http.post('http://localhost:4941/api/v1/auctions', this.currentAuction, {
+        this.$http.post(this.apiUrl + '/api/v1/auctions', this.currentAuction, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           } }).then(response => {
@@ -1632,7 +1637,7 @@ module.exports = g;
       let validAuction = this.validateAuction();
       if (validAuction) {
 
-        this.$http.patch('http://localhost:4941/api/v1/auctions/' + this.currentAuctionId, this.currentAuction, {
+        this.$http.patch(this.apiUrl + '/api/v1/auctions/' + this.currentAuctionId, this.currentAuction, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           } }).then(response => {
@@ -1664,7 +1669,7 @@ module.exports = g;
 
     getAuctionDetails: function (id) {
       this.editing = true;
-      this.$http.get('http://localhost:4941/api/v1/auctions/' + id).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions/' + id).then(response => {
         this.currentAuction = response.data;
         this.parseDatesToISO();
         this.parsePricesToInput();
@@ -1690,7 +1695,7 @@ module.exports = g;
 
     getActiveAuctions: function () {
       this.noAuctions = false;
-      this.$http.get('http://localhost:4941/api/v1/auctions?status=active&seller=' + localStorage.getItem('id')).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions?status=active&seller=' + localStorage.getItem('id')).then(response => {
         this.auctions = response.data;
         this.message = "Auctions you have created that are yet to complete.";
         if (this.auctions.length < 1) {
@@ -1703,7 +1708,7 @@ module.exports = g;
 
     getSoldAuctions: function () {
       this.noAuctions = false;
-      this.$http.get('http://localhost:4941/api/v1/auctions?status=won&seller=' + localStorage.getItem('id')).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions?status=won&seller=' + localStorage.getItem('id')).then(response => {
         this.auctions = response.data;
         this.message = "Auctions you have created that completed with a winning bid.";
         if (this.auctions.length < 1) {
@@ -1716,7 +1721,7 @@ module.exports = g;
 
     getUnsoldAuctions: function () {
       this.noAuctions = false;
-      this.$http.get('http://localhost:4941/api/v1/auctions?status=expired&seller=' + localStorage.getItem('id')).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions?status=expired&seller=' + localStorage.getItem('id')).then(response => {
         this.auctions = response.data;
         this.message = "Auctions you have created that completed without a winning bid.";
         if (this.auctions.length < 1) {
@@ -1729,7 +1734,7 @@ module.exports = g;
 
     getUpcomingAuctions: function () {
       this.noAuctions = false;
-      this.$http.get('http://localhost:4941/api/v1/auctions?status=upcoming&seller=' + localStorage.getItem('id')).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions?status=upcoming&seller=' + localStorage.getItem('id')).then(response => {
         this.auctions = response.data;
         this.message = "Auctions you have created that haven't started - you can edit these.";
         if (this.auctions.length < 1) {
@@ -1747,7 +1752,7 @@ module.exports = g;
     },
 
     onUpload: function () {
-      this.$http.post('http://localhost:4941/api/v1/auctions/' + this.currentAuctionId + '/photos', this.photo, {
+      this.$http.post(this.apiUrl + '/api/v1/auctions/' + this.currentAuctionId + '/photos', this.photo, {
         headers: {
           "X-Authorization": localStorage.getItem('token'),
           "Content-Type": "image/jpeg" || "image/jpg" || "image/png"
@@ -1761,7 +1766,7 @@ module.exports = g;
 
     deletePhoto: function () {
       this.photo = null;
-      this.$http.delete('http://localhost:4941/api/v1/auctions/' + this.currentAuctionId + '/photos', {
+      this.$http.delete(this.apiUrl + '/api/v1/auctions/' + this.currentAuctionId + '/photos', {
         headers: {
           "X-Authorization": localStorage.getItem('token')
         }
@@ -1797,7 +1802,7 @@ module.exports = g;
     },
 
     getAllCategories: function () {
-      this.$http.get('http://localhost:4941/api/v1/categories').then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/categories').then(response => {
         this.categories = response.data;
         this.categories.sort((a, b) => parseInt(a.categoryId) - parseInt(b.categoryId));
       }).catch(error => {
@@ -1849,7 +1854,7 @@ module.exports = g;
     },
 
     logout: function () {
-      this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+      this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
         headers: {
           'X-Authorization': localStorage.getItem('token')
         }
@@ -2096,7 +2101,8 @@ module.exports = g;
       editableAuction: false,
       categories: [],
       catId: 0,
-      loggedIn: false
+      loggedIn: false,
+      apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
 
     };
   },
@@ -2109,7 +2115,7 @@ module.exports = g;
   methods: {
 
     getSingleAuction: function () {
-      this.$http.get('http://localhost:4941/api/v1/auctions/' + this.id).then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/auctions/' + this.id).then(response => {
         this.auction = response.data;
         this.nextBid = Math.round(this.convertPrice(this.auction.currentBid) + 1);
         this.sortedBids = this.auction.bids.sort((a, b) => parseInt(b.datetime) - parseInt(a.datetime));
@@ -2128,7 +2134,7 @@ module.exports = g;
       } else {
         console.log("valid bid");
         console.log(this.nextBid);
-        this.$http.post('http://localhost:4941/api/v1/auctions/' + this.id + "/bids?amount=" + this.nextBid * 100, {}, {
+        this.$http.post(this.apiUrl + '/api/v1/auctions/' + this.id + "/bids?amount=" + this.nextBid * 100, {}, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           }
@@ -2147,7 +2153,7 @@ module.exports = g;
 
     getSellerDetails: function () {
       if (this.loggedIn) {
-        this.$http.get('http://localhost:4941/api/v1/users/' + this.auction.seller.id, {
+        this.$http.get(this.apiUrl + '/api/v1/users/' + this.auction.seller.id, {
           headers: {
             'X-Authorization': localStorage.getItem('token')
           }
@@ -2176,7 +2182,7 @@ module.exports = g;
     },
 
     getAllCategories: function () {
-      this.$http.get('http://localhost:4941/api/v1/categories').then(response => {
+      this.$http.get(this.apiUrl + '/api/v1/categories').then(response => {
         this.categories = response.data;
         this.categories.push({ categoryId: 0, categoryTitle: "all", categoryDescription: "All categories" });
         this.categories.sort((a, b) => parseInt(a.categoryId) - parseInt(b.categoryId));
@@ -2201,7 +2207,7 @@ module.exports = g;
     },
 
     logout: function () {
-      this.$http.post('http://localhost:4941/api/v1/users/logout', {}, {
+      this.$http.post(this.apiUrl + '/api/v1/users/logout', {}, {
         headers: {
           'X-Authorization': localStorage.getItem('token')
         }
@@ -2232,6 +2238,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Auction_vue__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_vue_router__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_vue_resource__ = __webpack_require__(68);
+
 
 
 
@@ -13945,7 +13952,7 @@ module.exports = __webpack_require__.p + "linkedin.png?b3d5f2438de47f35b153080b3
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue__ = __webpack_require__(6);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9449bb02_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_180351b8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(42);
 function injectStyle (ssrContext) {
   __webpack_require__(40)
 }
@@ -13960,12 +13967,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-9449bb02"
+var __vue_scopeId__ = "data-v-180351b8"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9449bb02_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_180351b8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13986,7 +13993,7 @@ var content = __webpack_require__(41);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("43c7e3e3", content, true, {});
+var update = __webpack_require__(1)("4980835d", content, true, {});
 
 /***/ }),
 /* 41 */
@@ -14019,7 +14026,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Auctions_vue__ = __webpack_require__(7);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b53f1de_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auctions_vue__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_769298a8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auctions_vue__ = __webpack_require__(46);
 function injectStyle (ssrContext) {
   __webpack_require__(44)
 }
@@ -14034,12 +14041,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-1b53f1de"
+var __vue_scopeId__ = "data-v-769298a8"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Auctions_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b53f1de_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auctions_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_769298a8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auctions_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14060,7 +14067,7 @@ var content = __webpack_require__(45);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("0f303c48", content, true, {});
+var update = __webpack_require__(1)("14d3412f", content, true, {});
 
 /***/ }),
 /* 45 */
@@ -14099,7 +14106,7 @@ module.exports = __webpack_require__.p + "sad.png?2da9087c1be28c5b636b57862efffd
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Profile_vue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_db0d78d0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Profile_vue__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_62083a6c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Profile_vue__ = __webpack_require__(51);
 function injectStyle (ssrContext) {
   __webpack_require__(49)
 }
@@ -14114,12 +14121,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-db0d78d0"
+var __vue_scopeId__ = "data-v-62083a6c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Profile_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_db0d78d0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Profile_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_62083a6c_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Profile_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14140,7 +14147,7 @@ var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("1ce50208", content, true, {});
+var update = __webpack_require__(1)("ce0162b0", content, true, {});
 
 /***/ }),
 /* 50 */
@@ -14173,7 +14180,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MyBids_vue__ = __webpack_require__(9);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4249ea44_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyBids_vue__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a40805cc_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyBids_vue__ = __webpack_require__(55);
 function injectStyle (ssrContext) {
   __webpack_require__(53)
 }
@@ -14188,12 +14195,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-4249ea44"
+var __vue_scopeId__ = "data-v-a40805cc"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MyBids_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4249ea44_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyBids_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a40805cc_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyBids_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14214,7 +14221,7 @@ var content = __webpack_require__(54);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("d1670100", content, true, {});
+var update = __webpack_require__(1)("6007b281", content, true, {});
 
 /***/ }),
 /* 54 */
@@ -14259,7 +14266,7 @@ module.exports = __webpack_require__.p + "crying.jpg?22272b4f3e16d52d982fad8bf84
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MyAuctions_vue__ = __webpack_require__(10);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51eb2f98_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyAuctions_vue__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_695c5140_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyAuctions_vue__ = __webpack_require__(61);
 function injectStyle (ssrContext) {
   __webpack_require__(59)
 }
@@ -14274,12 +14281,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-51eb2f98"
+var __vue_scopeId__ = "data-v-695c5140"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MyAuctions_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51eb2f98_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyAuctions_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_695c5140_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyAuctions_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14300,7 +14307,7 @@ var content = __webpack_require__(60);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("3f30b8ad", content, true, {});
+var update = __webpack_require__(1)("21b0db0a", content, true, {});
 
 /***/ }),
 /* 60 */
@@ -14339,7 +14346,7 @@ module.exports = __webpack_require__.p + "confounded.png?b1080e3349c29267a389976
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Auction_vue__ = __webpack_require__(11);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0df1277e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auction_vue__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_123cc7f2_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auction_vue__ = __webpack_require__(66);
 function injectStyle (ssrContext) {
   __webpack_require__(64)
 }
@@ -14354,12 +14361,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-0df1277e"
+var __vue_scopeId__ = "data-v-123cc7f2"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Auction_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0df1277e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auction_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_123cc7f2_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auction_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14380,7 +14387,7 @@ var content = __webpack_require__(65);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("75eff8ef", content, true, {});
+var update = __webpack_require__(1)("79d3c04e", content, true, {});
 
 /***/ }),
 /* 65 */
