@@ -688,6 +688,14 @@ module.exports = g;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'app',
@@ -2216,14 +2224,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__James_vue__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Home_vue__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Auctions_vue__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Profile__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__MyBids__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__MyAuctions__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Auction_vue__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_vue_router__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_vue_resource__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Home_vue__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Auctions_vue__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Profile__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__MyBids__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__MyAuctions__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Auction_vue__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_vue_router__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_vue_resource__ = __webpack_require__(68);
 
 
 
@@ -13785,7 +13793,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_James_vue__ = __webpack_require__(5);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4e83cbd7_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_James_vue__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_41c7add7_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_James_vue__ = __webpack_require__(25);
 function injectStyle (ssrContext) {
   __webpack_require__(23)
 }
@@ -13800,12 +13808,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-4e83cbd7"
+var __vue_scopeId__ = "data-v-41c7add7"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_James_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4e83cbd7_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_James_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_41c7add7_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_James_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -13826,7 +13834,7 @@ var content = __webpack_require__(24);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("14d8edfd", content, true, {});
+var update = __webpack_require__(1)("a839e274", content, true, {});
 
 /***/ }),
 /* 24 */
@@ -13837,7 +13845,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "p[data-v-4e83cbd7]{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:left;color:#2c3e50}nav[data-v-4e83cbd7]{margin-top:-60px;background-color:transparent}h1[data-v-4e83cbd7]{font-weight:400;font-family:Helvetica;text-align:center}h2[data-v-4e83cbd7]{font-weight:400}h5[data-v-4e83cbd7]{color:grey}ul[data-v-4e83cbd7]{list-style-type:none;padding:0}card[data-v-4e83cbd7]{border-color:transparent}li[data-v-4e83cbd7]{display:inline-block;margin:0 10px;color:#000}a[data-v-4e83cbd7]{color:#1e90ff}form[data-v-4e83cbd7]{margin-left:auto;margin-right:auto}", ""]);
+exports.push([module.i, "p[data-v-41c7add7]{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:left;color:#2c3e50}nav[data-v-41c7add7]{margin-top:-60px;background-color:transparent}h1[data-v-41c7add7]{font-weight:400;font-family:Helvetica;text-align:center}h2[data-v-41c7add7]{font-weight:400}h5[data-v-41c7add7]{color:grey}ul[data-v-41c7add7]{list-style-type:none;padding:0}card[data-v-41c7add7]{border-color:transparent}li[data-v-41c7add7]{display:inline-block;margin:0 10px;color:#000}a[data-v-41c7add7]{color:#1e90ff}form[data-v-41c7add7]{margin-left:auto;margin-right:auto}", ""]);
 
 // exports
 
@@ -13847,8 +13855,8 @@ exports.push([module.i, "p[data-v-4e83cbd7]{font-family:Avenir,Helvetica,Arial,s
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._m(0),_vm._v(" "),_c('br'),_vm._v(" "),_c('div',{staticClass:"card",staticStyle:{"width":"30rem","margin-left":"auto","margin-right":"auto","border-color":"transparent"}},[_c('h1',[_vm._v("James Toohey")]),_vm._v(" "),_c('img',{staticClass:"card-img-top",attrs:{"src":__webpack_require__(26),"alt":"Card image cap"}}),_c('br'),_vm._v(" "),_c('h3',{attrs:{"id":"about"}},[_vm._v("About Me")]),_vm._v(" "),_c('p',[_vm._v("Hi, I'm James - a student in my penultimate year of study seeking employment over the 2018/19 summer.\n            From studying\n            software engineering and computer science papers, I have become very keen to get into the workforce and\n            apply my knowledge. I'm aiming to pursue a career related to developing either financial or medical\n            software, and am\n            interested to see what software requirements are necessary for these sectors.")]),_vm._v(" "),_c('p',[_vm._v("Throughout my study, I have particularly enjoyed working on team projects where we have been developing\n            software using agile methodologies under the Scrum framework. The challenges we've faced from these\n            projects have been very useful in relation to my problem-solving skills and helping me further enjoying\n            working as a software developer. I am therefore looking for a job where similar techniques are carried\n            out so that I can apply my knowledge effectively and productively.")]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"skills"}},[_vm._v("My Skills")]),_vm._v(" "),_c('h5',[_vm._v("Front End Development")]),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('p',[_vm._v("\n            In the last two years, I have been involved with front-end development and have grown to really enjoy it.\n            I've been using Vue.js for the front-end development, so evidently, I have experience with MVVC. An example auctions website I have developed using Vue.js can be found "),_c('router-link',{attrs:{"to":"/home"}},[_vm._v("here")]),_vm._v(". In\n            various Java projects, I have also used the MVC architecture with fxml.")],1),_vm._v(" "),_c('h5',[_vm._v("Back End Development")]),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Relational Databases")]),_vm._v(" "),_vm._m(3),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Computer Graphics")]),_vm._v(" "),_vm._m(4),_vm._v(" "),_c('p',[_vm._v("Using OpenGL has been a very fun way for me to get into computer graphics, and really brought out my\n            creative side. Since I was never very good at drawing when I was younger, I love the fact that I can use\n            a computer to do it for me.")]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"work"}},[_vm._v("Work Experience")]),_vm._v(" "),_c('h5',[_vm._v("ClubHub Software Services Ltd")]),_vm._v(" "),_vm._m(5),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Mt Albert YMCA")]),_vm._v(" "),_vm._m(6),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"contact"}},[_vm._v("Contact")]),_vm._v(" "),_vm._m(7),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',[_vm._v("Hobbies")]),_vm._v(" "),_c('img',{staticClass:"card-img-top",attrs:{"src":__webpack_require__(27),"alt":"Cardgage cap"}}),_c('br'),_vm._v(" "),_vm._m(8),_vm._v(" "),_c('hr'),_vm._v(" "),_vm._m(9)])])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"navbar navbar-expand-lg navbar-light bg-light"},[_c('a',{staticClass:"navbar-brand",attrs:{"href":"#"}}),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#about"}},[_vm._v("About Me")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#skills"}},[_vm._v("My Skills")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#work"}},[_vm._v("Work Experience")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#contact"}},[_vm._v("Contact")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(28),"alt":"html5"}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(29),"alt":"html5","align":"right","width":"200px","height":"200px"}}),_vm._v("\n            This year I have learned how to design RESTful API's based on specifications so that a server can\n            communicate with multiple clients. I have created servers using both Node.js and Java's Spring Boot\n            framework.")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"rounded float-left",attrs:{"src":__webpack_require__(30),"alt":"html5","width":"200px","height":"200px"}}),_vm._v("I have had\n            a lot of exposure to relational databases, using management tools like SQLite and MySQL. This knowledge has been essential for my implementation of servers. Databases are a topic\n            that I find really enjoyable - I love learning about query optimization how databases can handle large\n            quantities of data.")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card"},[_c('img',{staticClass:"img-fluid",attrs:{"src":__webpack_require__(31),"alt":"html5"}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"rounded float-left",attrs:{"src":__webpack_require__(32),"alt":"html5","align":"left","width":"200px","height":"200px"}}),_vm._v("Last year I was an intern at "),_c('a',{attrs:{"href":"https://clubhubssl.com","target":"_blank"}},[_vm._v("ClubHub\n            Software Services Ltd")]),_vm._v("\n            in St Heliers, where I developed websites for sports clubs in New Zealand, Australia, and Asia. This\n            also involved\n            meeting with clients to discuss the requirements of their website and how they wanted it to look. Being\n            able to help these clubs with websites that I was creating gave me a great sense of achievement. I\n            really enjoyed each of the different challenges that clients would have with how they wanted their\n            websites laid out and information portrayed.")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"rounded float-right",attrs:{"src":__webpack_require__(33),"alt":"html5","align":"right","width":"180px","height":"220px"}}),_vm._v("Throughout my school years, I was a volunteer at the Mt Albert YMCA as a Raise Up\n            member. This is where a team of us met up each week to organise community events. This program built on\n            my leadership skills and gave me a passion for working productively in team environments. These skills\n            have been essential during my university group projects and I am looking forward to applying them in a\n            real-world context. An article about my time at the YMCA can be found "),_c('a',{attrs:{"href":"https://www.ymcaauckland.org.nz/news/james-toohey-raising-up","target":"_blank"}},[_vm._v("here")]),_vm._v(".\n        ")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',{staticStyle:{"width":"100%"}},[_c('tr',[_c('td',[_c('p',[_c('a',{attrs:{"href":"mailto:jamestoohey97@gmail.com"}},[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(34),"alt":"html5"}}),_vm._v("\n                    jamestoohey97@gmail.com")])])]),_vm._v(" "),_c('td',[_c('a',{attrs:{"href":"https://github.com/james2hey","target":"_blank"}},[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(35),"alt":"html5"}}),_vm._v("\n                    GitHub")])])]),_vm._v(" "),_c('tr',[_c('td',[_c('p',[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(36),"alt":"html5"}}),_vm._v(" 021 265\n                    9668")])]),_vm._v(" "),_c('td',[_c('a',{attrs:{"href":"https://www.linkedin.com/in/james-toohey-01997","target":"_blank"}},[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(37),"alt":"html5"}}),_vm._v(" LinkedIn")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("\n        I have competitively been playing football since a young age and am currently playing at Christchurch\n        United in the mens first team. I really enjoy being a part of a team and playing under a team environment.\n        Some of my games have articles written about them, for example "),_c('a',{attrs:{"href":"http://cufc.co.nz/christchurch-united-with-a-solid-win-against-burwood-afc/","target":"_blank"}},[_vm._v("this")]),_vm._v(" one from the 2017\n        season.\n        ")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{staticStyle:{"font-size":"12px"}},[_vm._v("Icons made by "),_c('a',{attrs:{"href":"https://www.flaticon.com/authors/zurb","title":"Phone receiver"}},[_vm._v("Phone receiver")]),_vm._v("\n            from "),_c('a',{attrs:{"href":"https://www.flaticon.com/","title":"Flaticon"}},[_vm._v("www.flaticon.com")]),_vm._v(" is licensed by "),_c('a',{attrs:{"href":"http://creativecommons.org/licenses/by/3.0/","title":"Creative Commons BY 3.0","target":"_blank"}},[_vm._v("CC 3.0 BY")])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._m(0),_vm._v(" "),_c('br'),_vm._v(" "),_c('div',{staticClass:"card",staticStyle:{"width":"30rem","margin-left":"auto","margin-right":"auto","border-color":"transparent"}},[_c('h1',[_vm._v("James Toohey")]),_vm._v(" "),_c('img',{staticClass:"card-img-top",attrs:{"src":__webpack_require__(26),"alt":"Card image cap"}}),_c('br'),_vm._v(" "),_c('h3',{attrs:{"id":"about"}},[_vm._v("About Me")]),_vm._v(" "),_c('p',[_vm._v("Hi, I'm James - a student in my penultimate year of study seeking employment over the 2018/19 summer.\n            From studying\n            software engineering and computer science papers, I have become very keen to get into the workforce and\n            apply my knowledge. I'm aiming to pursue a career related to developing either financial or medical\n            software, and am\n            interested to see what software requirements are necessary for these sectors.")]),_vm._v(" "),_c('p',[_vm._v("Throughout my study, I have particularly enjoyed working on team projects where we have been developing\n            software using agile methodologies under the Scrum framework. The challenges we've faced from these\n            projects have been very useful in relation to my problem-solving skills and helping me further enjoying\n            working as a software developer. I am therefore looking for a job where similar techniques are carried\n            out so that I can apply my knowledge effectively and productively.")]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"skills"}},[_vm._v("My Skills")]),_vm._v(" "),_c('h5',[_vm._v("Front End Development")]),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('p',[_vm._v("\n            In the last two years, I have been involved with front-end development and have grown to really enjoy it.\n            I've been using Vue.js for the front-end development, so evidently, I have experience with MVVC. An example auctions website I have developed using Vue.js can be found "),_c('router-link',{attrs:{"to":"/home"}},[_vm._v("here")]),_vm._v(". In\n            various Java projects, I have also used the MVC architecture with fxml.")],1),_vm._v(" "),_c('h5',[_vm._v("Back End Development")]),_vm._v(" "),_vm._m(2),_vm._v(" "),_c('h5',[_vm._v("Relational Databases")]),_vm._v(" "),_vm._m(3),_vm._v(" "),_c('h5',[_vm._v("Embedded Systems")]),_vm._v(" "),_vm._m(4),_vm._v(" "),_c('h5',[_vm._v("Computer Graphics")]),_vm._v(" "),_vm._m(5),_vm._v(" "),_c('p',[_vm._v("Using OpenGL has been a very fun way for me to get into computer graphics, and really brought out my\n            creative side. Since I was never very good at drawing when I was younger, I love the fact that I can use\n            a computer to do it for me. I've used OpenGL to render and model 3D scenes. I've also studied algorithms\n        to implement transformations and lighting models. ")]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"work"}},[_vm._v("Work Experience")]),_vm._v(" "),_c('h5',[_vm._v("ClubHub Software Services Ltd")]),_vm._v(" "),_vm._m(6),_vm._v(" "),_c('br'),_vm._v(" "),_c('h5',[_vm._v("Mt Albert YMCA")]),_vm._v(" "),_vm._m(7),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',{attrs:{"id":"contact"}},[_vm._v("Contact")]),_vm._v(" "),_vm._m(8),_vm._v(" "),_c('hr'),_vm._v(" "),_c('h3',[_vm._v("Hobbies")]),_vm._v(" "),_c('img',{staticClass:"card-img-top",attrs:{"src":__webpack_require__(27),"alt":"Cardgage cap"}}),_c('br'),_vm._v(" "),_vm._m(9),_vm._v(" "),_c('hr'),_vm._v(" "),_vm._m(10)])])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"navbar navbar-expand-lg navbar-light bg-light"},[_c('a',{staticClass:"navbar-brand",attrs:{"href":"#"}}),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#about"}},[_vm._v("About Me")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#skills"}},[_vm._v("My Skills")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#work"}},[_vm._v("Work Experience")])]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('a',{staticClass:"nav-link",attrs:{"href":"#contact"}},[_vm._v("Contact")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card"},[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(28),"alt":"html5"}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(29),"alt":"html5","align":"right","width":"200px","height":"200px"}}),_vm._v("\n            This year I have learned how to design RESTful API's for servers that are used to\n            communicate with multiple clients. This has also included using databases for the server to retrieve information\n            from so that it can serve this data to the client. I have created servers using both Node.js and Java's Spring Boot\n            framework.")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"rounded float-left",attrs:{"src":__webpack_require__(30),"alt":"html5","width":"200px","height":"200px"}}),_vm._v("I have had\n            a lot of exposure to relational databases, using management tools like SQLite and MySQL. Databases are a topic\n            that I find really enjoyable - I love learning about query optimization how databases can handle large\n            quantities of data.")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"img-thumbnail",attrs:{"src":__webpack_require__(31),"alt":"html5","align":"right","width":"200px","height":"200px"}}),_vm._v("\n        I have studied computer systems which used C++ to program a small embedded system. This was a microcomputer\n        which had input buttons, infrared light receivers/transmitters, and a matrix of lights to display output. I learnt how to handle the\n        IO of the microcomputer so that user interactions with the buttons would update the matrix display. This\n        involved a project where I created a game of snake between two fun kits.")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card"},[_c('img',{staticClass:"img-fluid",attrs:{"src":__webpack_require__(32),"alt":"html5"}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"rounded float-left",attrs:{"src":__webpack_require__(33),"alt":"html5","align":"left","width":"200px","height":"200px"}}),_vm._v("Last year I was an intern at "),_c('a',{attrs:{"href":"https://clubhubssl.com","target":"_blank"}},[_vm._v("ClubHub\n            Software Services Ltd")]),_vm._v("\n            in St Heliers, where I developed websites for sports clubs in New Zealand, Australia, and Asia. This\n            also involved\n            meeting with clients to discuss the requirements of their website and how they wanted it to look. Being\n            able to help these clubs with websites that I was creating gave me a great sense of achievement. I\n            really enjoyed each of the different challenges that clients would have with how they wanted their\n            websites laid out and information portrayed.")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('img',{staticClass:"rounded float-right",attrs:{"src":__webpack_require__(34),"alt":"html5","align":"right","width":"180px","height":"220px"}}),_vm._v("Throughout my school years, I was a volunteer at the Mt Albert YMCA as a Raise Up\n            member. This is where a team of us met up each week to organise community events. This program built on\n            my leadership skills and gave me a passion for working productively in team environments. These skills\n            have been essential during my university group projects and I am looking forward to applying them in a\n            real-world context. An article about my time at the YMCA can be found "),_c('a',{attrs:{"href":"https://www.ymcaauckland.org.nz/news/james-toohey-raising-up","target":"_blank"}},[_vm._v("here")]),_vm._v(".\n        ")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',{staticStyle:{"width":"100%"}},[_c('tr',[_c('td',[_c('p',[_c('a',{attrs:{"href":"mailto:jamestoohey97@gmail.com"}},[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(35),"alt":"html5"}}),_vm._v("\n                    jamestoohey97@gmail.com")])])]),_vm._v(" "),_c('td',[_c('a',{attrs:{"href":"https://github.com/james2hey","target":"_blank"}},[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(36),"alt":"html5"}}),_vm._v("\n                    GitHub")])])]),_vm._v(" "),_c('tr',[_c('td',[_c('p',[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(37),"alt":"html5"}}),_vm._v(" 021 265\n                    9668")])]),_vm._v(" "),_c('td',[_c('a',{attrs:{"href":"https://www.linkedin.com/in/james-toohey-01997","target":"_blank"}},[_c('img',{staticClass:"rounded float",staticStyle:{"width":"20px","height":"20px"},attrs:{"src":__webpack_require__(38),"alt":"html5"}}),_vm._v(" LinkedIn")])])])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_vm._v("\n        I have competitively been playing football since a young age and am currently playing at Christchurch\n        United in the mens first team. I really enjoy being a part of a team and playing under a team environment.\n        Some of my games have articles written about them, for example "),_c('a',{attrs:{"href":"http://cufc.co.nz/christchurch-united-with-a-solid-win-against-burwood-afc/","target":"_blank"}},[_vm._v("this")]),_vm._v(" one from the 2017\n        season.\n        ")])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{staticStyle:{"font-size":"12px"}},[_vm._v("Icons made by "),_c('a',{attrs:{"href":"https://www.flaticon.com/authors/zurb","title":"Phone receiver"}},[_vm._v("Phone receiver")]),_vm._v("\n            from "),_c('a',{attrs:{"href":"https://www.flaticon.com/","title":"Flaticon"}},[_vm._v("www.flaticon.com")]),_vm._v(" is licensed by "),_c('a',{attrs:{"href":"http://creativecommons.org/licenses/by/3.0/","title":"Creative Commons BY 3.0","target":"_blank"}},[_vm._v("CC 3.0 BY")])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
@@ -13886,54 +13894,60 @@ module.exports = __webpack_require__.p + "db.png?0d767d7ad7f5fdb332f652cbacc8678
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "opengl.png?2a269688605a580f160d94be2bdc44dd";
+module.exports = __webpack_require__.p + "funkit.png?69888fb86961b87b6fe3d9939ce60c22";
 
 /***/ }),
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "clubhub.png?2642b877782ce7ff9db4ec56438254d4";
+module.exports = __webpack_require__.p + "opengl.png?2a269688605a580f160d94be2bdc44dd";
 
 /***/ }),
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ymca.jpg?c2267baf6686ece226047117b2066cec";
+module.exports = __webpack_require__.p + "clubhub.png?2642b877782ce7ff9db4ec56438254d4";
 
 /***/ }),
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "email.png?d67f47aa8ece0aba6bfa03d40170a25b";
+module.exports = __webpack_require__.p + "ymca.jpg?c2267baf6686ece226047117b2066cec";
 
 /***/ }),
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "github.png?a83841c50aa67da6144860bd5031cc53";
+module.exports = __webpack_require__.p + "email.png?d67f47aa8ece0aba6bfa03d40170a25b";
 
 /***/ }),
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "phone.png?d5a751b7520da9a06e89904135716857";
+module.exports = __webpack_require__.p + "github.png?a83841c50aa67da6144860bd5031cc53";
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "linkedin.png?b3d5f2438de47f35b153080b34f8e7a4";
+module.exports = __webpack_require__.p + "phone.png?d5a751b7520da9a06e89904135716857";
 
 /***/ }),
 /* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "linkedin.png?b3d5f2438de47f35b153080b34f8e7a4";
+
+/***/ }),
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue__ = __webpack_require__(6);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9449bb02_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9449bb02_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(42);
 function injectStyle (ssrContext) {
-  __webpack_require__(39)
+  __webpack_require__(40)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -13962,20 +13976,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(40);
+var content = __webpack_require__(41);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("43c7e3e3", content, true, {});
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -13989,7 +14003,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13999,15 +14013,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Auctions_vue__ = __webpack_require__(7);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b53f1de_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auctions_vue__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1b53f1de_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auctions_vue__ = __webpack_require__(46);
 function injectStyle (ssrContext) {
-  __webpack_require__(43)
+  __webpack_require__(44)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14036,20 +14050,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(44);
+var content = __webpack_require__(45);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("0f303c48", content, true, {});
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14063,31 +14077,31 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('nav',{staticClass:"navbar fixed-top navbar-dark bg-primary"},[_c('a',{staticClass:"navbar-brand",attrs:{"href":"#"}},[_vm._v("365 Auctions")]),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('li',{staticClass:"nav-item"},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"white"},attrs:{"to":"/auctions"}},[_vm._v("Auctions")])],1),_vm._v(" "),(_vm.loggedIn)?_c('div',[_c('li',{staticClass:"nav-item dropdown"},[_c('a',{staticClass:"nav-link dropdown-toggle",staticStyle:{"color":"white"},attrs:{"href":"#","id":"navbarDropdown","role":"button","data-toggle":"dropdown","aria-haspopup":"true","aria-expanded":"false"}},[_vm._v("\n            Profile\n          ")]),_vm._v(" "),_c('div',{staticClass:"dropdown-menu",attrs:{"aria-labelledby":"navbarDropdown"}},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/myauctions"}},[_vm._v("My Auctions")]),_vm._v(" "),_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/mybids"}},[_vm._v("My Bids")]),_vm._v(" "),_c('div',{staticClass:"dropdown-divider"}),_vm._v(" "),_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/profile"}},[_vm._v("Edit Profile")])],1)]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"white"},attrs:{"to":"/home"},nativeOn:{"click":function($event){_vm.logout()}}},[_vm._v("Logout")])],1)]):_c('div',[_c('li',{staticClass:"nav-item"},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"white"},attrs:{"to":"/home"}},[_vm._v("Create Account")])],1)])])]),_vm._v(" "),_c('div',[_c('h1',[_vm._v("Auctions")]),_vm._v(" "),_c('div',{staticClass:"card",staticStyle:{"width":"50%","margin-left":"auto","margin-right":"auto"}},[_c('form',{on:{"submit":function($event){$event.preventDefault();_vm.getAuctions()}}},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col"},[_c('h5',[_vm._v("Status")]),_vm._v(" "),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.statusValue),expression:"statusValue"}],staticClass:"custom-select",on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.statusValue=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},_vm._l((_vm.status),function(stat){return _c('option',{domProps:{"value":stat.value}},[_vm._v(_vm._s(stat.value))])}))]),_vm._v(" "),_c('div',{staticClass:"col"},[_c('h5',[_vm._v("Category")]),_vm._v(" "),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.catId),expression:"catId"}],staticClass:"custom-select",on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.catId=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},_vm._l((_vm.categories),function(cat){return _c('option',{domProps:{"value":cat.categoryId}},[_vm._v(_vm._s(cat.categoryTitle))])}))]),_vm._v(" "),_c('div',{staticClass:"col"},[_c('h5',[_vm._v("Search")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.q),expression:"q"}],staticClass:"form-control",attrs:{"placeholder":"Search"},domProps:{"value":(_vm.q)},on:{"input":function($event){if($event.target.composing){ return; }_vm.q=$event.target.value}}})])]),_vm._v(" "),_c('br'),_c('br'),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){_vm.getAuctions()}}},[_vm._v("Filter")])])]),_vm._v(" "),_c('br'),_c('br'),_vm._v(" "),(_vm.visibleAuctions.length === 0 && _vm.searched)?_c('div',[_vm._m(0)]):_c('div',{staticClass:"card-deck"},_vm._l((_vm.visibleAuctions),function(auction){return _c('div',[_c('div',{staticClass:"card",staticStyle:{"width":"18rem"}},[_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"container"},[_c('img',{staticClass:"card-img-top",attrs:{"src":_vm.getPhotoSrc(auction.id),"alt":"Photo failed to load"}})]),_vm._v(" "),_c('h5',{staticClass:"card-title"},[_vm._v(_vm._s(auction.title))]),_vm._v(" "),_c('p',{staticClass:"card-text"},[_vm._v("Highest Bid: $ "+_vm._s(_vm.convertPrice(auction.currentBid)))]),_vm._v(" "),_c('router-link',{staticClass:"btn btn-primary",attrs:{"to":{name: 'Auction', params: {auctionId: auction.id}}}},[_vm._v("\n              View\n            ")])],1)])])})),_vm._v(" "),_c('br'),_c('br'),_vm._v(" "),_c('nav',{attrs:{"aria-label":"Page navigation"}},[_c('ul',{staticClass:"pagination justify-content-center"},_vm._l((_vm.pageArray),function(page){return _c('li',{staticClass:"page-item"},[_c('a',{staticClass:"page-link",attrs:{"href":"#"},on:{"click":function($event){_vm.setVisibleAuctions(page)}}},[_vm._v(_vm._s(page))])])}))])]),_vm._v(" "),_c('br'),_c('br'),_c('br')])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("Aw dear, no results found!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(46)}})])}]
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("Aw dear, no results found!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(47)}})])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "sad.png?2da9087c1be28c5b636b57862efffd8e";
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Profile_vue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_db0d78d0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Profile_vue__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_db0d78d0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Profile_vue__ = __webpack_require__(51);
 function injectStyle (ssrContext) {
-  __webpack_require__(48)
+  __webpack_require__(49)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14116,20 +14130,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(49);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("1ce50208", content, true, {});
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14143,7 +14157,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14153,15 +14167,15 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MyBids_vue__ = __webpack_require__(9);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4249ea44_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyBids_vue__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4249ea44_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyBids_vue__ = __webpack_require__(55);
 function injectStyle (ssrContext) {
-  __webpack_require__(52)
+  __webpack_require__(53)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14190,20 +14204,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(53);
+var content = __webpack_require__(54);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("d1670100", content, true, {});
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14217,37 +14231,37 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('nav',{staticClass:"navbar fixed-top navbar-dark bg-primary"},[_c('a',{staticClass:"navbar-brand",attrs:{"href":"#"}},[_vm._v("365 Auctions")]),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('li',{staticClass:"nav-item"},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"white"},attrs:{"to":"/auctions"}},[_vm._v("Auctions")])],1),_vm._v(" "),_c('li',{staticClass:"nav-item dropdown"},[_c('a',{staticClass:"nav-link dropdown-toggle",staticStyle:{"color":"white"},attrs:{"href":"#","id":"navbarDropdown","role":"button","data-toggle":"dropdown","aria-haspopup":"true","aria-expanded":"false"}},[_vm._v("\n          Profile\n        ")]),_vm._v(" "),_c('div',{staticClass:"dropdown-menu",attrs:{"aria-labelledby":"navbarDropdown"}},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/myauctions"}},[_vm._v("My Auctions")]),_vm._v(" "),_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/mybids"}},[_vm._v("My Bids")]),_vm._v(" "),_c('div',{staticClass:"dropdown-divider"}),_vm._v(" "),_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/profile"}},[_vm._v("Edit Profile")])],1)]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"white"},attrs:{"to":"/home"},nativeOn:{"click":function($event){_vm.logout()}}},[_vm._v("Logout")])],1)])]),_vm._v(" "),_c('div',[_c('br'),_vm._v(" "),_c('h1',[_vm._v(" My Bids")]),_c('br'),_vm._v(" "),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.bidChoice),expression:"bidChoice"}],staticClass:"custom-select",staticStyle:{"width":"30%"},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.bidChoice=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},_vm._l((_vm.bidChoices),function(choice){return _c('option',{domProps:{"value":choice.value}},[_vm._v(_vm._s(choice.value))])})),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){_vm.filter()}}},[_vm._v("View")]),_vm._v(" "),_c('small',{staticClass:"form-text text-muted",attrs:{"id":"editHelp"}},[_vm._v("Choose your in-progress/won bids, then hit 'filter'.")])]),_vm._v(" "),_c('br'),_vm._v(" "),(_vm.noBids)?_c('div',[_vm._m(0)]):_vm._e(),_vm._v(" "),(_vm.noWins)?_c('div',[_vm._m(1)]):_c('div',{staticClass:"row"},_vm._l((_vm.auctions),function(auction){return _c('div',{staticClass:"col"},[_c('div',{staticClass:"card",staticStyle:{"width":"18rem"}},[_c('img',{staticClass:"card-img-top",attrs:{"src":_vm.getPhotoSrc(auction.id),"alt":"Photo failed to load"}}),_vm._v(" "),_c('div',{staticClass:"card-body"},[_c('h5',{staticClass:"card-title"},[_vm._v(_vm._s(auction.title))]),_vm._v(" "),_c('p',{staticClass:"card-text"},[_vm._v("Current Bid: $ "+_vm._s(_vm.convertPrice(auction.currentBid)))]),_vm._v(" "),_c('router-link',{staticClass:"btn btn-primary",attrs:{"to":{name: 'Auction', params: {auctionId: auction.id}}}},[_vm._v("\n            View\n          ")])],1)])])}))])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("Come onnn, you haven't got any bids on active auctions!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(55)}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("You haven't won any auctions!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(56)}})])}]
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("Come onnn, you haven't got any bids on active auctions!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(56)}})])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("You haven't won any auctions!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(57)}})])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "smirk.png?fc96c2239fa4020b1f43228a91fda1b1";
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "crying.jpg?22272b4f3e16d52d982fad8bf84e03a4";
+module.exports = __webpack_require__.p + "smirk.png?fc96c2239fa4020b1f43228a91fda1b1";
 
 /***/ }),
 /* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "crying.jpg?22272b4f3e16d52d982fad8bf84e03a4";
+
+/***/ }),
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_MyAuctions_vue__ = __webpack_require__(10);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51eb2f98_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyAuctions_vue__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51eb2f98_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_MyAuctions_vue__ = __webpack_require__(61);
 function injectStyle (ssrContext) {
-  __webpack_require__(58)
+  __webpack_require__(59)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14276,20 +14290,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(59);
+var content = __webpack_require__(60);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("3f30b8ad", content, true, {});
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14303,31 +14317,31 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('nav',{staticClass:"navbar fixed-top navbar-dark bg-primary"},[_c('a',{staticClass:"navbar-brand",attrs:{"href":"#"}},[_vm._v("365 Auctions")]),_vm._v(" "),_c('form',{staticClass:"form-inline"},[_c('li',{staticClass:"nav-item"},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"white"},attrs:{"to":"/auctions"}},[_vm._v("Auctions")])],1),_vm._v(" "),_c('li',{staticClass:"nav-item dropdown"},[_c('a',{staticClass:"nav-link dropdown-toggle",staticStyle:{"color":"white"},attrs:{"href":"#","id":"navbarDropdown","role":"button","data-toggle":"dropdown","aria-haspopup":"true","aria-expanded":"false"}},[_vm._v("\n          Profile\n        ")]),_vm._v(" "),_c('div',{staticClass:"dropdown-menu",attrs:{"aria-labelledby":"navbarDropdown"}},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/myauctions"}},[_vm._v("My Auctions")]),_vm._v(" "),_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/mybids"}},[_vm._v("My Bids")]),_vm._v(" "),_c('div',{staticClass:"dropdown-divider"}),_vm._v(" "),_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"black"},attrs:{"to":"/profile"}},[_vm._v("Edit Profile")])],1)]),_vm._v(" "),_c('li',{staticClass:"nav-item"},[_c('router-link',{staticClass:"nav-link",staticStyle:{"color":"white"},attrs:{"to":"/home"},nativeOn:{"click":function($event){_vm.logout()}}},[_vm._v("Logout")])],1)])]),_vm._v(" "),_c('div',{staticClass:"modal fade",attrs:{"id":"editAuctionModal","tabindex":"-1","role":"dialog","aria-labelledby":"editAuctionModalLabel","aria-hidden":"true"}},[_c('div',{staticClass:"modal-dialog",attrs:{"role":"document"}},[_c('div',{staticClass:"modal-content"},[_c('div',{staticClass:"modal-header"},[_c('h5',{staticClass:"modal-title",attrs:{"id":"editAuctionModalLabel"}},[_vm._v("My Auction")]),_vm._v(" "),_c('button',{staticClass:"close",attrs:{"type":"button","data-dismiss":"modal","aria-label":"Close"},on:{"click":function($event){_vm.resetData()}}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])])]),_vm._v(" "),_c('div',{staticClass:"modal-body"},[_c('form',{staticClass:"form-group"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col"},[_c('h5',[_vm._v("Title")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.currentAuction.title),expression:"currentAuction.title"}],staticClass:"form-control",attrs:{"id":"title"},domProps:{"value":(_vm.currentAuction.title)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.currentAuction, "title", $event.target.value)}}}),_vm._v(" "),_c('h5',[_vm._v("Description")]),_vm._v(" "),_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.currentAuction.description),expression:"currentAuction.description"}],staticClass:"form-control",attrs:{"id":"description","rows":"3"},domProps:{"value":(_vm.currentAuction.description)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.currentAuction, "description", $event.target.value)}}}),_vm._v(" "),_c('label',[_vm._v("Reserve Price")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.inputReservePrice),expression:"inputReservePrice"}],staticClass:"form-control currency",attrs:{"type":"number","value":"1000","min":"0","step":"0.01","data-number-to-fixed":"2","data-number-stepfactor":"100","id":"c1"},domProps:{"value":(_vm.inputReservePrice)},on:{"input":function($event){if($event.target.composing){ return; }_vm.inputReservePrice=$event.target.value}}}),_vm._v(" "),_c('label',[_vm._v("Starting Bid")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.inputStartingBid),expression:"inputStartingBid"}],staticClass:"form-control currency",attrs:{"type":"number","value":"1000","min":"0","step":"0.01","data-number-to-fixed":"2","data-number-stepfactor":"100","id":"c2"},domProps:{"value":(_vm.inputStartingBid)},on:{"input":function($event){if($event.target.composing){ return; }_vm.inputStartingBid=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"col"},[_c('label',[_vm._v("Start Time")]),_c('br'),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.outputStartDateTime),expression:"outputStartDateTime"}],staticClass:"form-control",attrs:{"id":"startDate","type":"datetime-local"},domProps:{"value":(_vm.outputStartDateTime)},on:{"input":function($event){if($event.target.composing){ return; }_vm.outputStartDateTime=$event.target.value}}}),_vm._v(" "),_c('br'),_vm._v(" "),_c('label',[_vm._v("End Time")]),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.outputEndDateTime),expression:"outputEndDateTime"}],staticClass:"form-control",attrs:{"id":"endDate","type":"datetime-local"},domProps:{"value":(_vm.outputEndDateTime)},on:{"input":function($event){if($event.target.composing){ return; }_vm.outputEndDateTime=$event.target.value}}}),_vm._v(" "),_c('br'),_vm._v(" "),_c('label',[_vm._v("Category")]),_vm._v(" "),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.catId),expression:"catId"}],staticClass:"custom-select",on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.catId=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},_vm._l((_vm.categories),function(cat){return _c('option',{domProps:{"value":cat.categoryId}},[_vm._v(_vm._s(cat.categoryTitle))])})),_vm._v(" "),_c('label',[_vm._v("Photo")]),_vm._v(" "),_c('div',{staticClass:"custom-file"},[_c('input',{staticClass:"custom-file-input",attrs:{"type":"file","id":"customFile","accept":".jpeg, .jpg, .png"},on:{"change":_vm.onFileChanged}}),_vm._v(" "),_c('label',{staticClass:"custom-file-label",attrs:{"for":"customFile"}},[_vm._v("Choose file")]),_vm._v(" "),_c('small',{staticClass:"form-text text-muted",attrs:{"id":"editHelps"}},[_vm._v("PNG or JPEG images are supported.")]),_vm._v(" "),(_vm.editing)?_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){_vm.deletePhoto()}}},[_vm._v("Delete Photo")]):_vm._e(),_c('br'),_vm._v(" "),(_vm.photoMessage !== '')?_c('p',[_vm._v(_vm._s(_vm.photoMessage))]):_vm._e(),_vm._v(" "),_c('br')])])]),_vm._v(" "),(_vm.paramStatus === 1)?_c('div',{staticStyle:{"color":"green"}},[_c('p',[_vm._v(_vm._s(_vm.message))])]):_vm._e(),_vm._v(" "),(_vm.paramStatus === 2)?_c('div',{staticStyle:{"color":"red"}},[_c('p',[_vm._v(_vm._s(_vm.message))])]):_vm._e()])]),_vm._v(" "),_c('div',{staticClass:"modal-footer"},[_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button","data-dismiss":"modal","id":"cancelButton"},on:{"click":function($event){_vm.resetData()}}},[_vm._v("Cancel")]),_vm._v(" "),(_vm.editing)?_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){_vm.patchAuction()}}},[_vm._v("Save")]):_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){_vm.createNewAuction()}}},[_vm._v("Create")])])])])]),_vm._v(" "),_c('br'),_vm._v(" "),_c('h1',[_vm._v(" My Auctions")]),_c('br'),_vm._v(" "),_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.auctionChoice),expression:"auctionChoice"}],staticClass:"custom-select",staticStyle:{"width":"30%"},on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.auctionChoice=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},_vm._l((_vm.auctionChoices),function(choice){return _c('option',{domProps:{"value":choice.value}},[_vm._v(_vm._s(choice.value))])})),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){_vm.filter()}}},[_vm._v("Filter")]),_vm._v(" "),_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button","data-toggle":"modal","data-target":"#editAuctionModal"}},[_vm._v("\n    Create New Auction\n  ")]),_vm._v(" "),_c('small',{staticClass:"form-text text-muted",attrs:{"id":"editHelp"}},[_vm._v("Choose the type of your auctions you wish to view and hit 'filter'.")]),_c('br'),_c('br'),_vm._v(" "),_c('p',{staticClass:"text-nowrap bd-highlight"},[_vm._v(_vm._s(_vm.message))]),_c('hr'),_vm._v(" "),(_vm.noAuctions)?_c('div',[_vm._m(0)]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"card-deck"},_vm._l((_vm.auctions),function(auction){return _c('div',[_c('div',{staticClass:"card",staticStyle:{"width":"18rem"}},[_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"container"},[_c('img',{staticClass:"card-img-top",attrs:{"src":_vm.getPhotoSrc(auction.id),"alt":"Photo failed to load"}})]),_vm._v(" "),_c('h5',{staticClass:"card-title"},[_vm._v(_vm._s(auction.title))]),_vm._v(" "),_c('p',{staticClass:"card-text"},[_vm._v("Highest Bid: $ "+_vm._s(_vm.convertPrice(auction.currentBid)))]),_vm._v(" "),_c('router-link',{staticClass:"btn btn-primary",attrs:{"to":{name: 'Auction', params: {auctionId: auction.id}}}},[_vm._v("\n          View\n        ")]),_c('br'),_c('br'),_vm._v(" "),(_vm.editableAuction)?_c('div',[_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button","data-toggle":"modal","data-target":"#editAuctionModal"},on:{"click":function($event){_vm.getAuctionDetails(auction.id)}}},[_vm._v("\n            Edit\n          ")])]):_vm._e()],1)])])}))])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("Goodness me, there are no auction results!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(61)}})])}]
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('p',[_vm._v("Goodness me, there are no auction results!")]),_vm._v(" "),_c('img',{staticClass:"img-thumbnail",staticStyle:{"width":"50%","height":"50%"},attrs:{"src":__webpack_require__(62)}})])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "confounded.png?b1080e3349c29267a3899769ac19e43a";
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Auction_vue__ = __webpack_require__(11);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0df1277e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auction_vue__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0df1277e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Auction_vue__ = __webpack_require__(66);
 function injectStyle (ssrContext) {
-  __webpack_require__(63)
+  __webpack_require__(64)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -14356,20 +14370,20 @@ var Component = normalizeComponent(
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(64);
+var content = __webpack_require__(65);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(1)("75eff8ef", content, true, {});
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -14383,7 +14397,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14393,7 +14407,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17023,7 +17037,7 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18121,7 +18135,7 @@ function xhrClient (request) {
 
 function nodeClient (request) {
 
-    var client = __webpack_require__(68);
+    var client = __webpack_require__(69);
 
     return new PromiseObj(function (resolve) {
 
@@ -18589,7 +18603,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports) {
 
 /* (ignored) */

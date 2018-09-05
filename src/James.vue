@@ -57,17 +57,24 @@
             <h5>Back End Development</h5>
             <p><img src="./assets/nodejs.png" alt="html5" class="img-thumbnail" align="right" width="200px"
                     height="200px">
-                This year I have learned how to design RESTful API's based on specifications so that a server can
-                communicate with multiple clients. I have created servers using both Node.js and Java's Spring Boot
+                This year I have learned how to design RESTful API's for servers that are used to
+                communicate with multiple clients. This has also included using databases for the server to retrieve information
+                from so that it can serve this data to the client. I have created servers using both Node.js and Java's Spring Boot
                 framework.</p>
-            <br>
 
             <h5>Relational Databases</h5>
             <p><img src="./assets/db.png" alt="html5" class="rounded float-left" width="200px" height="200px">I have had
-                a lot of exposure to relational databases, using management tools like SQLite and MySQL. This knowledge has been essential for my implementation of servers. Databases are a topic
+                a lot of exposure to relational databases, using management tools like SQLite and MySQL. Databases are a topic
                 that I find really enjoyable - I love learning about query optimization how databases can handle large
                 quantities of data.</p>
-            <br>
+
+            <h5>Embedded Systems</h5>
+            <p><img src="./assets/funkit.png" alt="html5" class="img-thumbnail" align="right" width="200px"
+                    height="200px">
+            I have studied computer systems which used C++ to program a small embedded system. This was a microcomputer
+            which had input buttons, infrared light receivers/transmitters, and a matrix of lights to display output. I learnt how to handle the
+            IO of the microcomputer so that user interactions with the buttons would update the matrix display. This
+            involved a project where I created a game of snake between two fun kits.</p>
 
             <h5>Computer Graphics</h5>
             <div class="card">
@@ -75,7 +82,8 @@
             </div>
             <p>Using OpenGL has been a very fun way for me to get into computer graphics, and really brought out my
                 creative side. Since I was never very good at drawing when I was younger, I love the fact that I can use
-                a computer to do it for me.</p>
+                a computer to do it for me. I've used OpenGL to render and model 3D scenes. I've also studied algorithms
+            to implement transformations and lighting models. </p>
 
             <hr/>
 
