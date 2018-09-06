@@ -312,7 +312,7 @@
 
       getPhotoSrc: function () {
         // console.log(this.viewedAuction);
-        return "http://localhost:4941/api/v1/auctions/" + this.id + "/photos";
+        return this.apiUrl + "/api/v1/auctions/" + this.id + "/photos";
       },
 
       convertDate: function (input) {

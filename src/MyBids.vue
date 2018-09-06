@@ -139,7 +139,7 @@
 
 
       getPhotoSrc: function (id) {
-        return "http://localhost:4941/api/v1/auctions/" + id + "/photos";
+        return this.apiUrl + "/api/v1/auctions/" + id + "/photos";
       },
 
       convertDate: function (input) {
