@@ -118,7 +118,7 @@
         loggedIn: false,
         pageArray: [],
         searched: false,
-        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
+        apiUrl: 'https://jacksteel.co.nz/projects/seng365'
       }
     },
     mounted: function () {
@@ -189,7 +189,7 @@
 
       getPhotoSrc: function (id) {
         // console.log(this.viewedAuction);
-        return "http://localhost:4941/api/v1/auctions/" + id + "/photos";
+        return this.apiUrl + "/api/v1/auctions/" + id + "/photos";
       },
 
 

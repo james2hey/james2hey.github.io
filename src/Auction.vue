@@ -227,7 +227,7 @@
         categories: [],
         catId: 0,
         loggedIn: false,
-        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
+        apiUrl: 'https://jacksteel.co.nz/projects/seng365'
 
       }
     },

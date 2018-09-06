@@ -85,7 +85,7 @@
         id: 0,
         updateStatus: 0,
         message: "",
-        apiUrl: 'https://fathomless-hollows-20816.herokuapp.com'
+        apiUrl: 'https://jacksteel.co.nz/projects/seng365'
       }
     },
     mounted: function () {
