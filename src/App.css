@@ -1,33 +1,114 @@
 .App {
-  text-align: center;
+    text-align: center;
+
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.Job-title {
+    height: 10vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background: linear-gradient(135deg, #3cdddd, #ff1ac6);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.About {
+    background-color: #5111b1;
+    width: 220px;
+    position: relative;
+    /*top: 0;*/
+    /*left: -240px;*/
+    /*min-height: 100vh;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*font-size: calc(10px + 2vmin);*/
+    /*color: white;*/
+}
+
+.Skills {
+    background-color: #5abab1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.Experience {
+    background-color: #5111b1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.Contact {
+    width: 100%;
+    height: 100%;
+    /*background-color: #5abab1;*/
+    /*min-height: 100vh;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*font-size: calc(10px + 2vmin);*/
+    /*color: white;*/
+}
+
+.Contact-left {
+    background-color: #5f1;
+}
+
+.Contact-right {
+    background-color: #ff1ac6;
+}
+
+.Lhs {
+    /*position:absolute; left:50px; top:20px;*/
+    /*position: fixed;*/
+    /*left: 50%;*/
+    /*background: #ff1ac6;*/
+    /*right: 10px;*/
+    /*top: 5px;*/
+
+}
+
+.Rhs {
+    /*position: fixed;*/
+    /*margin-left: 60px;*/
+    /*background: #ff1ac6;*/
+    /*right: 10px;*/
+    /*top: 5px;*/
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
