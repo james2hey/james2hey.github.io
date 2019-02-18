@@ -25,18 +25,30 @@
 }
 
 .About {
-    background-color: #5111b1;
-    width: 220px;
-    position: relative;
-    /*top: 0;*/
-    /*left: -240px;*/
-    /*min-height: 100vh;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*font-size: calc(10px + 2vmin);*/
-    /*color: white;*/
+    float:left;
+    width:100%;
+    min-height: 300vh;
+    text-align:center;
+    font-family:'Pacifico', cursive;
+    color:#443366;
+    font-size:4vw;
+    /*margin-top:40vh;*/
+}
+
+.Rhs {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /*height: ;*/
+    background-color: #3cdddd;
+    width: 50%;
+}
+
+.Lhs {
+    width: 50%;
+    float: right;
+    background-color: #3342a1;
+
 }
 
 .Skills {
@@ -64,40 +76,27 @@
 .Contact {
     width: 100%;
     height: 100%;
-    /*background-color: #5abab1;*/
-    /*min-height: 100vh;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*font-size: calc(10px + 2vmin);*/
-    /*color: white;*/
 }
 
 .Contact-left {
     background-color: #5f1;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-left: -5px;
 }
 
 .Contact-right {
     background-color: #ff1ac6;
 }
 
-.Lhs {
-    /*position:absolute; left:50px; top:20px;*/
-    /*position: fixed;*/
-    /*left: 50%;*/
-    /*background: #ff1ac6;*/
-    /*right: 10px;*/
-    /*top: 5px;*/
-
-}
-
-.Rhs {
-    /*position: fixed;*/
-    /*margin-left: 60px;*/
-    /*background: #ff1ac6;*/
-    /*right: 10px;*/
-    /*top: 5px;*/
+.Scrollable {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
 }
 
 .App-link {

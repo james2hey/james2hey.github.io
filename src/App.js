@@ -23,25 +23,27 @@ class App extends Component { // about, skills, experience, contact
                     {/*</a>*/}
                  </header>
 
-                <div className="About">
-                    {/*<p>about</p>*/}
-                    {/*<div className="Lhs">*/}
-                        {/*<p>LHS</p>*/}
-                    {/*</div>*/}
-                    {/*<div className="Rhs">*/}
-                        {/*<p>ffff</p>*/}
-                    {/*</div>*/}
+                    <div className="About">
+                        <div className="Rhs">
+                            <p>About</p>
+                        </div>
+                        <div className="Lhs">
+                            <p>Stuff about me</p>
+                        </div>
+                    </div>
 
-
-                </div>
-
-                <div className="Skills">
+                <section className="Skills">
                     <table>
                         <td>asdf</td>
                         <td>d</td>
                     </table>
-
-                </div>
+                </section>
+                <section className="Skills">
+                    <table>
+                        <td>asdf</td>
+                        <td>d</td>
+                    </table>
+                </section>
 
                 <div className="Experience">
                     <table>
@@ -51,20 +53,12 @@ class App extends Component { // about, skills, experience, contact
 
                 </div>
 
-                {/*<div className="Contact">*/}
-                    <table className="Contact">
-                        <td className="Contact-left">asdf</td>
-                        <td className="Contact-right">d</td>
-                    </table>
-
-                {/*</div>*/}
-
+                <table>
+                    <td>asdf</td>
+                    <td>d</td>
+                </table>
                 <footer>
-
                 </footer>
-
-
-
             </div>
         );
     }
