@@ -1,0 +1,56 @@
+.App-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: linear-gradient(135deg, #288181, #9b1972);
+    color: white;
+
+    width: 100vw;
+    height: 100vh;
+
+    text-align: center;
+    font-size: calc(6px + 2vmin);
+    /*font-family: 'Segoe Print', serif;*/
+    font-weight: bold;
+}
+
+.App-header-text-title {
+    font-weight: bold;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 400px;
+    pointer-events: none;
+}
+
+.App-header-nav {
+    height: 100px;
+}
+
+.App-header-nav-text {
+    font-size:14px;
+    align-self: flex-start;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    /*text-decoration: underline;*/
+    border-bottom: 3px solid;
+
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

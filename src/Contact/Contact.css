@@ -1,0 +1,74 @@
+.Contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Left-container {
+    flex-grow: 2;
+    background: linear-gradient(135deg, #3cdddd, #dd22a1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    height: 100vh;
+    width: 100%;
+    /*width: 300px;*/
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.Right-container {
+    flex-grow: 1;
+    height: 100vh;
+    width: 100%;
+    /*background: #fffccf;*/
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.Left-header {
+    color: white;
+    font-size: calc(6px + 2vmin);
+    font-family: 'Segoe Print', serif;
+    font-weight: bold;
+}
+
+.Right-contents-container {
+    width: 80%;
+    height: 90%;
+    margin-left: 10px;
+}
+
+.Social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.Social-item {
+
+}
+
+.Social-item:hover {
+    color: #979e94;
+    border-bottom: 3px solid;
+}
+
+/*a {*/
+    /*color: #3cdddd;*/
+    /*border-bottom: 1px solid;*/
+/*}*/
+
+/*a:hover {*/
+    /*color: #429bdd;*/
+    /*border-bottom: 1px solid;*/
+/*}*/
+
+
