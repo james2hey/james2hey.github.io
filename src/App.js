@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
-import About from "./About/About";
-import Contact from "./Contact/Contact";
-import Header from "./Header/Header";
-import Experience from "./Experience/Experience";
-import Skills from "./Skills/Skills";
+import About from "./about/About";
+import Contact from "./contact/Contact";
+import Header from "./header/Header";
+import Experience from "./experience/Experience";
+import Skills from "./skills/Skills";
 
-class App extends Component { // about, skills, experience, contact
+class App extends Component {
     render() {
         return (
             <div className="App">

@@ -4,5 +4,37 @@
     font-family: 'Roboto', sans-serif;
     /*text-align: center;*/
     user-select: none;
+    color: white;
+    background: #1B1E25;
+}
 
+h1 {
+    color: white;
+    /*size: 8vh;*/
+    font-size: calc(6px + 4vmin);
+}
+
+h2 {
+    color: white;
+    font-size: calc(6px + 3vmin);
+}
+
+h3 {
+    color: white;
+    font-size: calc(6px + 2vmin);
+}
+
+h4 {
+    color: white;
+    font-size: calc(6px + 1.5vmin);
+}
+
+h5 {
+    color: white;
+    font-size: calc(6px + 1vmin);
+}
+
+h6 {
+    color: white;
+    font-size: calc(6px + 0.5vmin);
 }

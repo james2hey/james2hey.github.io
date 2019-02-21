@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    background: linear-gradient(135deg, #288181, #9b1972);
+    background: linear-gradient(0deg, #33686C, #5D1555);
     color: white;
 
     width: 100vw;
@@ -13,10 +13,7 @@
     font-size: calc(6px + 2vmin);
     /*font-family: 'Segoe Print', serif;*/
     font-weight: bold;
-}
-
-.App-header-text-title {
-    font-weight: bold;
+    border-bottom: 1px solid #979e94;
 }
 
 .App-logo {
@@ -27,6 +24,7 @@
 
 .App-header-nav {
     height: 100px;
+    align-items: flex-start;
 }
 
 .App-header-nav-text {
@@ -43,7 +41,6 @@ a {
 a:hover {
     /*text-decoration: underline;*/
     border-bottom: 3px solid;
-
 }
 
 @keyframes App-logo-spin {

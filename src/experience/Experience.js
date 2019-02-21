@@ -4,7 +4,7 @@ import './Experience.css';
 class Experience extends Component {
     render() {
         return (
-            <div className="About" id={"Experience"}>
+            <div className="Experience" id={"Experience"}>
                 <div className="Experience-left">
                     <p className="Experience-header">Experience</p>
                 </div>
