@@ -15,9 +15,9 @@
     height: 100vh;
     width: 100%;
 
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    /*position: -webkit-sticky;*/
+    /*position: sticky;*/
+    /*top: 0;*/
 }
 
 .Skills-header {
@@ -29,7 +29,7 @@
 
 .Skills-right {
     flex-grow: 1;
-    height: 200vh;
+    /*height: 200vh;*/
     width: 100%;
 }
 
@@ -49,16 +49,39 @@
 .Tech-image {
     width: 9vmin;
     height: 9vmin;
-    /*width: 70px;*/
-    /*height: 70px;*/
 }
 
-.Tech-container2 {
+.Processes-container {
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.Tech-row {
+.Processes-item {
+    width: 40%;
+    border-radius: 5px;
+    border: white 1px solid;
 
+    /*margin-left: 20px;*/
+    /*margin-right: 20px;*/
+}
+
+.Process-image {
+    width: calc(10px + 9vmin);
+    height: calc(10px + 9vmin);
+}
+
+.Process-text {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Skills {
+        flex-direction: column;
+    }
 }
 
 /*Grey colour of images #ededed*/

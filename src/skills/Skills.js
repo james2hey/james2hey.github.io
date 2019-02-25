@@ -11,6 +11,8 @@ import reactNative from '../assets/img/react-native.svg';
 import sql from '../assets/img/sql.svg';
 import swift from '../assets/img/swift.svg';
 import vue from '../assets/img/vue.svg';
+import agile from '../assets/img/agile.svg';
+import waterfall from '../assets/img/waterfall.svg'
 
 
 class Skills extends Component {
@@ -68,7 +70,26 @@ class Skills extends Component {
                             <p>SQL</p>
                         </div>
                     </div>
-                    <p>Talk about processes </p>
+                    <h3>Development Processes</h3>
+                    <div className='Processes-container'>
+                        <div className='Processes-item'>
+                            <h5>Agile (Scrum)</h5>
+                            <img src={agile} alt={'agile'} className="Process-image"/>
+                            <p className='Process-text'>During university I have been part of a course that involved a year long project
+                            under an agile development. We used the scrum framework in teams of 8. We undertook the generic
+                            scum meetings including sprint plannings, stand ups, retrospectives, and reviews.
+                            <br/><br/>
+                            I also was involved in using agile processes in an industry environment during my last internship,
+                            having the same principles in mind.</p>
+                        </div>
+                        <div className='Processes-item'>
+                            <h5>Waterfall</h5>
+                            <img src={waterfall} alt={'waterfall'} className="Process-image"/>
+                            <p className='Process-text'>I have been a part of a team who used the waterfall model for our project. This taught
+                            me both the pros and cons of such a model and helped me have exposoure to a variaty of process types.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
