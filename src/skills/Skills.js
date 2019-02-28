@@ -71,25 +71,31 @@ class Skills extends Component {
                         </div>
                     </div>
                     <h3>Development Processes</h3>
-                    <div className='Processes-container'>
-                        <div className='Processes-item'>
+                    <div className='White-outline-container'>
+                        <div className='White-outline-item'>
                             <h5>Agile (Scrum)</h5>
-                            <img src={agile} alt={'agile'} className="Process-image"/>
-                            <p className='Process-text'>During university I have been part of a course that involved a year long project
+                            <img src={agile} alt={'agile'} className="White-outline-container-image"/>
+                            <p className='White-outline-container-text'>During university I have been part of a course that involved a year long project
                             under an agile development. We used the scrum framework in teams of 8. We undertook the generic
                             scum meetings including sprint plannings, stand ups, retrospectives, and reviews.
                             <br/><br/>
                             I also was involved in using agile processes in an industry environment during my last internship,
                             having the same principles in mind.</p>
                         </div>
-                        <div className='Processes-item'>
+                        <div className='White-outline-item'>
                             <h5>Waterfall</h5>
-                            <img src={waterfall} alt={'waterfall'} className="Process-image"/>
-                            <p className='Process-text'>I have been a part of a team who used the waterfall model for our project. This taught
-                            me both the pros and cons of such a model and helped me have exposoure to a variaty of process types.
+                            <img src={waterfall} alt={'waterfall'} className="White-outline-container-image"/>
+                            <p className='White-outline-container-text'>I have been a part of a team who used the waterfall model for
+                                our project. This taught
+                                me both the pros and cons of such a model and helped me have exposoure to a variaty of
+                                process types. The traditional
+                                model also helped me learn how to use agile processes and was a good entry point into
+                                software development in
+                                a team environment.
                             </p>
                         </div>
                     </div>
+                    <br/>
                 </div>
             </div>
         );

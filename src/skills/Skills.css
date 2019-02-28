@@ -1,6 +1,6 @@
 .Skills {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
 }
@@ -14,15 +14,11 @@
 
     height: 100vh;
     width: 100%;
-
-    /*position: -webkit-sticky;*/
-    /*position: sticky;*/
-    /*top: 0;*/
 }
 
 .Skills-header {
     color: white;
-    font-size: calc(6px + 2vmin);
+    font-size: calc(10px + 6vmin);
     font-family: 'Segoe Print', serif;
     font-weight: bold;
 }
@@ -51,14 +47,13 @@
     height: 9vmin;
 }
 
-.Processes-container {
-
+.White-outline-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.Processes-item {
+.White-outline-item {
     width: 40%;
     border-radius: 5px;
     border: white 1px solid;
@@ -67,20 +62,25 @@
     /*margin-right: 20px;*/
 }
 
-.Process-image {
+.White-outline-container-image {
     width: calc(10px + 9vmin);
     height: calc(10px + 9vmin);
 }
 
-.Process-text {
+.White-outline-container-text {
     text-align: left;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 975px) {
     .Skills {
-        flex-direction: column;
+        flex-direction: row;
+    }
+    .Skills-left {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 }
 
