@@ -18,7 +18,7 @@ import waterfall from '../assets/img/waterfall.svg'
 class Skills extends Component {
     render() {
         return (
-            <div className="Skills" id={"Skills"}>
+            <div className="Skills" id={"skills"}>
                 <div className="Skills-left">
                     <p className="Skills-header">Skills</p>
                 </div>

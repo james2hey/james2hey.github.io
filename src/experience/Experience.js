@@ -2,15 +2,15 @@ import React, {Component} from 'react';
 import './Experience.css';
 import odms from '../assets/img/odms.svg';
 import auctions from '../assets/img/auctions.svg';
-import funkit from '../assets/img/funkit.png';
-import pedals from '../assets/img/pedals.PNG';
+import snake from '../assets/img/snake.svg';
+import pedals from '../assets/img/pedals.svg';
 import vista from '../assets/img/vista.svg';
 import clubhub from '../assets/img/clubhub.svg';
 
 class Experience extends Component {
     render() {
         return (
-            <div className="Experience" id={"Experience"}>
+            <div className="Experience" id={"experience"}>
                 <div className="Experience-left">
                     <p className="Experience-header">Experience</p>
                 </div>
@@ -29,7 +29,7 @@ class Experience extends Component {
                             </div>
                         </div>
                         <div className='Project-item'>
-                            <img src={funkit} alt={'funkit'} className="Project-image"/>
+                            <img src={snake} alt={'snake'} className="Project-image"/>
                             <div className='Project-body'>
                                 <h5>Racey Snakey</h5>
                                 <p>A two player game based on the classic Nokia game snake. This was a program written in C
