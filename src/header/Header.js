@@ -9,8 +9,9 @@ class Header extends Component { // header, skills, experience, contact
         return (
             <header className="App-header">
                 <h3>Software Developer & Design Enthusiast</h3>
-                <img src={logo} className="App-logo" alt="logo"/>
                 <img src={jamestoohey} className="My-name" alt="logo"/>
+                {/*<img src={logo} className="App-logo" alt="logo"/>*/}
+
                 <div className="App-header-nav">
                     <h5>
                     <a href={"#about"}>About</a> | <a href={"#skills"}>Skills</a> | <a
