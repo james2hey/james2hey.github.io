@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://jamestoohey.me",
+  "homepage": "https://james2hey.github.io",
   "eslintConfig": {
     "extends": "react-app"
   },
