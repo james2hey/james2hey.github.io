@@ -54,3 +54,6 @@ p {
     color: #ff1ac6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
