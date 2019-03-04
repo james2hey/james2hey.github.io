@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './About.css';
 import books from './../assets/img/books.svg';
-import pencil from './../assets/img/pencil.svg';
+import ux from './../assets/img/ux.svg';
 import computer from './../assets/img/computer.svg';
 import windowSize from 'react-window-size';
 import Nav from "../nav/Nav";
@@ -57,13 +57,13 @@ class About extends Component {
                         <br/>
                         <div className="Card-container">
                             <div className="Card-items">
-                                <img src={pencil} alt={'pencil'} className="Card-image"/>
+                                <img src={ux} alt={'ux'} className="Card-image"/>
                                 <div className="Card-right-side-text">
                                     <h4>Design</h4>
                                     <p className="Card-text">During my time as a software developer I have become
                                         very passionate about putting time and effort into product design. Visually
                                         appealing
-                                        software is something I strive to create and love to show.</p>
+                                        software is something I strive to create and love to show off.</p>
                                 </div>
                             </div>
                         </div>
