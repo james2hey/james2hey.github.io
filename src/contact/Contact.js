@@ -3,6 +3,7 @@ import './Contact.css';
 import mail from '../assets/img/mail.svg';
 import linkedin from '../assets/img/linkedin.svg';
 import github from '../assets/img/github.svg';
+import Nav from "../nav/Nav";
 
 class Contact extends Component {
     render() {
@@ -10,6 +11,7 @@ class Contact extends Component {
             <div className="Contact-container" id={"contact"}>
                 <div className="Left-container">
                     <p className="Left-header">Contact</p>
+                    <Nav />
                 </div>
                 <div className="Right-container">
                     <div className="Right-contents-container">

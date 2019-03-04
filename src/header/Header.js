@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import logo from './../logo.svg';
-// import './../App.css';
+
 import './Header.css'
 import jamestoohey from '../assets/img/jamestoohey.svg';
+import Nav from "../nav/Nav";
 
 class Header extends Component { // header, skills, experience, contact
     render() {
@@ -12,11 +13,7 @@ class Header extends Component { // header, skills, experience, contact
                 <img src={jamestoohey} className="My-name" alt="logo"/>
                 {/*<img src={logo} className="App-logo" alt="logo"/>*/}
 
-                <div className="App-header-nav">
-                    <h5>
-                    <a href={"#about"}>About</a> | <a href={"#skills"}>Skills</a> | <a
-                    href={"#experience"}>Experience</a> | <a href={"#contact"}>Contact</a></h5>
-                </div>
+                <Nav />
             </header>
 
         );

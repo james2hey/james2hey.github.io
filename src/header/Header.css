@@ -4,6 +4,7 @@
     justify-content: space-between;
 
     background: linear-gradient(0deg, #33686C, #5D1555);
+
     color: white;
 
     width: 100vw;
@@ -11,7 +12,6 @@
 
     text-align: center;
     font-size: calc(6px + 2vmin);
-    /*font-family: 'Segoe Print', serif;*/
     font-weight: bold;
     border-bottom: 1px solid #979e94;
 }
@@ -20,17 +20,6 @@
     animation: App-logo-spin infinite 20s linear;
     height: 400px;
     pointer-events: none;
-}
-
-.App-header-nav {
-    height: 100px;
-    align-items: flex-start;
-}
-
-.App-header-nav-text {
-    font-size:14px;
-    align-self: flex-start;
-    color: white;
 }
 
 .My-name {

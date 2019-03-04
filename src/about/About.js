@@ -4,6 +4,7 @@ import books from './../assets/img/books.svg';
 import pencil from './../assets/img/pencil.svg';
 import computer from './../assets/img/computer.svg';
 import windowSize from 'react-window-size';
+import Nav from "../nav/Nav";
 
 class About extends Component {
 
@@ -13,6 +14,7 @@ class About extends Component {
                 <div className="About-large" id={"about"}>
                     <div className="About-left">
                         <p className="About-header">About</p>
+                        <Nav />
                     </div>
                     <div className="About-right">
                         <div className="Card-container">

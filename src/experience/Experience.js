@@ -6,6 +6,7 @@ import snake from '../assets/img/snake.svg';
 import pedals from '../assets/img/pedals.svg';
 import vista from '../assets/img/vista.svg';
 import clubhub from '../assets/img/clubhub.svg';
+import Nav from "../nav/Nav";
 
 class Experience extends Component {
     render() {
@@ -13,6 +14,7 @@ class Experience extends Component {
             <div className="Experience" id={"experience"}>
                 <div className="Experience-left">
                     <p className="Experience-header">Experience</p>
+                    <Nav />
                 </div>
                 <div className="Experience-right">
                     <h3>Projects</h3>{/*TODO load each one in a modal on click*/}

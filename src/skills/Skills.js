@@ -13,6 +13,7 @@ import swift from '../assets/img/swift.svg';
 import vue from '../assets/img/vue.svg';
 import agile from '../assets/img/agile.svg';
 import waterfall from '../assets/img/waterfall.svg'
+import Nav from "../nav/Nav";
 
 
 class Skills extends Component {
@@ -21,6 +22,7 @@ class Skills extends Component {
             <div className="Skills" id={"skills"}>
                 <div className="Skills-left">
                     <p className="Skills-header">Skills</p>
+                    <Nav />
                 </div>
                 <div className="Skills-right">
                     <h3>Personal Tech Stack</h3>
