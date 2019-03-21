@@ -21,7 +21,9 @@ class Experience extends Component {
                     <div className='Project-container'>
                         {/*<a href={'https://github.com/UCNZ-SENG302-2018-Donaco/OrgaNZ'} target="_blank" rel="noopener noreferrer">*/}
                         <div className='Project-item'>
-                            <img src={odms} alt={'odms'} className="Project-image"/>
+                            <div className='Project-image-container'>
+                                <img src={odms} alt={'odms'} className="Project-image"/>
+                            </div>
                             <div className='Project-body'>
                                 <h5>ODMS</h5>
                                 <p>A project focused on creating an organ donation management system to support the deceased number in organ donors in New Zealand in the recent years.
@@ -31,7 +33,9 @@ class Experience extends Component {
                             </div>
                         </div>
                         <div className='Project-item'>
-                            <img src={snake} alt={'snake'} className="Project-image"/>
+                            <div className='Project-image-container'>
+                                <img src={snake} alt={'snake'} className="Project-image"/>
+                            </div>
                             <div className='Project-body'>
                                 <h5>Racey Snakey</h5>
                                 <p>A two player game based on the classic Nokia game snake. This was a program written in C
@@ -42,7 +46,9 @@ class Experience extends Component {
                         </div>
 
                         <div className='Project-item'>
-                            <img src={auctions} alt={'auctions'} className="Project-image"/>
+                            <div className='Project-image-container'>
+                                <img src={auctions} alt={'auctions'} className="Project-image"/>
+                            </div>
                             <div className='Project-body'>
                                 <h5>Auctions 365</h5>
                                 <p>My first project with a client-server architecture. The web application provides an auction website where

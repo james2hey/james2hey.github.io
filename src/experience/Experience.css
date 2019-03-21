@@ -36,7 +36,6 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: left;
-
 }
 
 .Project-item {
@@ -54,12 +53,15 @@
 }
 
 .Project-image-container {
-    width: calc(90px + 9vmin);
+    width: 300px ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .Project-image {
-    width: calc(10px + 9vmin);
-    height: calc(10px + 9vmin);
+    width: calc(9vmin);
+    height: calc(9vmin);
     /*margin-right: 20px;*/
 }
 

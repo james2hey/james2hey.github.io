@@ -12,10 +12,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
     height: 100vh;
     width: 100%;
-
 }
 
 .Right-container {
@@ -23,11 +21,10 @@
     width: 100%;
     background: #1B1E25;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
     justify-content: center;
-    /*margin-left: 10px;*/
-    /*margin-right: 10px*/
+    align-items: center;
 }
 
 .Left-header {
@@ -38,10 +35,13 @@
 }
 
 .Right-contents-container {
-    /*width: 80%;*/
+    width: 70%;
+    border-radius: 5px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .Brief-container {
@@ -52,14 +52,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-self: center;
 }
 
 .Social-item-container {
-    width: 140px;
+    width: 100px;
     height: 140px
 }
-
-
 
 .Social-image {
     width: 80px;
