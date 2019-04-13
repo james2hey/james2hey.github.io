@@ -55,8 +55,12 @@
 .Project-image-container {
     width: 300px ;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+}
+
+.Project-item:hover {
+    background-color: #33686C;
 }
 
 .Project-image {
@@ -70,7 +74,6 @@
     align-items: flex-start;
     text-align: left;
 }
-
 
 
 

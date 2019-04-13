@@ -5,6 +5,8 @@ import ux from './../assets/img/ux.svg';
 import computer from './../assets/img/computer.svg';
 import windowSize from 'react-window-size';
 import Nav from "../nav/Nav";
+import Project from "../components/Project";
+import Background from "../components/Background";
 
 class About extends Component {
 
@@ -17,6 +19,18 @@ class About extends Component {
                         <Nav />
                     </div>
                     <div className="About-right">
+                        {/*<Background*/}
+                            {/*header={'Education'}*/}
+                            {/*image={books}*/}
+                            {/*body={'Im currently in my fourth year of a BE(Hons) degree majoring in software engineering. Two internships in professional environments have provided me with over 800 hours of industrial experience.'}*/}
+                        {/*/>*/}
+                        {/*<Background*/}
+                            {/*header={'Education'}*/}
+                            {/*image={books}*/}
+                            {/*body={'Im currently in my fourth year of a BE(Hons) degree majoring in software engineering. Two internships in professional environments have provided me with over 800 hours of industrial experience.'}*/}
+                            {/*reversed={false}*/}
+                        {/*/>*/}
+
                         <div className="Card-container">
                             {/*TODO change to a man running after a graduation hat*/}
                             <div className="Card-items">
@@ -24,11 +38,9 @@ class About extends Component {
                                 <div className="Card-right-side-text">
                                     <h4>Education</h4>
                                     <p className="Card-text">I'm currently in my fourth year of a BE(Hons) degree
-                                        majoring
-                                        in software engineering.
+                                        majoring in software engineering.
                                         Two internships in professional environments have provided me with over 800
-                                        hours of
-                                        industrial experience.</p>
+                                        hours of industrial experience.</p>
                                 </div>
                             </div>
                         </div>

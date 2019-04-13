@@ -30,6 +30,16 @@
     height: 140px;
 }
 
+.Menu-link {
+color: white;
+text-decoration: none;
+}
+
+.Menu-link:hover {
+/*text-decoration: underline;*/
+border-bottom: 3px solid;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -37,7 +47,7 @@ a {
 
 a:hover {
     /*text-decoration: underline;*/
-    border-bottom: 3px solid;
+    /*border-bottom: 3px solid;*/
 }
 
 @keyframes App-logo-spin {

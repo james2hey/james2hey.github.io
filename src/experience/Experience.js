@@ -6,7 +6,13 @@ import snake from '../assets/img/snake.svg';
 import pedals from '../assets/img/pedals.svg';
 import vista from '../assets/img/vista.svg';
 import clubhub from '../assets/img/clubhub.svg';
+import matchup from '../assets/img/matchup.png'; //TODO convert this to a png
+import blog from '../assets/img/blog.png';
+import paper from '../assets/img/paper.svg';
 import Nav from "../nav/Nav";
+import Project from "../components/Project";
+import personasInRe from '../assets/pdf/personas_in_requirements_engineering.pdf';
+import securityWithOSS from '../assets/pdf/security_with_oss.pdf'
 
 class Experience extends Component {
     render() {
@@ -17,58 +23,51 @@ class Experience extends Component {
                     <Nav />
                 </div>
                 <div className="Experience-right">
-                    <h3>Projects</h3>{/*TODO load each one in a modal on click*/}
+                    <h3>Projects</h3>
                     <div className='Project-container'>
-                        {/*<a href={'https://github.com/UCNZ-SENG302-2018-Donaco/OrgaNZ'} target="_blank" rel="noopener noreferrer">*/}
-                        <div className='Project-item'>
-                            <div className='Project-image-container'>
-                                <img src={odms} alt={'odms'} className="Project-image"/>
-                            </div>
-                            <div className='Project-body'>
-                                <h5>ODMS</h5>
-                                <p>A project focused on creating an organ donation management system to support the deceased number in organ donors in New Zealand in the recent years.
-                                    We created a tabletop touch screen application for multiple clinicians to collaborate and use simultaneously. A demonstration can be found
-                                    <a href={'https://www.youtube.com/watch?v=mG5o0Ly3CCo&feature=youtu.be'} target="_blank" rel="noopener noreferrer"> here</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div className='Project-item'>
-                            <div className='Project-image-container'>
-                                <img src={snake} alt={'snake'} className="Project-image"/>
-                            </div>
-                            <div className='Project-body'>
-                                <h5>Racey Snakey</h5>
-                                <p>A two player game based on the classic Nokia game snake. This was a program written in C
-                                    to be used with two microcontrollers. Players each controlled a snake on a 7x5 LED matrix
-                                    and had to avoid touching the other snakes tail.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className='Project-item'>
-                            <div className='Project-image-container'>
-                                <img src={auctions} alt={'auctions'} className="Project-image"/>
-                            </div>
-                            <div className='Project-body'>
-                                <h5>Auctions 365</h5>
-                                <p>My first project with a client-server architecture. The web application provides an auction website where
-                                    users can create posts, make bids, and win auctions. This was a very fun project to introduce
-                                    myself into how client-server architectures work, and had an awesome outcome.
-                                </p>
-                            </div>
-                        </div>
-                        <div className='Project-item'>
-                            <div className='Project-image-container'>
-                                <img src={pedals} alt={'pedals'} className="Project-image"/>
-                            </div>
-                            <div className='Project-body'>
-                                <h5>Pedals</h5>
-                                <p>A Java desktop application targeted for Bike Mapping and Anaysis for cyclists in New York.
-                                    Basic route data from Citi Bike was used to base our application on and allowed us to provide
-                                    insightful data for users to plan routes and see existing statistics.
-                                </p>
-                            </div>
-                        </div>
+                        <Project
+                            header={'ODMS'}
+                            image={odms}
+                            link={'https://www.youtube.com/watch?v=mG5o0Ly3CCo&feature=youtu.be'}
+                            body={'A project focused on creating an organ donation management system to support the deceased number in organ donors in New Zealand in the recent years. ' +
+                            'We created a tabletop touch screen application for multiple clinicians to collaborate and use simultaneously.'}
+                        />
+                        <Project
+                            header={'matchup'}
+                            image={matchup}
+                            link={'https://github.com/james2hey/matchup'}
+                            body={'Matchup is an android application that can be used to manage and generate sports tournaments. I wrote this to become more familiar using Kotlin while also creating a useful application that volunteer sports organisers can use to help generate random tournaments.'}
+                        />
+                        <Project
+                            header={'Persona\'s in RE Blog'}
+                            image={blog}
+                            link={personasInRe}
+                            body={'In this project I researched into how persona\'s can be used to fit into Requirements Engineering activities. My teammate and I wrote a blog to elaborate on their usefulness how how they can be integrated to fit into the typical activities.'}
+                        />
+                        <Project
+                            header={'Security Vulnerabilities with Open Source Software'}
+                            image={paper}
+                            link={securityWithOSS}
+                            body={'Package managers like NPM and PiP are widely used in software development to manage open source software dependencies. This paper analyses security issues that can arise from using such tools and how developers can mitigate them.'}
+                        />
+                        <Project
+                            header={'Racey Snakey'}
+                            image={snake}
+                            link={'https://github.com/james2hey/racey-snakey'}
+                            body={'A two player game based on the classic Nokia game snake. This was a program written in C to be used with two microcontrollers. Players each controlled a snake on a 7x5 LED matrix and had to avoid touching the other snakes tail.'}
+                        />
+                        <Project
+                            header={'Auctions 365'}
+                            image={auctions}
+                            link={'https://github.com/james2hey/auctions-client'} //todo add this to live site
+                            body={'My first project with a client-server architecture. The web application provides an auction website where users can create posts, make bids, and win auctions. This was a very fun project to introduce myself into how client-server architectures work, and had an awesome outcome.'}
+                        />
+                        <Project
+                            header={'Pedals'}
+                            image={pedals}
+                            link={'https://github.com/james2hey/seng202-team10-project'}
+                            body={'A Java desktop application targeted for Bike Mapping and Anaysis for cyclists in New York. Basic route data from Citi Bike was used to base our application on and allowed us to provide insightful data for users to plan routes and see existing statistics.'}
+                        />
                     </div>
                     <h3>Internships</h3>
                     <div className='White-outline-container'>
