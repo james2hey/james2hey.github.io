@@ -5,6 +5,10 @@ import Contact from "./contact/Contact";
 import Header from "./header/Header";
 import Experience from "./experience/Experience";
 import Skills from "./skills/Skills";
+import ReactGA from "react-ga";
+
+ReactGA.initialize('UA-123365106-1');
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
     render() {

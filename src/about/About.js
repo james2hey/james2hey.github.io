@@ -33,49 +33,55 @@ class About extends Component {
 
                         <div className="Card-container">
                             {/*TODO change to a man running after a graduation hat*/}
-                            <div className="Card-items">
-                                <img src={books} alt={'books'} className="Card-image"/>
+                            <div className="Card-item">
+                                <div className={'Background-image-container'}>
+                                    <img src={books} alt={'books'} className="Card-image"/>
+                                </div>
                                 <div className="Card-right-side-text">
                                     <h4>Education</h4>
                                     <p className="Card-text">I'm currently in my fourth year of a BE(Hons) degree
-                                        majoring in software engineering.
-                                        Two internships in professional environments have provided me with over 800
+                                        majoring in software engineering at the University of Canterbury, New Zealand.
+                                        I have also completed two internships in professional environments which have  provided me with over 800
                                         hours of industrial experience.</p>
                                 </div>
                             </div>
                         </div>
                         <br/>
                         <div className="Card-container">
-                            <div className="Card-items">
+                            <div className="Card-item">
                                 <div>
                                     <h4>Why I Chose Software Development?</h4>
                                     <p className="Card-text">
                                         <ul>
                                             <li><span className="Highlight-blue">Continuous Leaning</span> - New challenges I encounter daily add to my problem
-                                                solving skills and help me grow as a programmer
+                                                solving skills and help me grow as a software engineer
                                             </li>
-                                            <li><span className="Highlight-pink">Teamwork</span> - The social aspect is awesome! I've learned and taught so much
-                                                off my teammates throughout the years
+                                            <li><span className="Highlight-pink">Teamwork</span> - The social aspect is awesome! I thrive in team environments and love working in teams to create great products
                                             </li>
-                                            <li><span className="Highlight-blue">Creativity</span> - I think creating products that have never existed is very
-                                                exciting. Outside of the box thinking is a must for this
+                                            <li><span className="Highlight-blue">Creativity</span> - Crafting products that have never existed is very
+                                                exciting and I love the challange of coming up with solutions to clients problems.
                                             </li>
                                         </ul>
                                     </p>
                                 </div>
-                                <img src={computer} alt={'computer'} className="Card-image"/>
+                                <div className={'Background-image-container'}>
+                                    <img src={computer} alt={'computer'} className="Card-image"/>
+                                </div>
                             </div>
                         </div>
                         <br/>
                         <div className="Card-container">
-                            <div className="Card-items">
-                                <img src={ux} alt={'ux'} className="Card-image"/>
+                            <div className="Card-item">
+                                <div className={'Background-image-container'}>
+                                    <img src={ux} alt={'ux'} className="Card-image"/>
+                                </div>
                                 <div className="Card-right-side-text">
                                     <h4>Design</h4>
                                     <p className="Card-text">During my time as a software developer I have become
                                         very passionate about putting time and effort into product design. Visually
-                                        appealing
-                                        software is something I strive to create and love to show off.</p>
+                                        appealing software is something I strive to create and love to show off. I think
+                                    software design is a huge part of development as this is the part of the system
+                                    end users actually interact with</p>
                                 </div>
                             </div>
                         </div>

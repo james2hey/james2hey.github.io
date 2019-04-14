@@ -11,9 +11,9 @@ export default class Background extends Component {
                 <div className='Project-item'>
                     <div className='Project-body'>
                         <h4>{this.props.header}</h4>
-                        <p>{this.props.body}</p>
+                        {this.props.body}
                     </div>
-                    <div className='Project-image-container'>
+                    <div className='Background-image-container'>
                         <img src={this.props.image} alt={'project image'} className="Project-image"/>
                     </div>
                 </div>

@@ -48,7 +48,7 @@ class Experience extends Component {
                             header={'Security Vulnerabilities with Open Source Software'}
                             image={paper}
                             link={securityWithOSS}
-                            body={'Package managers like NPM and PiP are widely used in software development to manage open source software dependencies. This paper analyses security issues that can arise from using such tools and how developers can mitigate them.'}
+                            body={'Package managers like NPM and PiP are widely used in software development to manage open source software dependencies. This paper analyses security issues that can arise from using such tools and looks into mitigation techniques to prevent attackers from exploiting OSS.'}
                         />
                         <Project
                             header={'Racey Snakey'}
@@ -66,7 +66,7 @@ class Experience extends Component {
                             header={'Pedals'}
                             image={pedals}
                             link={'https://github.com/james2hey/seng202-team10-project'}
-                            body={'A Java desktop application targeted for Bike Mapping and Anaysis for cyclists in New York. Basic route data from Citi Bike was used to base our application on and allowed us to provide insightful data for users to plan routes and see existing statistics.'}
+                            body={'A Java desktop application targeted for bike mapping and analysis for cyclists in New York. Basic route data from Citi Bike was used to base our application on and allowed us to provide insightful data for users to plan routes and see existing statistics.'}
                         />
                     </div>
                     <h3>Internships</h3>
@@ -74,7 +74,7 @@ class Experience extends Component {
                         <div className='White-outline-item'>
                             <h5>Vista</h5>
                             <img src={vista} alt={'vista'} className="White-outline-container-image"/>
-                            <p className='White-outline-container-text'>I worked as an intern software developer for the 2018-19 summer. Initially I worked as an iOS
+                            <p className='White-outline-container-text'>I worked as an intern software developer for Vista over the 2018-19 summer. Initially I worked as an iOS
                                 developer where I used Swift and objective C. Secondly, I worked on a new React Native project
                                 where I created the client side application that used an existing back-end server. This internship
                                 gave me a fantastic experience in a unique and exciting field of work. This also
@@ -86,7 +86,7 @@ class Experience extends Component {
                             <h5>ClubHub</h5>
                             <img src={clubhub} alt={'clubhub'} className="White-outline-container-image"/>
                             <p className='White-outline-container-text'>My first experience in industry was at ClubHubSSL. I spent my time in web development creating
-                                websites for sports teams. This also involved directly talking to clients to gather requirements
+                                websites for sports clubs. This also involved direct communication with clients to gather requirements
                                 and understand customer needs. Having direct contact with clients showed me the importance of
                                 designing websites to meet their requirements and helping them with design decisions along the way.
                             </p>
