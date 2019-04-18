@@ -65,10 +65,9 @@
     height: 80px;
 }
 
-/*.Social-image:hover {*/
-    /*fill: red;*/
-    /*border-bottom: 3px solid;*/
-/*}*/
+.Social-image:hover {
+    border-bottom: 3px solid;
+}
 
 
 @media only screen and (max-width: 975px) {

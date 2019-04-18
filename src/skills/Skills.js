@@ -79,22 +79,21 @@ class Skills extends Component {
                             <h5>Agile (Scrum)</h5>
                             <img src={agile} alt={'agile'} className="White-outline-container-image"/>
                             <p className='White-outline-container-text'>During university I have been part of a course that involved a year long project
-                            under agile development. We used the scrum framework and worked in large teams of 8. Generic scrum meeting were taken
+                            under agile development. We used the scrum framework and worked in large teams of 8. Generic scrum meetings were taken
                             including sprint plannings, stand ups, retrospectives, and product reviews.
                             <br/><br/>
-                                During my last internship we also used the scrum framework for our projects development.
+                                During my last internship we also used the scrum framework when developing our product.
                             </p>
                         </div>
                         <div className='White-outline-item'>
                             <h5>Waterfall</h5>
                             <img src={waterfall} alt={'waterfall'} className="White-outline-container-image"/>
-                            <p className='White-outline-container-text'>I was been a part of a team who used the waterfall model for
-                                my first team project. This taught
-                                me both the pros and cons of such a model and helped me have exposure to a variety of
-                                processes.
+                            <p className='White-outline-container-text'>The first software team project I worked in used the
+                                waterfall development model. This taught me both the pros and cons of such a model and
+                                showed me how it can be applied to developing software products.
                                 <br/><br/>
                                 This traditional model was a good entry point into software development and taught me
-                                how this type of process can be effective for certain types of projects.
+                                how this type of process can be effective for particular projects.
                             </p>
                         </div>
                     </div>

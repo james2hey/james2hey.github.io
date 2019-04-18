@@ -13,6 +13,7 @@ import Nav from "../nav/Nav";
 import Project from "../components/Project";
 import personasInRe from '../assets/pdf/personas_in_requirements_engineering.pdf';
 import securityWithOSS from '../assets/pdf/security_with_oss.pdf'
+import circuitStats from '../assets/img/circuit-stats.png';
 
 class Experience extends Component {
     render() {
@@ -29,14 +30,22 @@ class Experience extends Component {
                             header={'ODMS'}
                             image={odms}
                             link={'https://www.youtube.com/watch?v=mG5o0Ly3CCo&feature=youtu.be'}
-                            body={'A project focused on creating an organ donation management system to support the deceased number in organ donors in New Zealand in the recent years. ' +
+                            body={'A project focused on creating an organ donation management system to support the decreasing number of organ donors in New Zealand .' +
                             'We created a tabletop touch screen application for multiple clinicians to collaborate and use simultaneously.'}
+                        />
+                        <Project
+                            header={'Cicuit Stats'}
+                            image={circuitStats}
+                            link={'https://play.google.com/store/apps/details?id=nz.co.vista.cinemastats'}
+                            body={'A cross platform application that managers of cinema chains can use to track their key performance ' +
+                            'indicators. I helped write this application with three other interns during my time at Vista and it ' +
+                            'was then published to the App Store and Google Play.'}
                         />
                         <Project
                             header={'matchup'}
                             image={matchup}
                             link={'https://github.com/james2hey/matchup'}
-                            body={'Matchup is an android application that can be used to manage and generate sports tournaments. I wrote this to become more familiar using Kotlin while also creating a useful application that volunteer sports organisers can use to help generate random tournaments.'}
+                            body={'Matchup is an android application that can be used to manage and generate sports tournaments. I wrote this to get more familiar with the Kotlin programming language while also creating a useful application that volunteer sports organisers can use to help generate random tournaments.'}
                         />
                         <Project
                             header={'Persona\'s in RE Blog'}
@@ -60,7 +69,7 @@ class Experience extends Component {
                             header={'Auctions 365'}
                             image={auctions}
                             link={'https://github.com/james2hey/auctions-client'} //todo add this to live site
-                            body={'My first project with a client-server architecture. The web application provides an auction website where users can create posts, make bids, and win auctions. This was a very fun project to introduce myself into how client-server architectures work, and had an awesome outcome.'}
+                            body={'My first project with a client-server architecture. The web application provides an auction website where users can create posts, make bids, and win auctions. This was a great introduction into the client-server architecture and had an awesome outcome.'}
                         />
                         <Project
                             header={'Pedals'}

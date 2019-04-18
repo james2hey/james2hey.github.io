@@ -8,7 +8,7 @@ import Skills from "./skills/Skills";
 import ReactGA from "react-ga";
 
 ReactGA.initialize('UA-123365106-1');
-// ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
     render() {
