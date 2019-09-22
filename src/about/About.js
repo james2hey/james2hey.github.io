@@ -32,23 +32,20 @@ class About extends Component {
                     {/*/>*/}
 
                     <div className="Card-container">
-                        {/*TODO change to a man running after a graduation hat*/}
-                        <div className="Card-item">
-                            <div className={'Background-image-container'}>
+                            <div>
                                 <img src={books} alt={'books'} className="Card-image"/>
                             </div>
-                            <div className="Card-right-side-text">
+                            <div>
                                 <h4>Education</h4>
-                                <p className="Card-text">I'm currently in my fourth year of a BE(Hons) degree
+                                <p>I'm currently in my fourth year of a BE(Hons) degree
                                     majoring in software engineering at the University of Canterbury, New Zealand.
                                     I have also completed two internships in professional environments which have
                                     provided me with over 800 hours of industrial experience.</p>
                             </div>
-                        </div>
                     </div>
+
                     <br/>
                     <div className="Card-container">
-                        <div className="Card-item">
                             <div>
                                 <h4>Why I Chose Software Development?</h4>
                                 <p className="Card-text">
@@ -72,12 +69,10 @@ class About extends Component {
                             <div className={'Background-image-container'}>
                                 <img src={computer} alt={'computer'} className="Card-image"/>
                             </div>
-                        </div>
                     </div>
                     <br/>
                     <div className="Card-container">
-                        <div className="Card-item">
-                            <div className={'Background-image-container'}>
+                            <div>
                                 <img src={ux} alt={'ux'} className="Card-image"/>
                             </div>
                             <div className="Card-right-side-text">
@@ -88,7 +83,6 @@ class About extends Component {
                                     software design is a huge part of development as this is the part of the system
                                     end users actually interact with</p>
                             </div>
-                        </div>
                     </div>
                     <br/>
                 </div>
