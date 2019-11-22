@@ -7,7 +7,7 @@
 
 .Left-container {
     flex-grow: 2;
-    background: linear-gradient(135deg, #3cdddd, #dd22a1);
+    background: #3cdddd;
     display: flex;
     flex-direction: column;
     justify-content: center;

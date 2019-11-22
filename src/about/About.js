@@ -5,13 +5,10 @@ import ux from './../assets/img/ux.svg';
 import computer from './../assets/img/computer.svg';
 import windowSize from 'react-window-size';
 import Nav from "../nav/Nav";
-import Project from "../components/Project";
-import Background from "../components/Background";
 
 class About extends Component {
 
     render() {
-        console.log(this.props.windowWidth);
         return (
             <div className="About-large" id={"about"}>
                 <div className="About-left">
@@ -30,6 +27,7 @@ class About extends Component {
                     {/*body={'Im currently in my fourth year of a BE(Hons) degree majoring in software engineering. Two internships in professional environments have provided me with over 800 hours of industrial experience.'}*/}
                     {/*reversed={false}*/}
                     {/*/>*/}
+                    <br/>
 
                     <div className="Card-container">
                             <div>

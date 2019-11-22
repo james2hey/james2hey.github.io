@@ -18,7 +18,7 @@ class Contact extends Component {
                         <div className='Brief-container'>
                             <h3>Let's talk</h3>
                             <p>I'm available for full time work from November 2019 onwards, or part time work throughout the year.</p>
-                            <h5 className='Highlight-blue'>James Toohey</h5>
+                            <h5 className='Highlight-pink'>James Toohey</h5>
                             <p>+64 021 265 9668</p>
                         </div>
                         {/*<a href="mailto:jamestoohey97@gmail.com">jamestoohey97@gmail.com</a>*/}
