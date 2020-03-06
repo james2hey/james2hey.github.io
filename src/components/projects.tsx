@@ -1,5 +1,5 @@
 import React from 'react';
-import './Projects.css';
+import '../scss/projects.scss';
 import odms from '../assets/img/odms.svg';
 import auctions from '../assets/img/auctions.svg';
 import snake from '../assets/img/snake.svg';
@@ -10,8 +10,8 @@ import matchup from '../assets/img/matchup.png'; //TODO convert this to a png
 import blog from '../assets/img/blog.png';
 import paper from '../assets/img/paper.svg';
 import circuitStats from '../assets/img/circuit-stats.png';
-import { Nav } from '../nav/Nav';
-import { Project } from '../components/Project';
+import { Nav } from './nav';
+import { Project } from './subcomponents/project';
 // import personasInRe from '../assets/pdf/personas_in_requirements_engineering.pdf';
 
 export const Projects: React.FC = props => {

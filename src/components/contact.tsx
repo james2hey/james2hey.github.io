@@ -1,9 +1,9 @@
 import React from 'react';
-import './Contact.css';
+import '../scss/contact.scss';
 import mail from '../assets/img/mail.svg';
 import linkedin from '../assets/img/linkedin.svg';
 import github from '../assets/img/github.svg';
-import { Nav } from '../nav/Nav';
+import { Nav } from './nav';
 
 export const Contact: React.FC = () => {
     return (

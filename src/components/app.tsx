@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
-import { Header } from './header/Header';
-import { About } from './about/About';
-import { Skills } from './skills/Skills';
-import { Experience } from './experience/Experience';
-import { Projects } from './projects/Projects';
-import { Contact } from './contact/Contact';
+import '../scss/app.scss';
+import { Header } from './header';
+import { About } from './about';
+import { Experience } from './experience';
+import { Projects } from './projects';
+import { Contact } from './contact';
+import { Skills } from './skills';
 
 export const App: React.FC = () => {
     return (

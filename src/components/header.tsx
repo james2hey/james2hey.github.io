@@ -1,8 +1,8 @@
 import React from 'react';
-import './Header.css'
+import '../scss/header.scss'
 import jamestoohey from '../assets/img/jamestoohey.svg';
 import portrait from '../assets/img/portrait.jpg';
-import { Nav } from '../nav/Nav';
+import { Nav } from './nav';
 
 export const Header: React.FC = () => {
     return (

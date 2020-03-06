@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import './About.css';
+import '../scss/about.scss';
 import books from './../assets/img/books.svg';
 import ux from './../assets/img/ux.svg';
 import computer from './../assets/img/computer.svg';
-import { Nav } from '../nav/Nav';
+import { Nav } from './nav';
 // import windowSize from 'react-window-size'; // TODO do this with the DOM instead
 
 export const About: React.FC = () => {

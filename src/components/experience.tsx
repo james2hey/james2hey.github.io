@@ -1,8 +1,8 @@
 import React from 'react';
-import './Experience.css';
+import '../scss/experience.scss';
 import vista from '../assets/img/vista.svg';
 import clubhub from '../assets/img/clubhub.svg';
-import { Nav } from '../nav/Nav';
+import { Nav } from './nav';
 
 export const Experience: React.FC = () => {
     return (

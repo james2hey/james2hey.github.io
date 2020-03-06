@@ -17,6 +17,7 @@
     background-image: url("../assets/img/portrait.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    /*-webkit-backdrop-filter: grayscale(1);*/
 }
 
 .App-logo {
@@ -31,6 +32,7 @@
     -webkit-animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
     height: 140px;
+    /*-webkit-filter: grayscale(1);*/
 }
 
 .Menu-link {

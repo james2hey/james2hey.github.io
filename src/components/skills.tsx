@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Skills.css';
+import '../scss/skills.scss';
 import angular from '../assets/img/angular.svg';
 import c from '../assets/img/c.svg';
 import java from '../assets/img/java.svg';
@@ -13,8 +13,8 @@ import swift from '../assets/img/swift.svg';
 import vue from '../assets/img/vue.svg';
 import agile from '../assets/img/agile.svg';
 import waterfall from '../assets/img/waterfall.svg'
-import { Nav } from '../nav/Nav';
-import { TechItem } from '../components/TechItem';
+import { Nav } from '../components/nav';
+import { TechItem } from '../components/subcomponents/tech-item';
 
 export const Skills: React.FC = () => {
     return (
