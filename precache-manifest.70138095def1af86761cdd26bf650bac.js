@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "13fade56a90613d1cfe9fd3fb5790f1f",
+    "revision": "2701d38d6cab34d529d1d868093ec244",
     "url": "/index.html"
   },
   {
-    "revision": "342ebb12d82a21878dfa",
-    "url": "/static/css/main.48d83b7c.chunk.css"
+    "revision": "4528c2c37d9c0e6b7575",
+    "url": "/static/css/main.f336e88e.chunk.css"
   },
   {
-    "revision": "1d78e3a9319c8d4cd886",
-    "url": "/static/js/2.a63fd196.chunk.js"
+    "revision": "0b8963699b7ec2493d0e",
+    "url": "/static/js/2.6d9cc169.chunk.js"
   },
   {
     "revision": "5356fa2f66e46e6c05e4cbe319ac7f1d",
-    "url": "/static/js/2.a63fd196.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.6d9cc169.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "342ebb12d82a21878dfa",
-    "url": "/static/js/main.ac5ebc9d.chunk.js"
+    "revision": "4528c2c37d9c0e6b7575",
+    "url": "/static/js/main.741b7eeb.chunk.js"
   },
   {
     "revision": "a513106688a270c6a04c",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1020842d145c65d66eb5c7e496f7d98f",
     "url": "/static/media/auctions.1020842d.svg"
+  },
+  {
+    "revision": "24c1d806f8cacbb2ef01782e2ac326a4",
+    "url": "/static/media/blog.24c1d806.png"
   },
   {
     "revision": "543adf87ee381740f00d39febbfbace1",
@@ -92,8 +96,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/odms.e2ac3f01.svg"
   },
   {
+    "revision": "e47a74d0370b4d26771393fa06439fed",
+    "url": "/static/media/paper.e47a74d0.svg"
+  },
+  {
     "revision": "47c85eb520430b283359c270fcf56bca",
     "url": "/static/media/pedals.47c85eb5.svg"
+  },
+  {
+    "revision": "2fdcc1e53450f50c44959dd583597d3e",
+    "url": "/static/media/personas_in_requirements_engineering.2fdcc1e5.pdf"
   },
   {
     "revision": "d174b02a4bd8945b58cc8bd875b49485",
@@ -114,6 +126,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bd8afa24c4cc9dbe109767316936464d",
     "url": "/static/media/react.bd8afa24.svg"
+  },
+  {
+    "revision": "e2dd5736039336e04a531efd94e27767",
+    "url": "/static/media/security_with_oss.e2dd5736.pdf"
   },
   {
     "revision": "7d7a2f94e78e45d12cb64c00d8a13e97",
