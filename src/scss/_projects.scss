@@ -1,0 +1,53 @@
+@import "colors";
+
+.Project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .Project-left {
+    flex-grow: 2;
+    background: linear-gradient(135deg, $color-cyan, $color-pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+
+    .Project-header {
+      font-size: calc(10px + 6vmin);
+      font-family: 'Segoe Print', serif;
+      font-weight: bold;
+    }
+  }
+
+  .Project-right {
+    flex-grow: 1;
+    width: 100%;
+
+    .Project-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: left;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 975px) {
+  .Project {
+    flex-direction: row;
+  }
+  .Project-left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+

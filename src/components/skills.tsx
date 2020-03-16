@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import '../scss/skills.scss';
+import React from 'react';
+import '../scss/_skills.scss';
 import angular from '../assets/img/angular.svg';
 import c from '../assets/img/c.svg';
 import java from '../assets/img/java.svg';
@@ -13,8 +13,8 @@ import swift from '../assets/img/swift.svg';
 import vue from '../assets/img/vue.svg';
 import agile from '../assets/img/agile.svg';
 import waterfall from '../assets/img/waterfall.svg'
-import { Nav } from '../components/nav';
-import { TechItem } from '../components/subcomponents/tech-item';
+import { Nav } from './nav';
+import { TechItem } from './subcomponents/tech-item';
 
 export const Skills: React.FC = () => {
     return (
@@ -75,27 +75,29 @@ export const Skills: React.FC = () => {
                 <div className='White-outline-container'>
                     <div className='White-outline-item'>
                         <h5>Agile (Scrum)</h5>
-                        <img src={agile} alt={'agile'} className="White-outline-container-image"/>
-                        <p className='White-outline-container-text'>During university I have been part of a course that involved a year long project
-                            under agile development. We used the scrum framework and worked in large teams of 8. Generic scrum meetings were taken
+                        <img src={agile} alt={'agile'} className="White-outline-container-image" />
+                        <p className='White-outline-container-text'>During university I have been part of a course that
+                            involved a year long project
+                            under agile development. We used the scrum framework and worked in large teams of 8. Generic
+                            scrum meetings were taken
                             including sprint plannings, stand ups, retrospectives, and product reviews.
-                            <br/><br/>
+                            <br /><br />
                             During my last internship we also used the scrum framework when developing our product.
                         </p>
                     </div>
                     <div className='White-outline-item'>
                         <h5>Waterfall</h5>
-                        <img src={waterfall} alt={'waterfall'} className="White-outline-container-image"/>
+                        <img src={waterfall} alt={'waterfall'} className="White-outline-container-image" />
                         <p className='White-outline-container-text'>The first software team project I worked in used the
                             waterfall development model. This taught me both the pros and cons of such a model and
                             showed me how it can be applied to developing software products.
-                            <br/><br/>
+                            <br /><br />
                             This traditional model was a good entry point into software development and taught me
                             how this type of process can be effective for particular projects.
                         </p>
                     </div>
                 </div>
-                <br/>
+                <br />
             </div>
         </div>
     );

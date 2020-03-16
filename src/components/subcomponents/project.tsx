@@ -1,10 +1,11 @@
 import React from "react";
+import '../../scss/subcomponents/project.scss';
 
 export interface ProjectProps {
     image: string;
     header: string;
     link: string;
-    body: string; // TODO use children instead of this ugly boi
+    body: string;
 }
 
 export const Project: React.FC<ProjectProps> = props => {

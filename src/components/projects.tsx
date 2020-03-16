@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/projects.scss';
+import '../scss/_projects.scss';
 import odms from '../assets/img/odms.svg';
 import auctions from '../assets/img/auctions.svg';
 import snake from '../assets/img/snake.svg';
@@ -12,9 +12,10 @@ import paper from '../assets/img/paper.svg';
 import circuitStats from '../assets/img/circuit-stats.png';
 import { Nav } from './nav';
 import { Project } from './subcomponents/project';
-// import personasInRe from '../assets/pdf/personas_in_requirements_engineering.pdf';
+import personasInRe from '../assets/pdf/personas_in_requirements_engineering.pdf';
+import securityWithOSS from '../assets/pdf/security_with_oss.pdf';
 
-export const Projects: React.FC = props => {
+export const Projects: React.FC = () => {
     return (
         <div className="Project" id={"project"}>
             <div className="Project-left">
@@ -22,8 +23,8 @@ export const Projects: React.FC = props => {
                 <Nav />
             </div>
             <div className="Project-right">
-                <h3>Projects</h3>
                 <div className='Project-container'>
+                    <h3>Projects</h3>
                     <Project
                         header={'ODMS'}
                         image={odms}
@@ -60,18 +61,12 @@ export const Projects: React.FC = props => {
                         link={'https://github.com/james2hey/matchup'}
                         body={'Matchup is an android application that can be used to manage and generate sports tournaments. I wrote this to get more familiar with the Kotlin programming language while also creating a useful application that volunteer sports organisers can use to help generate random tournaments.'}
                     />
-                    {/*<Project*/}
-                    {/*    header={'Persona\'s in RE Blog'}*/}
-                    {/*    image={blog}*/}
-                    {/*    link={personasInRe}*/}
-                    {/*    body={'In this project I researched into how persona\'s can be used to fit into Requirements Engineering activities. My teammate and I wrote a blog to elaborate on their usefulness how how they can be integrated to fit into the typical activities.'}*/}
-                    {/*/>*/}
-                    {/*<Project*/}
-                    {/*    header={'Security Vulnerabilities with Open Source Software'}*/}
-                    {/*    image={paper}*/}
-                    {/*    link={securityWithOSS}*/}
-                    {/*    body={'Package managers like NPM and PiP are widely used in software development to manage open source software dependencies. This paper analyses security issues that can arise from using such tools and looks into mitigation techniques to prevent attackers from exploiting OSS.'}*/}
-                    {/*/>*/}
+                    <Project
+                        header={'Pedals'}
+                        image={pedals}
+                        link={'https://github.com/james2hey/seng202-team10-project'}
+                        body={'A Java desktop application targeted for bike mapping and analysis for cyclists in New York. Basic route data from Citi Bike was used to base our application on and allowed us to provide insightful data for users to plan routes and see existing statistics.'}
+                    />
                     <Project
                         header={'Racey Snakey'}
                         image={snake}
@@ -84,15 +79,23 @@ export const Projects: React.FC = props => {
                         link={'https://github.com/james2hey/auctions-client'} //todo add this to live site
                         body={'My first project with a client-server architecture. The web application provides an auction website where users can create posts, make bids, and win auctions. This was a great introduction into the client-server architecture and had an awesome outcome.'}
                     />
+                    <br />
+                    <h3>Research</h3>
                     <Project
-                        header={'Pedals'}
-                        image={pedals}
-                        link={'https://github.com/james2hey/seng202-team10-project'}
-                        body={'A Java desktop application targeted for bike mapping and analysis for cyclists in New York. Basic route data from Citi Bike was used to base our application on and allowed us to provide insightful data for users to plan routes and see existing statistics.'}
+                        header={'Persona\'s in RE Blog'}
+                        image={blog}
+                        link={personasInRe}
+                        body={'In this project I researched into how persona\'s can be used to fit into Requirements Engineering activities. My teammate and I wrote a blog to elaborate on their usefulness how how they can be integrated to fit into the typical activities.'}
+                    />
+                    <Project
+                        header={'Security Vulnerabilities with Open Source Software'}
+                        image={paper}
+                        link={securityWithOSS}
+                        body={'Package managers like NPM and PiP are widely used in software development to manage open source software dependencies. This paper analyses security issues that can arise from using such tools and looks into mitigation techniques to prevent attackers from exploiting OSS.'}
                     />
                 </div>
-                <br/>
             </div>
+
         </div>
     );
 };

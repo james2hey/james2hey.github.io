@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/experience.scss';
+import '../scss/_experience.scss';
 import vista from '../assets/img/vista.svg';
 import clubhub from '../assets/img/clubhub.svg';
 import { Nav } from './nav';

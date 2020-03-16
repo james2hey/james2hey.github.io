@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import '../scss/about.scss';
+import React from 'react';
+import '../scss/_about.scss';
 import books from './../assets/img/books.svg';
 import ux from './../assets/img/ux.svg';
 import computer from './../assets/img/computer.svg';
@@ -14,17 +14,6 @@ export const About: React.FC = () => {
                 <Nav/>
             </div>
             <div className="About-right">
-                {/*<Background*/}
-                {/*header={'Education'}*/}
-                {/*image={books}*/}
-                {/*body={'Im currently in my fourth year of a BE(Hons) degree majoring in software engineering. Two internships in professional environments have provided me with over 800 hours of industrial experience.'}*/}
-                {/*/>*/}
-                {/*<Background*/}
-                {/*header={'Education'}*/}
-                {/*image={books}*/}
-                {/*body={'Im currently in my fourth year of a BE(Hons) degree majoring in software engineering. Two internships in professional environments have provided me with over 800 hours of industrial experience.'}*/}
-                {/*reversed={false}*/}
-                {/*/>*/}
                 <br/>
 
                 <div className="Card-container">
@@ -33,7 +22,7 @@ export const About: React.FC = () => {
                     </div>
                     <div>
                         <h4>Education</h4>
-                        <p>I'm currently in my fourth year of a BE(Hons) degree
+                        <p>I've recently finished my fourth year of a BE(Hons) degree
                             majoring in software engineering at the University of Canterbury, New Zealand.
                             I have also completed two internships in professional environments which have
                             provided me with over 800 hours of industrial experience.</p>

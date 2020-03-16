@@ -1,19 +1,21 @@
+@import "colors";
+
 .Skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .Skills-left {
-    flex-grow: 1;
-    background: linear-gradient(135deg, #3cdddd, #ff1ac6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex-grow: 1;
+  background: linear-gradient(135deg, $color-cyan, #ff1ac6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 .Skills-header {

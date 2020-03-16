@@ -1,19 +1,21 @@
+@import "colors";
+
 .Contact-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    user-select: text;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  user-select: text;
 }
 
 .Left-container {
-    flex-grow: 2;
-    background: #3cdddd;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    width: 100%;
+  flex-grow: 2;
+  background: $color-cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .Right-container {
@@ -28,10 +30,10 @@
 }
 
 .Left-header {
-    color: white;
-    font-size: calc(10px + 6vmin);
-    font-family: 'Segoe Print', serif;
-    font-weight: bold;
+  color: $color-white;
+  font-size: calc(10px + 6vmin);
+  font-family: 'Segoe Print', serif;
+  font-weight: bold;
 }
 
 .Right-contents-container {
