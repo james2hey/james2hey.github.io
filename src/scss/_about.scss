@@ -1,0 +1,98 @@
+@import "colors";
+
+.About-large {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /*background: linear-gradient(180deg, #33686C, #1B1E25);*/
+  background: linear-gradient(0deg, $color-cyan-dull, $color-pink-dull);
+}
+
+.About-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, #33686C, #1B1E25);
+}
+
+.About-left {
+    flex-grow: 2;
+    background: rgba(39, 42, 50, 0.01);
+    /*background: #5D1555;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+}
+
+.About-header {
+  color: $color-white;
+  font-size: calc(10px + 6vmin);
+  font-family: 'Segoe Print', serif;
+  font-weight: bold;
+}
+
+.About-right {
+    flex-grow: 1;
+    /*height: 100vh;*/
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /*justify-content: t;*/
+    /*background: #fffccf;*/
+}
+
+.Card-container {
+    background-color: #272A32;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.Card-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Card-image {
+  margin: 4px 4px;
+  width: 16vmin;
+  height: 16vmin;
+}
+
+.Card-right-side-text {
+    margin-left: 40px;
+}
+
+
+.Background-image-container {
+    width: 300px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media only screen and (min-width: 975px) {
+    .About-large {
+        flex-direction: row;
+    }
+    .About-left {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+}

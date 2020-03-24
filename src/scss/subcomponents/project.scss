@@ -1,0 +1,37 @@
+@import '../colors';
+
+.Project-item {
+  width: 70%;
+  border-radius: 5px;
+  background-color: #272A32;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 rgba(10, 11, 15, 0.3), 0 1px 3px 1px rgba(214, 225, 233, 0.15);
+  box-sizing: border-box;
+
+  .Project-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px 4px;
+
+    .Project-image {
+      width: calc(8vmin);
+      height: calc(8vmin);
+    }
+  }
+
+  .Project-body {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+}
+
+.Project-item:hover {
+  background: linear-gradient(135deg, $color-cyan-dull, $color-pink-dull);
+}
+

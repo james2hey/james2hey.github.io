@@ -1,0 +1,89 @@
+@import "colors";
+
+.Skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.Skills-left {
+  flex-grow: 1;
+  background: linear-gradient(135deg, $color-cyan, #ff1ac6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100%;
+}
+
+.Skills-header {
+    color: white;
+    font-size: calc(10px + 6vmin);
+    font-family: 'Segoe Print', serif;
+    font-weight: bold;
+}
+
+.Skills-right {
+    flex-grow: 1;
+    /*height: 200vh;*/
+    width: 100%;
+}
+
+.Tech-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.Tech-item-container {
+    width: 12vmin;
+
+    /*width: 80px;*/
+}
+
+.Tech-image {
+    width: 9vmin;
+    height: 9vmin;
+}
+
+.White-outline-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.White-outline-item {
+    width: 40%;
+    border-radius: 5px;
+    border: white 1px solid;
+
+    /*margin-left: 20px;*/
+    /*margin-right: 20px;*/
+}
+
+.White-outline-container-image {
+    width: calc(10px + 9vmin);
+    height: calc(10px + 9vmin);
+}
+
+.White-outline-container-text {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media only screen and (min-width: 975px) {
+    .Skills {
+        flex-direction: row;
+    }
+    .Skills-left {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+}
+
+/*Grey colour of images #ededed*/

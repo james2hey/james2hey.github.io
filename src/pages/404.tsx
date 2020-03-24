@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Layout from '../default-components/layout'
-import SEO from '../default-components/seo'
+import Layout from '../gatsby/layout'
+import SEO from '../gatsby/seo'
 
 const NotFoundPage: React.FC = () => {
     return (

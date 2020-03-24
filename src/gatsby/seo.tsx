@@ -6,14 +6,19 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+
+interface Meta {
+  name?: string;
+  property?: string;
+  content: string;
+}
 
 interface SEOProps {
     description?: string;
     lang?: string;
-    meta: object[];
+    meta?: JSX.IntrinsicElements['meta'][];
     title: string;
 }
 
@@ -74,9 +79,9 @@ const SEO: React.FC<SEOProps> = ({ description, lang, meta, title }) =>  {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat()}
     />
-  )
+  ) // TODO concat meta
 };
 
 export default SEO;
