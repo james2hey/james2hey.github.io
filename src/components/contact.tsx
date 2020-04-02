@@ -10,7 +10,6 @@ export const Contact: React.FC = () => {
         <div className="Contact-container" id={"contact"}>
             <div className="Left-container">
                 <p className="Left-header">Contact</p>
-                <Nav />
             </div>
             <div className="Right-container">
                 <div className="Right-contents-container">

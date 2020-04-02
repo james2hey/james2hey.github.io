@@ -1,9 +1,26 @@
+@import "colors";
 
-.App-header-nav {
-    height: 100px;
+.nav {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    background-color: $color-grey-light;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
-.App-header-nav-text {
-    font-size:14px;
-    color: white;
+.nav-link {
+    color: $color-white;
+    text-underline: none;
+    text-decoration: none;
+    border-bottom: none;
+
+    &:hover {
+        color: $color-blue;
+    }
 }

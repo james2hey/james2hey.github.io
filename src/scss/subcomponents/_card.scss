@@ -1,0 +1,22 @@
+@import '../colors';
+
+:root {
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+}
+
+
+.card {
+  display: inline-block;
+  background-color: $color-grey-light;
+  box-sizing: border-box;
+
+  &:hover {
+    background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue, $color-pink);
+    //background: radial-gradient(at top, #4405f7, transparent);
+    //transform: translate(-50%, -50%);
+    //transition: width .2s ease, height .2s ease;
+    //border-radius: --mouse-x;
+    //border-bottom-width: var(-x);
+  }
+}

@@ -4,14 +4,12 @@ import books from '../assets/images/books.svg';
 import ux from '../assets/images/ux.svg';
 import computer from '../assets/images/computer.svg';
 import { Nav } from './nav';
-// import windowSize from 'react-window-size'; // TODO do this with the DOM instead
 
 export const About: React.FC = () => {
     return (
         <div className="About-large" id={"about"}>
             <div className="About-left">
                 <p className="About-header">About</p>
-                <Nav/>
             </div>
             <div className="About-right">
                 <br/>

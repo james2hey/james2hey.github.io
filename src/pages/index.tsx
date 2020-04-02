@@ -4,13 +4,13 @@ import { Link } from "gatsby"
 import Layout from "../gatsby/layout"
 import Image from "../gatsby/image"
 import SEO from "../gatsby/seo"
-import App from "../components/app";
+import Portfolio from "../components/portfolio";
 
 const IndexPage: React.FC = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <App />
+            <Portfolio />
         </Layout>
     );
 };

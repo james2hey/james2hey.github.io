@@ -9,7 +9,7 @@
 
 .Skills-left {
   flex-grow: 1;
-  background: linear-gradient(135deg, $color-cyan, #ff1ac6);
+  background: linear-gradient(135deg, $color-blue, #ff1ac6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@
 .White-outline-item {
     width: 40%;
     border-radius: 5px;
-    border: white 1px solid;
+    border: $color-white 1px solid;
 
     /*margin-left: 20px;*/
     /*margin-right: 20px;*/

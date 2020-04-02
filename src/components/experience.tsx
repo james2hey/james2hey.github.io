@@ -9,7 +9,6 @@ export const Experience: React.FC = () => {
         <div className="Project" id={"experience"}>
             <div className="Experience-left">
                 <p className="Experience-header">Experience</p>
-                <Nav />
             </div>
             <div className="Experience-right">
                 <h3>Internships</h3>

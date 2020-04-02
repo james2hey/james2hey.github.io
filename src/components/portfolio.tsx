@@ -7,18 +7,20 @@ import { Projects } from "./projects";
 import { Contact } from "./contact";
 import { Skills } from "./skills";
 import { Link } from "gatsby";
+import { Nav } from "./nav";
 
-export const App: React.FC = () => {
+export const Portfolio: React.FC = () => {
   return (
     <div className="App">
-      <Header/>
-      <About/>
-      <Skills/>
-      <Experience/>
-      <Projects/>
-      <Contact/>
+      <Header />
+      <Nav />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
     </div>
   );
 };
 
-export default App;
+export default Portfolio;

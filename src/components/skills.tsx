@@ -21,7 +21,6 @@ export const Skills: React.FC = () => {
         <div className="Skills" id={"skills"}>
             <div className="Skills-left">
                 <p className="Skills-header">Skills</p>
-                <Nav />
             </div>
             <div className="Skills-right">
                 <h3>Personal Tech Stack</h3>

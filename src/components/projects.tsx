@@ -20,7 +20,6 @@ export const Projects: React.FC = () => {
         <div className="Project" id={"project"}>
             <div className="Project-left">
                 <p className="Project-header">Projects</p>
-                <Nav />
             </div>
             <div className="Project-right">
                 <div className='Project-container'>
