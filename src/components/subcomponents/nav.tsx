@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby";
-import "../scss/_nav.scss"
+import "../../scss/subcomponents/_nav.scss"
 
 const separator = '  |  ';
 

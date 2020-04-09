@@ -7,12 +7,6 @@
   align-items: center;
 }
 
-//br {
-//  color: $color-grey-light;
-//  border-bottom: 10px;
-//  border-bottom-color: #dd22a1;
-//}
-
 .playground-cards {
   display: flex;
   flex-direction: row;
@@ -22,11 +16,11 @@
 }
 
 .playground-card {
-  //padding: 1em;
+  padding: 8px;
   justify-content: center;
   width: 40%;
 }
 
 .highlight {
-  color: $color-blue-light;
+  color: $color-blue;
 }

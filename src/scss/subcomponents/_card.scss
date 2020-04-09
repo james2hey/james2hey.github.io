@@ -7,16 +7,12 @@
 
 
 .card {
-  display: inline-block;
+  //display: inline-block;
   background-color: $color-grey-light;
   box-sizing: border-box;
 
   &:hover {
-    background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue, $color-pink);
-    //background: radial-gradient(at top, #4405f7, transparent);
-    //transform: translate(-50%, -50%);
-    //transition: width .2s ease, height .2s ease;
-    //border-radius: --mouse-x;
-    //border-bottom-width: var(-x);
+    //background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-pink-dark, $color-blue-dark);
+    background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
   }
 }

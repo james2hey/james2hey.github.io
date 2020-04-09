@@ -1,4 +1,5 @@
 import React from "react";
+import "../../scss/subcomponents/_tech-item.scss"
 
 export interface TechItemProps {
     name: string,
@@ -7,8 +8,8 @@ export interface TechItemProps {
 
 export const TechItem: React.FC<TechItemProps> = props => {
     return (
-        <div className="Tech-item-container">
-            <img src={props.image} alt={'tech image'} className="Tech-image"/>
+        <div className="tech-item">
+            <img src={props.image} alt={`${props.name} image`} className="tech-item_image"/>
             <p>{props.name}</p>
         </div>
     )

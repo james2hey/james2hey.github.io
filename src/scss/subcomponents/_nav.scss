@@ -1,13 +1,16 @@
-@import "colors";
+@import "../colors";
+@import "../font";
 
 .nav {
     display: flex;
     flex-direction: row;
-    height: 56px;
+    height: 60px;
+    width: 100%;
     background-color: $color-grey-light;
     align-items: center;
     justify-content: center;
     opacity: 0.8;
+    font-family: $default-font;
 
     position: -webkit-sticky;
     position: sticky;

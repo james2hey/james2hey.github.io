@@ -1,15 +1,15 @@
 @import "colors";
 
-.About-large {
+.about-large {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   /*background: linear-gradient(180deg, #33686C, #1B1E25);*/
-  background: linear-gradient(0deg, $color-cyan-dull, $color-pink-dull);
+  background: linear-gradient(0deg, $color-cyan-dull, $color-pink-dark);
 }
 
-.About-small {
+.about-small {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +17,7 @@
     background: linear-gradient(180deg, #33686C, #1B1E25);
 }
 
-.About-left {
+.about-left {
     flex-grow: 2;
     background: rgba(39, 42, 50, 0.01);
     display: flex;
@@ -28,14 +28,14 @@
     width: 100%;
 }
 
-.About-header {
+.about-header {
   color: $color-white;
   font-size: calc(10px + 6vmin);
   font-family: 'Segoe Print', serif;
   font-weight: bold;
 }
 
-.About-right {
+.about-right {
     flex-grow: 1;
     /*height: 100vh;*/
     width: 100%;
@@ -48,14 +48,18 @@
     /*background: #fffccf;*/
 }
 
-.Card-container {
-    background-color: #272A32;
-    border-radius: 5px;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
+.about--card-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+
+  &--image {
+    margin: 4px 4px;
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .Card-item {
@@ -63,12 +67,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.Card-image {
-  margin: 4px 4px;
-  width: 16vmin;
-  height: 16vmin;
 }
 
 .Card-right-side-text {
@@ -86,10 +84,10 @@
 
 
 @media only screen and (min-width: 975px) {
-    .About-large {
+    .about-large {
         flex-direction: row;
     }
-    .About-left {
+    .about-left {
         position: -webkit-sticky;
         position: sticky;
         top: 0;

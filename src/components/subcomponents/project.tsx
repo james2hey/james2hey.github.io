@@ -1,5 +1,6 @@
 import React from "react";
 import '../../scss/subcomponents/project.scss';
+import { Card } from "./card";
 
 export interface ProjectProps {
     image: string;
@@ -11,16 +12,13 @@ export interface ProjectProps {
 export const Project: React.FC<ProjectProps> = props => {
     const { image, link, body, header } = props;
     return (
-        <div className='Project-item'>
-            <div className='Project-image-container'>
-                <img src={image} alt={'project image'} className="Project-image"/>
-            </div>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-                <div className='Project-body'>
-                    <h5>{header}</h5>
-                    <p>{body}</p>
-                </div>
-            </a>
+      <Card className={'project'} link={link}>
+        <img src={image} alt={'project image'} className="project--image"/>
+        <div className='project--details'>
+          <br/>
+            <h4>{header}</h4>
+            <p>{body}</p>
         </div>
+      </Card>
     )
 };

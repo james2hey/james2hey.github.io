@@ -9,12 +9,11 @@ export interface CardProps {
 export const Card: React.FC<CardProps & React.HTMLProps<HTMLDivElement>> = props => {
   const classes = `card ${props.className}`;
   const handleOnMouseEnter = (event: React.MouseEvent) => {
-    const x = event.clientX;
-    const y = event.clientY - event.pageY;
-    // const y = event.nativeEvent.offsetY;
+    const div = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - div.left;
+    const y = event.clientY - div.top;
     document.documentElement.style.setProperty('--mouse-x', `${x}px`);
     document.documentElement.style.setProperty('--mouse-y', `${y}px`);
-    console.log(`${x}px`, `${y}px`);
   };
 
   return (

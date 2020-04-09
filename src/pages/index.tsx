@@ -9,7 +9,7 @@ import Portfolio from "../components/portfolio";
 const IndexPage: React.FC = () => {
     return (
         <Layout>
-            <SEO title="Home" />
+            <SEO title="Portfolio" />
             <Portfolio />
         </Layout>
     );

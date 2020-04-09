@@ -10,7 +10,7 @@ import matchup from '../assets/images/matchup.png'; //TODO convert this to a png
 import blog from '../assets/images/blog.png';
 import paper from '../assets/images/paper.svg';
 import circuitStats from '../assets/images/circuit-stats.png';
-import { Nav } from './nav';
+import { Nav } from './subcomponents/nav';
 import { Project } from './subcomponents/project';
 import personasInRe from '../assets/pdfs/personas_in_requirements_engineering.pdf';
 import securityWithOSS from '../assets/pdfs/security_with_oss.pdf';

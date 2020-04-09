@@ -3,7 +3,7 @@ import '../scss/_contact.scss';
 import mail from '../assets/images/mail.svg';
 import linkedin from '../assets/images/linkedin.svg';
 import github from '../assets/images/github.svg';
-import { Nav } from './nav';
+import { Nav } from './subcomponents/nav';
 
 export const Contact: React.FC = () => {
     return (

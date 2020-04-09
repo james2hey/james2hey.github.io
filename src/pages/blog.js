@@ -2,11 +2,13 @@ import { graphql, Link } from "gatsby";
 import React from "react";
 import Layout from "../gatsby/layout";
 import "../scss/_blog.scss"
+import SEO from "../gatsby/seo";
 
 export const Blog = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <Layout>
+      <SEO title="Blog" />
       <div className={'blog'}>
         <h1>James Toohey - <span className={"highlight"}>Blog</span></h1>
         <h3>This is where I post about things I do to make my life easier working with software.</h3>

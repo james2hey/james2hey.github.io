@@ -1,0 +1,24 @@
+@import "../colors";
+
+:root {
+  --bar-level: 0;
+}
+
+.bar {
+  height: 28px;
+  width: 60%;
+  background-color: $color-grey-light;
+
+  &_fill {
+    //--bar-level: 0;
+    @keyframes bar-fill-animation {
+      from  {width: 0}
+      to {width: var(--bar-level)}
+    }
+    width: var(--bar-level);
+    height: 28px;
+    background-color: $color-blue;
+    animation: bar-fill-animation;
+    animation-duration: 3s;
+  }
+}
