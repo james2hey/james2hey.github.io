@@ -13,7 +13,6 @@ import swift from '../assets/images/swift.svg';
 import vue from '../assets/images/vue.svg';
 import agile from '../assets/images/agile.svg';
 import waterfall from '../assets/images/waterfall.svg'
-import { Nav } from './subcomponents/nav';
 import { TechItem } from './subcomponents/tech-item';
 
 export const Skills: React.FC = () => {

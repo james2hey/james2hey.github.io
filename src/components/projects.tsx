@@ -6,11 +6,10 @@ import snake from '../assets/images/snake.svg';
 import pedals from '../assets/images/pedals.svg';
 import milk from '../assets/images/milk.png';
 import pip from '../assets/images/pip.svg';
-import matchup from '../assets/images/matchup.png'; //TODO convert this to a png
+import matchup from '../assets/images/matchup.png';
 import blog from '../assets/images/blog.png';
 import paper from '../assets/images/paper.svg';
 import circuitStats from '../assets/images/circuit-stats.png';
-import { Nav } from './subcomponents/nav';
 import { Project } from './subcomponents/project';
 import personasInRe from '../assets/pdfs/personas_in_requirements_engineering.pdf';
 import securityWithOSS from '../assets/pdfs/security_with_oss.pdf';

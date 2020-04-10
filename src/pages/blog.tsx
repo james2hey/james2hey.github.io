@@ -1,17 +1,37 @@
-import { graphql, Link } from "gatsby";
+import "../scss/templates/_blog-post.scss";
+import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
-import Layout from "../gatsby/layout";
-import "../scss/_blog.scss"
-import SEO from "../gatsby/seo";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-export const Blog = ({ data }) => {
+interface BlogPageProps {
+  allMarkdownRemark: {
+    edges: [{
+      node: {
+        id: string;
+        excerpt: string;
+        frontmatter: {
+          title: string;
+          date: string;
+          path: string;
+        }
+      }
+    }]
+  }
+}
+
+
+export const BlogPage: React.FC<PageProps<BlogPageProps>> = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <Layout>
       <SEO title="Blog" />
-      <div className={'blog'}>
-        <h1>James Toohey - <span className={"highlight"}>Blog</span></h1>
-        <h3>This is where I post about things I do to make my life easier working with software.</h3>
+      <div className={"blog-post"}>
+        <h1>
+          <Link to={'/'} className={'blog-post__heading--white'}>
+            James Toohey</Link> - <span className={"highlight"}>Blog</span>
+        </h1>
+        <h4>A software engineer helping speed up and improve development experiences.</h4>
         <div className="blog-posts">
           {posts
             .filter(post => post.node.frontmatter.title.length > 0)
@@ -50,4 +70,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default Blog;
+export default BlogPage;

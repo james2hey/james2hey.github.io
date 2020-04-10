@@ -1,6 +1,5 @@
 import React from 'react';
 import '../scss/_header.scss'
-import { Nav } from './subcomponents/nav';
 
 export const Header: React.FC = () => {
     return (

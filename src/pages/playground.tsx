@@ -1,10 +1,10 @@
-import Layout from "../gatsby/layout";
+import Layout from "../components/layout";
 import React from "react";
 import { Card } from "../components/subcomponents/card";
 import "./../scss/_playground.scss";
 import { Button } from "../components/subcomponents/button";
 import { Nav } from "../components/subcomponents/nav";
-import SEO from "../gatsby/seo";
+import SEO from "../components/seo";
 import { Code } from "../components/subcomponents/code";
 import react from '../assets/images/react.svg';
 import python from '../assets/images/python.svg';

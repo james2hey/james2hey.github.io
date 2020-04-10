@@ -3,7 +3,6 @@ import "../scss/_about.scss";
 import books from "../assets/images/books.svg";
 import ux from "../assets/images/ux.svg";
 import computer from "../assets/images/computer.svg";
-import { Nav } from "./subcomponents/nav";
 import { Card } from "./subcomponents/card";
 
 export const About: React.FC = () => {

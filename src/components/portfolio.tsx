@@ -6,7 +6,6 @@ import { Experience } from "./experience";
 import { Projects } from "./projects";
 import { Contact } from "./contact";
 import { Skills } from "./skills";
-import { Link } from "gatsby";
 import { Nav } from "./subcomponents/nav";
 
 export const Portfolio: React.FC = () => {

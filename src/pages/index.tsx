@@ -1,14 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../gatsby/layout"
-import Image from "../gatsby/image"
-import SEO from "../gatsby/seo"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Portfolio from "../components/portfolio";
 
 const IndexPage: React.FC = () => {
     return (
-        <Layout>
+        <Layout hideFooter={true}>
             <SEO title="Portfolio" />
             <Portfolio />
         </Layout>

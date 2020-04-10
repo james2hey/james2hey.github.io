@@ -1,0 +1,14 @@
+@import "../colors";
+
+.blog-post {
+  max-width: 800px;
+
+  &__heading {
+    color: $color-blue;
+
+    &--white {
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+}
