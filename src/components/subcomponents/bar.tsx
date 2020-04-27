@@ -8,9 +8,14 @@ export interface BarProps {
 export const Bar: React.FC<BarProps & React.HTMLProps<HTMLElement>> = props => {
   const { level, style } = props;
 
+  useEffect(() => {
+    if (!document) return;
+    document.documentElement.style.setProperty('--bar-level', `${percent}%`);
+  }, []);
+
   if (level < 0 || level > 10) throw Error('Bar level must be between 0-10');
   const percent = level * 10;
-  document.documentElement.style.setProperty('--bar-level', `${percent}%`);
+
 
   // style?.setProperty('--bar-level', `${percent}%`);
   // useEffect(() => {

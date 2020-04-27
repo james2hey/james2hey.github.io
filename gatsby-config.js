@@ -31,7 +31,7 @@ module.exports = {
         background_color: `#0288d1`,
         theme_color: `#0288d1`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -47,6 +47,17 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-123365106-1",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ["/preview/**", "/do-not-track/me/too/"], // Avoids sending pageview hits from custom paths
+        pageTransitionDelay: 0,
       },
     },
     "gatsby-plugin-catch-links",

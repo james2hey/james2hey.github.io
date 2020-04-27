@@ -6,9 +6,9 @@ import { Button } from "../components/subcomponents/button";
 import { Nav } from "../components/subcomponents/nav";
 import SEO from "../components/seo";
 import { Code } from "../components/subcomponents/code";
-import react from '../assets/images/react.svg';
-import python from '../assets/images/python.svg';
-import kotlin from '../assets/images/kotlin.svg';
+import react from './../assets/images/react.svg';
+import python from './../assets/images/python.svg';
+import kotlin from './../assets/images/kotlin.svg';
 import { TechItem } from "../components/subcomponents/tech-item";
 import { Bar } from "../components/subcomponents/bar";
 
@@ -26,10 +26,8 @@ const PlaygroundPage: React.FC = () => {
           </div>
         </PlaygroundSection>
         <PlaygroundSection title={'Buttons'}>
-          <div className={"playground-cards"}>
-            <Button kind={"primary"}>Primary</Button>
-            <Button kind={"secondary"}>Secondary</Button>
-          </div>
+          <Button kind={"primary"}>Primary</Button>
+          <Button kind={"secondary"}>Secondary</Button>
         </PlaygroundSection>
         <PlaygroundSection title={'Bar'}>
           <Bar level={6} />
@@ -41,6 +39,7 @@ const PlaygroundPage: React.FC = () => {
           <Code>
             playground.components.forEach(component => console.log(`lookin good!`);
           </Code>
+          <br/>
         </PlaygroundSection>
         <PlaygroundSection title={'Tech Item'}>
           <div className={"playground-cards"}>

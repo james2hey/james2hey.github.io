@@ -4,13 +4,15 @@ date: 2020-04-10T00:00:00.000Z
 title: "Hello, World"
 ---
 
-Wherever you're reading this from, hello and welcome to my blog. I've created this for a variety of reasons, the main being 
-to give myself a central place to document how I set up everything computer related. As a software engineer, 
-I often find small knacks and tricks which speed up my day to day life. It can be easy to forget exactly how I've set 
-these up as they aren't always common things e.g. when generating new ssh-keys, there are some use cli flags I like to add
-to ease the process.
+Hello, I'm James. Welcome to my blog. 
 
-To maintain these as concrete details I've decided a personal blog would be best. Furthermore, other 
-people might also find these knacks useful! As I continue to get these new ideas.
+I've created this for a variety of reasons, mainly to give myself a central place to document how I set up all 
+things computer-related. I'm frequently finding new tricks and ideas which I use to speed up day-to-day life as a 
+Software Engineer. It can be easy to forget the details of exactly how I've set these up - they aren't always common 
+tasks. For example, sometimes I need to generate a new shh-key, but I can't always remember the exact flags to use. 
+So why not just add this to a blog? Then I'll never forget.
 
-So there we have it, my first blog. I can officially say Hello, World 😎
+Who knows, maybe other people will also find these tricks and ideas useful? Other engineers and developers around 
+the world use similar tools and technologies to me, so perhaps these will help speed up some of their daily tasks!
+
+So there we have it, my first blog. Hello, World 😎

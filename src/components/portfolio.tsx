@@ -1,6 +1,6 @@
 import React from "react";
 import "../scss/_app.scss";
-import { Header } from "./header";
+import { Intro } from "./intro";
 import { About } from "./about";
 import { Experience } from "./experience";
 import { Projects } from "./projects";
@@ -10,15 +10,15 @@ import { Nav } from "./subcomponents/nav";
 
 export const Portfolio: React.FC = () => {
   return (
-    <div className="App">
-      <Header />
+    <>
+      <Intro />
       <Nav />
       <About />
       <Skills />
       <Experience />
       <Projects />
       <Contact />
-    </div>
+    </>
   );
 };
 

@@ -19,60 +19,62 @@
 }
 
 .Skills-header {
-    color: white;
-    font-size: calc(10px + 6vmin);
-    font-family: 'Segoe Print', serif;
-    font-weight: bold;
+  color: white;
+  font-size: calc(10px + 6vmin);
+  font-family: 'Segoe Print', serif;
+  font-weight: bold;
 }
 
 .Skills-right {
-    flex-grow: 1;
-    /*height: 200vh;*/
-    width: 100%;
+  flex-grow: 1;
+  margin-top: 20px;
+  /*height: 200vh;*/
+  width: 100%;
 }
 
 .Tech-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .White-outline-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .White-outline-item {
-    width: 40%;
-    border-radius: 5px;
-    border: $color-white 1px solid;
+  width: 40%;
+  border-radius: 5px;
+  padding-top: 10px;
+  border: $color-white 1px solid;
 
-    /*margin-left: 20px;*/
-    /*margin-right: 20px;*/
+  /*margin-left: 20px;*/
+  /*margin-right: 20px;*/
 }
 
 .White-outline-container-image {
-    width: calc(10px + 9vmin);
-    height: calc(10px + 9vmin);
+  width: calc(10px + 9vmin);
+  height: calc(10px + 9vmin);
 }
 
 .White-outline-container-text {
-    text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 @media only screen and (min-width: 975px) {
-    .Skills {
-        flex-direction: row;
-    }
-    .Skills-left {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-    }
+  .Skills {
+    flex-direction: row;
+  }
+  .Skills-left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
 }
 
 /*Grey colour of images #ededed*/

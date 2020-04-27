@@ -7,12 +7,15 @@
 
 
 .card {
-  //display: inline-block;
+  background-color: $color-grey-light;
+  box-sizing: border-box;
+}
+
+.card--fancy {
   background-color: $color-grey-light;
   box-sizing: border-box;
 
   &:hover {
-    //background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-pink-dark, $color-blue-dark);
     background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
   }
 }
