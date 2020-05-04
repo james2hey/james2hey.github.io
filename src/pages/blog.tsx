@@ -31,7 +31,7 @@ export const BlogPage: React.FC<PageProps<BlogPageProps>> = ({ data }) => {
           <Link to={'/'} className={'blog-post__heading--white'}>
             James Toohey</Link> - <span className={"highlight"}>Blog</span>
         </h1>
-        <h4>A software engineer helping speed up and improve development experiences.</h4>
+        <h4>A software engineer from New Zealand 🇳🇿</h4>
         <div className="blog-posts">
           {posts
             .filter(post => post.node.frontmatter.title.length > 0)
