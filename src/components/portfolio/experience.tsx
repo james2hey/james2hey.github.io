@@ -1,7 +1,7 @@
 import React from 'react';
-import '../scss/_experience.scss';
-import vista from '../assets/images/vista.svg';
-import clubhub from '../assets/images/clubhub.svg';
+import '../../scss/portfolio/_experience.scss';
+import vista from '../../assets/images/vista.svg';
+import clubhub from '../../assets/images/clubhub.svg';
 
 export const Experience: React.FC = () => {
     return (

@@ -3,12 +3,22 @@
 .intro {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   //width: 100vw;
   height: 100vh;
   text-align: center;
   padding: 40px 0;
+
+  &__profile-picture {
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+    margin: 0 0 30px;
+    border-color: $color-white;
+    border-width: 2px;
+    border-style: solid;
+  }
 }
 
 .highlight {

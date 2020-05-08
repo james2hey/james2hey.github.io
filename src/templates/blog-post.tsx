@@ -11,7 +11,7 @@ interface BlogPostProps {
 const BlogPost: React.FC<PageProps<BlogPostProps>> = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
-    <Layout>
+    <Layout hideNav={true}>
       <SEO title={post.frontmatter.title} />
       <div className="blog-post">
         <h1 className={'blog-post__heading'}>{post.frontmatter.title}</h1>

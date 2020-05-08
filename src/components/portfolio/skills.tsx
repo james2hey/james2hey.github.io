@@ -1,19 +1,19 @@
 import React from 'react';
-import '../scss/_skills.scss';
-import angular from '../assets/images/angular.svg';
-import c from '../assets/images/c.svg';
-import java from '../assets/images/java.svg';
-import kotlin from '../assets/images/kotlin.svg';
-import node from '../assets/images/node.svg';
-import python from '../assets/images/python.svg';
-import react from '../assets/images/react.svg';
-import reactNative from '../assets/images/react-native.svg';
-import sql from '../assets/images/sql.svg';
-import swift from '../assets/images/swift.svg';
-import vue from '../assets/images/vue.svg';
-import agile from '../assets/images/agile.svg';
-import waterfall from '../assets/images/waterfall.svg'
-import { TechItem } from './subcomponents/tech-item';
+import '../../scss/portfolio/_skills.scss';
+import angular from '../../assets/images/angular.svg';
+import c from '../../assets/images/c.svg';
+import java from '../../assets/images/java.svg';
+import kotlin from '../../assets/images/kotlin.svg';
+import node from '../../assets/images/node.svg';
+import python from '../../assets/images/python.svg';
+import react from '../../assets/images/react.svg';
+import reactNative from '../../assets/images/react-native.svg';
+import sql from '../../assets/images/sql.svg';
+import swift from '../../assets/images/swift.svg';
+import vue from '../../assets/images/vue.svg';
+import agile from '../../assets/images/agile.svg';
+import waterfall from '../../assets/images/waterfall.svg'
+import { TechItem } from "../subcomponents/tech-item";
 
 export const Skills: React.FC = () => {
     return (

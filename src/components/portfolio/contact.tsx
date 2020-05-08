@@ -1,8 +1,8 @@
 import React from "react";
-import "../scss/_contact.scss";
-import mail from "../assets/images/mail.svg";
-import linkedin from "../assets/images/linkedin.svg";
-import github from "../assets/images/github.svg";
+import "../../scss/portfolio/_contact.scss";
+import mail from "../../assets/images/mail.svg";
+import linkedin from "../../assets/images/linkedin.svg";
+import github from "../../assets/images/github.svg";
 
 export const Contact: React.FC = () => {
     return (

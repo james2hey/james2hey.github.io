@@ -3,6 +3,9 @@ import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { ProfilePicture, ProfilePictureSize } from "../components/subcomponents/profile-picture";
+import { BlogTitle } from "../components/blog/blog-title";
+import { BlogFeed } from "../components/blog/blog-feed";
 
 interface BlogPageProps {
   allMarkdownRemark: {
@@ -27,26 +30,8 @@ export const BlogPage: React.FC<PageProps<BlogPageProps>> = ({ data }) => {
     <Layout>
       <SEO title="Blog" />
       <div className={"blog-post"}>
-        <h1>
-          <Link to={'/'} className={'blog-post__heading--white'}>
-            James Toohey</Link> - <span className={"highlight"}>Blog</span>
-        </h1>
-        <h4>A software engineer from New Zealand 🇳🇿</h4>
-        <div className="blog-posts">
-          {posts
-            .filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }) => {
-              return (
-                <div className="blog-post-preview" key={post.id}>
-                  <h1>
-                    <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                  </h1>
-                  <h2>{post.frontmatter.date}</h2>
-                  <p>{post.excerpt}</p>
-                </div>
-              );
-            })}
-        </div>
+        <BlogTitle />
+        <BlogFeed allMarkdownRemark={data.allMarkdownRemark}/>
       </div>
     </Layout>
   );

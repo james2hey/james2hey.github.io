@@ -3,7 +3,7 @@ import React from "react";
 import { Card } from "../components/subcomponents/card";
 import "./../scss/_playground.scss";
 import { Button } from "../components/subcomponents/button";
-import { Nav } from "../components/subcomponents/nav";
+import { PortfolioNav } from "../components/portfolio/portfolio-nav";
 import SEO from "../components/seo";
 import { Code } from "../components/subcomponents/code";
 import react from './../assets/images/react.svg';
@@ -13,27 +13,36 @@ import { TechItem } from "../components/subcomponents/tech-item";
 import { Bar } from "../components/subcomponents/bar";
 
 const PlaygroundPage: React.FC = () => {
+  const handleOnClick = () => alert('Hey, congrats');
+
   return (
     <Layout>
       <SEO title="Playground" />
       <div className={"playground"}>
         <h1>Where I test out my <span className={"highlight"}>components</span>.</h1>
-        <br />
         <PlaygroundSection title={'Cards'}>
           <div className={"playground-cards"}>
-            <PlaygroundCard />
-            <PlaygroundCard />
+            <Card className={"playground-card"}>
+              <h4 className={"highlight"}>Normal Card</h4>
+              <p>Here is a bunch of text on the card.</p>
+              <p>Here is a bunch more of text on the card.</p>
+            </Card>
+            <Card className={"playground-card"} link={'hello'} onClick={handleOnClick}>
+              <h4 className={"highlight"}>Hover Card</h4>
+              <p>Here is a bunch of text on the card.</p>
+              <p>Here is a bunch more of text on the card.</p>
+            </Card>
           </div>
         </PlaygroundSection>
         <PlaygroundSection title={'Buttons'}>
-          <Button kind={"primary"}>Primary</Button>
-          <Button kind={"secondary"}>Secondary</Button>
+          <Button kind={"primary"} onClick={handleOnClick}>Primary</Button>
+          <Button kind={"secondary"} onClick={handleOnClick}>Secondary</Button>
         </PlaygroundSection>
         <PlaygroundSection title={'Bar'}>
           <Bar level={6} />
         </PlaygroundSection>
         <PlaygroundSection title={'Navigation'}>
-          <Nav />
+          <PortfolioNav />
         </PlaygroundSection>
         <PlaygroundSection title={'Code'}>
           <Code>
@@ -62,20 +71,9 @@ interface PlaygroundSectionProps {
 const PlaygroundSection: React.FC<PlaygroundSectionProps> = props => {
   const { title, children } = props;
   return (
-    <>
+    <div className={'playground__section'}>
       <h3>{title}</h3>
       {children}
-      <br />
-    </>
+    </div>
   )
-};
-
-const PlaygroundCard: React.FC = () => {
-  return (
-    <Card className={"playground-card"}>
-      <h4 className={"highlight"}>Hello</h4>
-      <p>Here is a bunch of text on the card.</p>
-      <p>Here is a bunch more of text on the card.</p>
-    </Card>
-  );
 };

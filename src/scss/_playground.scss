@@ -1,6 +1,11 @@
 @import "colors";
 
 .playground {
+  margin-top: 12px;
+
+  &__section {
+    margin: 28px 0;
+  }
 
 }
 

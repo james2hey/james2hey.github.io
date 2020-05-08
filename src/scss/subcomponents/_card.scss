@@ -17,5 +17,6 @@
 
   &:hover {
     background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
+    cursor: pointer;
   }
 }

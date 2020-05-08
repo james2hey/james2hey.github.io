@@ -1,7 +1,7 @@
 @import "../colors";
 @import "../font";
 
-.nav {
+._portfolio-nav {
     display: flex;
     flex-direction: row;
     height: 60px;
@@ -18,7 +18,7 @@
     top: 0;
 }
 
-.nav-link {
+.portfolio-nav-link {
     color: $color-white;
     text-underline: none;
     text-decoration: none;
