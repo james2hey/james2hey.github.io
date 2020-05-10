@@ -1,4 +1,4 @@
-import "../scss/templates/_blog-post.scss";
+import "../scss/blog/_blog-post.scss";
 import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";

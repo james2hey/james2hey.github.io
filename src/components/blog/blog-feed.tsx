@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../scss/blog/_blog-feed.scss';
 import { Link } from "gatsby";
+import { BlogFeedItem } from "./blog-feed-item";
 
 export interface BlogFeedProps {
   allMarkdownRemark: {
@@ -26,13 +27,12 @@ export const BlogFeed: React.FC<BlogFeedProps> = ({ allMarkdownRemark }) => {
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => {
           return (
-            <div className="blog-post-preview" key={post.id}>
-              <h1>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </h1>
-              <h2>{post.frontmatter.date}</h2>
-              <p>{post.excerpt}</p>
-            </div>
+              <BlogFeedItem
+                id={post.id}
+                title={post.frontmatter.title}
+                excerpt={post.excerpt}
+                date={post.frontmatter.date}
+                path={post.frontmatter.path}/>
           );
         })}
     </div>

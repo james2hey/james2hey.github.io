@@ -1,13 +1,19 @@
 import React from "react";
 import { graphql, Link, PageProps } from "gatsby";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import "../scss/templates/_blog-post.scss";
+import "../../scss/blog/_blog-post.scss";
+import Layout from "../layout";
+import SEO from "../seo";
 
 interface BlogPostProps {
   markdownRemark: any;
 }
 
+/**
+ * This is directly used by gatsby-node.js to resolve pages e.g.
+ * `const BlogPost = path.resolve(`src/components/blog/blog-post.tsx`);`
+ * @param data
+ * @constructor
+ */
 const BlogPost: React.FC<PageProps<BlogPostProps>> = ({ data }) => {
   const { markdownRemark: post } = data;
   return (

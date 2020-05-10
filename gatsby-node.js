@@ -8,7 +8,7 @@ const path = require("path");
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const BlogPost = path.resolve(`src/templates/blog-post.tsx`);
+  const BlogPost = path.resolve(`src/components/blog/blog-post.tsx`);
 
   const result = await graphql(`
     {
