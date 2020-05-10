@@ -4,7 +4,7 @@ date: 2020-03-24T17:12:33.962Z
 title: "Git Hooks"
 ---
 
-I've been using git for some years now, and have come up with a few methods to speed up my day-to-day workflow using 
+If you're using multiple git repos at once, this could be useful for you. 
 [githooks](https://git-scm.com/docs/githooks). These are small executable scripts you can write to trigger when you 
 perform actions with git. For example, I like to keep local copies of each commit message I make to easily 
 track my tasks done throughout the week. This can be especially helpful when working across multiple git repos.
