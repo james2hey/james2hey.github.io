@@ -5,7 +5,7 @@ import { Button } from "../subcomponents/button";
 import { ProfilePicture, ProfilePictureSize } from "../subcomponents/profile-picture";
 
 export const Intro = () => {
-  const handleOnClick = () => navigate('#about');
+  const handleOnClick = () => navigate('#skills');
     return (
         <header className={'intro'}>
           <div>

@@ -13,9 +13,7 @@ const IndexPage: React.FC = () => {
     <Layout hideFooter={true}>
       <SEO title="Portfolio" />
       <Intro />
-      <About />
       <Skills />
-      <Experience />
       <Projects />
       <Contact />
     </Layout>

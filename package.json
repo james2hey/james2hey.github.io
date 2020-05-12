@@ -1,7 +1,7 @@
 {
   "name": "james-toohey",
   "private": true,
-  "description": "My personal website",
+  "description": "James Toohey's portfolio and blog",
   "version": "0.1.0",
   "author": "James Toohey <jamestoohey97@gmail.com>",
   "dependencies": {
@@ -16,10 +16,13 @@
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.4",
     "gatsby-plugin-typescript": "^2.3.1",
+    "gatsby-remark-autolink-headers": "^2.3.1",
+    "gatsby-remark-prismjs": "^3.5.1",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-remark": "^2.7.1",
     "gatsby-transformer-sharp": "^2.4.4",
     "node-sass": "^4.13.1",
+    "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

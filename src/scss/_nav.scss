@@ -9,8 +9,10 @@
   padding: 0 12px;
   height: 60px;
   width: 100%;
-  background-color: $color-grey-light;
+  background-color: $color-grey-darkest;
+  opacity: 0.8;
   font-family: $default-font;
+  border-bottom: 2px solid $color-grey-light;
 
 
   &__image {

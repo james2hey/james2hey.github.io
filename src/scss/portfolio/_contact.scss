@@ -1,9 +1,12 @@
 @import "../colors";
 
 .Contact-container {
-  display: flex;
-  flex-direction: row;
+  //display: flex;
+  //flex-direction: row;
+  margin-top: 12px;
   justify-content: center;
+  text-align: center;
+  max-width: 800px;
   user-select: text;
 }
 
