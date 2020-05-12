@@ -29,7 +29,7 @@ mkdir ~/.git-templates/hooks
 Now you can write scripts inside the hooks directory. For logging all my commits I use gits log command and write it to file:
 ```shell script
 #!/bin/sh
-git log -1 > all_commits.txt
+git log -1 > $HOME/commit-logs/all-commits.txt
 
 ```
 
