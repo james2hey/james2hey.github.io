@@ -11,7 +11,7 @@ export const BlogTitle = () => {
           <Link to={'/'} className={'blog-title__heading'}>
             James Toohey</Link> - <span className={"highlight"}>Blog</span>
         </h1>
-        <h4>A software engineer from New Zealand 🇳🇿</h4>
+        <h4 className={'blog-title__subheading'}>A software engineer from New Zealand 🇳🇿</h4>
       </div>
       <ProfilePicture size={ProfilePictureSize.SMALL}/>
     </div>
