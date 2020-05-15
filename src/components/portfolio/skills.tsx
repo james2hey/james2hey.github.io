@@ -14,7 +14,10 @@ import { Link } from "gatsby";
 export const Skills: React.FC = () => {
     return (
         <div className="Skills" id={"skills"}>
-            <h3>Personal Tech Stack</h3>
+          <h3>This Portfolio is a Work In Progress!</h3>
+          <p>The rest will be filled in soon. In the meantime, check out my <Link to={'/blog'}>blog</Link> or <Link to={'/playground'}>playground</Link>.</p>
+          <br/><br/><br/>
+          <h3>Personal Tech Stack</h3>
             <div className="Tech-container">
                 <TechItem
                   image={react}
@@ -49,9 +52,7 @@ export const Skills: React.FC = () => {
                   name={'SQL'}
                 />
             </div>
-            <h3>This Portfolio is a Work In Progress!</h3>
-            <p>The rest will be filled in soon. In the meantime, check out my <Link to={'/blog'}>blog</Link> or <Link to={'/playground'}>playground</Link>.</p>
-            <br/><br/><br/><br/><br/><br/>
+          <br/><br/><br/><br/><br/><br/>
         </div>
     );
 };

@@ -4,11 +4,14 @@
 //  color: $color-blue;
 //}
 
+.gatsby-highlight {
+  margin: 0 12px;
+  width: 100% !important;
+}
+
 .layout {
-  //padding: 2em 2em;
   display: flex;
   flex-direction: column;
-  //align-items: center;
 }
 
 .main {
@@ -379,6 +382,7 @@ code {
 pre code {
   background: none;
   line-height: 1.42;
+  width: 50px;
 }
 code:before,
 code:after,

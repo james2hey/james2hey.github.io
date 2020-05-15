@@ -22,11 +22,11 @@ const BlogPost: React.FC<PageProps<BlogPostProps>> = ({ data }) => {
       <div className="blog-post">
         <h1 className={'blog-post__heading'}>{post.frontmatter.title}</h1>
         <div
-          className="blog-post-content"
+          className="blog-post__content"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
-      <Link to={'/blog'}>{`< Back`}</Link>
+      <Link to={'/blog'} className={'blog-post__back'}>{`< Back`}</Link>
     </Layout>
   );
 };

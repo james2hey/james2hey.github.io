@@ -39,7 +39,9 @@ git config --global init.templatedir '~/.git-templates'
 Add a `hooks` directory. This is where all the global hooks can be stored:
 
 ```shell script
-mkdir ~/.git-templates/hooks
+mkdir .git-templates
+cd .git-templates/
+mkdir hooks
 ```
 ### 3. Write Your Hooks 😎
 cd into the hooks directory, and create your hooks. For logging all my commits I use `git log` and write it to file:

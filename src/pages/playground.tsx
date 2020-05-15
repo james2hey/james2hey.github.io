@@ -1,16 +1,19 @@
-import Layout from "../components/layout";
-import React from "react";
-import { Card } from "../components/subcomponents/card";
-import "./../scss/_playground.scss";
-import { Button } from "../components/subcomponents/button";
-import { PortfolioNav } from "../components/portfolio/portfolio-nav";
-import SEO from "../components/seo";
-import { Code } from "../components/subcomponents/code";
-import react from './../assets/images/react.svg';
-import python from './../assets/images/python.svg';
-import kotlin from './../assets/images/kotlin.svg';
-import { TechItem } from "../components/subcomponents/tech-item";
-import { Bar } from "../components/subcomponents/bar";
+import Layout from "../components/layout"
+import React from "react"
+import { Card } from "../components/subcomponents/card"
+import "./../scss/_playground.scss"
+import { Button } from "../components/subcomponents/button"
+import { PortfolioNav } from "../components/portfolio/portfolio-nav"
+import SEO from "../components/seo"
+import { Code } from "../components/subcomponents/code"
+import react from "./../assets/images/react.svg"
+import python from "./../assets/images/python.svg"
+import kotlin from "./../assets/images/kotlin.svg"
+import { TechItem } from "../components/subcomponents/tech-item"
+import { Bar } from "../components/subcomponents/bar"
+import { ProfilePicture, ProfilePictureSize } from "../components/subcomponents/profile-picture"
+import { Project } from "../components/subcomponents/project"
+import milk from '../assets/images/milk.png';
 
 const PlaygroundPage: React.FC = () => {
   const handleOnClick = () => alert('Hey, congrats');
@@ -56,6 +59,12 @@ const PlaygroundPage: React.FC = () => {
             <TechItem name={'Python'} image={python}/>
             <TechItem name={'Kotlin'} image={kotlin}/>
           </div>
+        </PlaygroundSection>
+        <PlaygroundSection title={'Profile Picture'}>
+          {Object.values(ProfilePictureSize).map(size => <ProfilePicture size={size}/>)}
+        </PlaygroundSection>
+        <PlaygroundSection title={'Project'}>
+          <Project image={milk} header={'Milk'} link={'https://google.com'} body={'this is a project called milk'} />
         </PlaygroundSection>
       </div>
     </Layout>

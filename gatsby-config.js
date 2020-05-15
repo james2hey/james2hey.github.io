@@ -3,6 +3,7 @@ module.exports = {
     title: `James Toohey`,
     description: `James Toohey's portfolio website.`,
     author: `@james2hey`,
+    siteUrl: 'https://toohey.dev',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,6 +20,12 @@ module.exports = {
         name: "blogs",
         path: `${__dirname}/src/blogs`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ['/playground'],
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

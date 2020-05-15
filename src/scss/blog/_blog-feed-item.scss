@@ -1,3 +1,8 @@
 .blog-feed-item {
-
+  &__title {
+    margin-bottom: 0;
+  }
+  &__date {
+    margin: 12px 0 !important;
+  }
 }
