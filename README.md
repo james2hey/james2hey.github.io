@@ -3,6 +3,5 @@
 
 
 ### TODO
-- [ ] add g analytics
-- [ ] gh pages
-- [ ] nav
+- [ ] Add favicon
+- [ ] 

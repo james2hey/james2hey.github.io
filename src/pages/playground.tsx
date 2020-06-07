@@ -14,6 +14,7 @@ import { Bar } from "../components/subcomponents/bar"
 import { ProfilePicture, ProfilePictureSize } from "../components/subcomponents/profile-picture"
 import { Project } from "../components/subcomponents/project"
 import milk from '../assets/images/milk.png';
+import { TechStack } from "../components/subcomponents/tech-stack"
 
 const PlaygroundPage: React.FC = () => {
   const handleOnClick = () => alert('Hey, congrats');
@@ -65,6 +66,9 @@ const PlaygroundPage: React.FC = () => {
         </PlaygroundSection>
         <PlaygroundSection title={'Project'}>
           <Project image={milk} header={'Milk'} link={'https://google.com'} body={'this is a project called milk'} />
+        </PlaygroundSection>
+        <PlaygroundSection title={'Tech Stack'}>
+          <TechStack header={'Web Development'} images={[react, python, kotlin, milk]}/>
         </PlaygroundSection>
       </div>
     </Layout>
