@@ -7,24 +7,24 @@ title: "Git Post Commit Hooks"
 Have you ever found it difficult to remember what features or bugs you've spent the last week on? How about the 
 past month, or even year?
 
-I find it hard. Sometimes It can even be hard to remember what I did by the end of a day. Luckily we have computers to help us out.
+I find it hard. Sometimes It can even be hard to remember what I did by the end of a day. Luckily computers can remember for us.
 
-Using git is a great way to track what you've done. If your commits are meaningful and frequent enough, fantastic - you can look back at these. These can behave as documented timelines providing context to your development. 
-But it's not always easy to keep track of your commits:
+Using git is a great way to track what you've done. If your commits are meaningful and frequent enough, fantastic - you can look back at these and see a timeline of what you've worked on. 
+But it's not always easy to keep track of your commits. For example:
 - What if you're using more than one git repo? 
-- What if these repos are under different Source Code Management System e.g. some are on GitHub and others GitLab? 
-- How about if you squash commits after merging?
+- What if these repos are under different Source Code Management System e.g. some are on GitHub and others Bitbucket? 
+- How about if you squash your commits after merging?
 
-There is a range of issues that can increase difficultly in tracking them.
+There are a range of issues that increase difficultly in tracking commits.
 
-## How can we track all commits?
+## So, how can we track all our commits?
 
 If all of these changes are being made under git, you can use [git-hooks](https://git-scm.com/docs/githooks)!
  
-These are small executable scripts you can write to trigger when you perform actions with git. They can even be written 
-globally to trigger in every git repo on your machine.
+These are small executable scripts that trigger when you perform actions with git. They can even be written 
+globally to trigger consistently for each git repo on your machine.
 
-Here is how to set up global post-commit hooks to write to record all commits.
+Here is how to set up global post-commit hooks to write to record all commits in a centralised document.
 
 ## Global Post Commit Hooks
 
@@ -66,7 +66,6 @@ of your local git hooks!)
 
 ## Conclusion
 
-Keeping a centralised record of your commits is invaluable. This self-documenting method provides a tool for you to 
-reflect on your work with contextual references on your thoughts at the time of writing.
-
-And finally, this seamlessly tracks and logs the dev side of customer work! (If you're commits are meaningful of course 😄).
+Keeping a centralised document of all your commits can be a powerful asset to have.
+This self-documenting method provides the opportunity to track your hours of customer work, see what features you 
+work on, and see a timeline of your work across any number of git repos.
