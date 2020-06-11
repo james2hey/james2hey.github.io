@@ -6,10 +6,14 @@
   justify-content: center;
   margin-bottom: 0;
 
-  &_image {
+  &__image {
     width: 60px;
     height: 60px;
     margin-bottom: 12px;
+  }
+
+  &__text {
+    text-align: center;
   }
 }
 

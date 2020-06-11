@@ -10,8 +10,7 @@ export interface CardProps {
 
 export const Card: React.FC<CardProps & React.HTMLProps<HTMLDivElement>> = props => {
   const { link, notFancy, theme } = props;
-  const themeModifier = theme === 'light' ? `--${theme}` : ``;
-  const classes = !link ? `card--fancy${themeModifier} ${props.className}` : `card--fancy${themeModifier} ${props.className}`;
+  const classes = !link ? `card--fancy ${props.className}` : `card--fancy ${props.className}`;
 
   if (!link && notFancy) return <div {...props} className={`card--fancy`}>{props.children}</div>;
 

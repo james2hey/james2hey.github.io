@@ -22,7 +22,7 @@ export const ProjectsList: React.FC<ProjectsListProps> = props => {
   return (
     <div style={projectsListStyle}>
       {visibleProjects.map((project, i) =>
-        <ProjectsListItem project={project} rhs={(i%2 === 0)} />
+        <ProjectsListItem project={project} rhs={(i%2 === 1)} />
       )}
       {visibleProjects < props.projects && <Button kind={"secondary"} onClick={makeMoreProjectsVisible}>View More</Button>}
     </div>
@@ -33,5 +33,5 @@ const projectsListStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  width: '100%'
+  // width: '100%'
 }

@@ -7,7 +7,7 @@ import { allProjects } from "../../../models/project-model"
 
 export const Projects: React.FC = () => {
   return (
-    <Section id={"projects"}>
+    <Section id={"projects"} style={{ width: "100%" }}>
         <h2>Projects</h2>
         <ProjectsList projects={allProjects} initialVisibleProjectCount={3} />
     </Section>

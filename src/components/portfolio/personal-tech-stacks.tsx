@@ -43,8 +43,6 @@ export const PersonalTechStacks: React.FC = () => {
           techStacks={miscTechStacks}
         />
       </div>
-
-      <br/><br/><br/><br/><br/><br/>
     </Section>
   );
 };

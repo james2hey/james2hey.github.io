@@ -1,6 +1,7 @@
 import React, { CSSProperties, useState } from "react"
 import { ProjectModel } from "../../../models/project-model"
 import { Card } from "../../subcomponents/card"
+import { TechItem } from "../../subcomponents/tech-item"
 
 export interface ProjectsListItemProps {
   project: ProjectModel
@@ -8,19 +9,28 @@ export interface ProjectsListItemProps {
 }
 
 export const ProjectsListItem: React.FC<ProjectsListItemProps> = ({ project, rhs, children }) => {
-  // const style = rhs ? {}
+  // const style = { ...projectStyle, alignSelf: rhs ? 'flex-end' : 'flex-start' }
+
+  const description = (
+    <div>
+      <p>{project.content}</p>
+      <div style={technologiesListStyle}>
+        {project.technologies.map(technology => <TechItem image={technology.image} name={technology.name} />)}
+      </div>
+    </div>
+  )
 
   return (
-    <Card style={projectStyle} theme={'light'}>
+    <Card style={projectStyle}>
       <h3>{project.name}</h3>
       <div style={projectContentStyle}>
         {rhs ?
           <>
             <img src={project.image} alt={project.name} style={imageStyle}/>
-            <p>{project.content}</p>
+            {description}
           </> :
           <>
-            <p>{project.content}</p>
+            {description}
             <img src={project.image} alt={project.name} style={imageStyle}/>
           </>
         }
@@ -33,16 +43,38 @@ export const projectStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  color: "black"
+  // alignSelf: 'flex-start',
+  width: '80%',
+  maxWidth: '1600px',
+  color: "black",
+  marginBottom: '48px',
+  padding: '12px',
+
 }
 
 export const projectContentStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: ''
+  justifyContent: '',
 }
 
 export const imageStyle: CSSProperties = {
+  objectFit: 'cover',
+  // width: '100%',
+  // height: 400,
+  width: '30vw'
+}
 
+export const projectDescriptionStyle: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  // alignItems: 'center'
+}
+
+export const technologiesListStyle: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
 }

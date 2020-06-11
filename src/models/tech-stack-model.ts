@@ -37,6 +37,12 @@ export const kotlinTechStack: TechStackModel = {
 
 export const mobileDevTechStacks: TechStackModel[] = [reactNativeTechStack, kotlinTechStack]
 
+export const dotNetTechStack: TechStackModel = {
+  name: '.NET',
+  description: 'asdfas',
+  image: sqlImage,
+}
+
 export const sqlTechStack: TechStackModel = {
   name: 'SQL',
   description: 'sdafasdfasdfads',
