@@ -13,7 +13,7 @@ export const Project: React.FC<ProjectProps> = props => {
     const { image, link, body, header } = props;
     return (
       <Card className={'project'} link={link}>
-        <img src={image} alt={'project image'} className="project--image"/>
+        <img src={image} alt={'projects image'} className="project--image"/>
         <div className='project--details'>
           <br/>
             <h4>{header}</h4>

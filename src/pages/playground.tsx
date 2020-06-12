@@ -3,18 +3,17 @@ import React from "react"
 import { Card } from "../components/subcomponents/card"
 import "./../scss/_playground.scss"
 import { Button } from "../components/subcomponents/button"
-import { PortfolioNav } from "../components/portfolio/portfolio-nav"
 import SEO from "../components/seo"
 import { Code } from "../components/subcomponents/code"
-import react from "./../assets/images/react.svg"
-import python from "./../assets/images/python.svg"
-import kotlin from "./../assets/images/kotlin.svg"
+import react from "../assets/images/technologies/react.svg"
+import python from "../assets/images/technologies/python.svg"
+import kotlin from "../assets/images/technologies/kotlin.svg"
 import { TechItem } from "../components/subcomponents/tech-item"
 import { Bar } from "../components/subcomponents/bar"
 import { ProfilePicture, ProfilePictureSize } from "../components/subcomponents/profile-picture"
 import { Project } from "../components/subcomponents/project"
-import milk from '../assets/images/milk.png';
 import { TechStack } from "../components/subcomponents/tech-stack"
+import { webDevTechStacks } from "../models/tech-stack-model"
 
 const PlaygroundPage: React.FC = () => {
   const handleOnClick = () => alert('Hey, congrats');
@@ -45,9 +44,6 @@ const PlaygroundPage: React.FC = () => {
         <PlaygroundSection title={'Bar'}>
           <Bar level={6} />
         </PlaygroundSection>
-        <PlaygroundSection title={'Navigation'}>
-          <PortfolioNav />
-        </PlaygroundSection>
         <PlaygroundSection title={'Code'}>
           <Code>
             playground.components.forEach(component => console.log(`lookin good!`);
@@ -65,10 +61,10 @@ const PlaygroundPage: React.FC = () => {
           {Object.values(ProfilePictureSize).map(size => <ProfilePicture size={size}/>)}
         </PlaygroundSection>
         <PlaygroundSection title={'Project'}>
-          <Project image={milk} header={'Milk'} link={'https://google.com'} body={'this is a project called milk'} />
+          <Project image={react} header={'Milk'} link={'https://google.com'} body={'this is a projects called milk'} />
         </PlaygroundSection>
         <PlaygroundSection title={'Tech Stack'}>
-          <TechStack header={'Web Development'} images={[react, python, kotlin, milk]}/>
+          <TechStack header={'Web Development'} techStacks={webDevTechStacks}/>
         </PlaygroundSection>
       </div>
     </Layout>

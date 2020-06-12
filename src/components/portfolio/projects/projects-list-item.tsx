@@ -12,7 +12,7 @@ export const ProjectsListItem: React.FC<ProjectsListItemProps> = ({ project, rhs
   // const style = { ...projectStyle, alignSelf: rhs ? 'flex-end' : 'flex-start' }
 
   const description = (
-    <div>
+    <div style={projectDescriptionStyle}>
       <p>{project.content}</p>
       <div style={technologiesListStyle}>
         {project.technologies.map(technology => <TechItem image={technology.image} name={technology.name} />)}
@@ -49,21 +49,19 @@ export const projectStyle: CSSProperties = {
   color: "black",
   marginBottom: '48px',
   padding: '12px',
-
 }
 
 export const projectContentStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: '',
+  justifyContent: 'space-around',
 }
 
 export const imageStyle: CSSProperties = {
   objectFit: 'cover',
-  // width: '100%',
-  // height: 400,
-  width: '30vw'
+  width: '30vw',
+  maxHeight: '400px'
 }
 
 export const projectDescriptionStyle: CSSProperties = {

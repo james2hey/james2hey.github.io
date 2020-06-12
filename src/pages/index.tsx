@@ -3,8 +3,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Intro } from "../components/portfolio/intro";
 import { About } from "../components/portfolio/about/about";
-import { Skills } from "../components/portfolio/skills";
-import { Experience } from "../components/portfolio/experience";
 import { Projects } from "../components/portfolio/projects/projects";
 import { Contact } from "../components/portfolio/contact";
 import { PersonalTechStacks } from "../components/portfolio/personal-tech-stacks"

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import "../../scss/subcomponents/_tech-item.scss"
 
 export interface TechItemProps {
