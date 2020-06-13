@@ -1,30 +1,15 @@
-import React from 'react';
-import './../../scss/subcomponents/_card.scss'
+import React from "react"
+import "./../../scss/subcomponents/_card.scss"
 
-export interface CardProps {
-  link?: string;
-  notFancy?: string;
-  theme?: 'light' | 'dark'
+export interface CardProps extends React.HTMLProps<HTMLDivElement> {
+  hover?: boolean;
 }
 
-
-export const Card: React.FC<CardProps & React.HTMLProps<HTMLDivElement>> = props => {
-  const { link, notFancy, theme } = props;
-  const classes = !link ? `card--fancy ${props.className}` : `card--fancy ${props.className}`;
-
-  if (!link && notFancy) return <div {...props} className={`card--fancy`}>{props.children}</div>;
-
-  // const handleOnClick = () => window.open(link);
-
-  // const handleOnMouseEnter = (event: React.MouseEvent) => {
-  //   const div = event.currentTarget.getBoundingClientRect();
-  //   const x = event.clientX - div.left;
-  //   const y = event.clientY - div.top;
-  //   document.documentElement.style.setProperty('--mouse-x', `${x}px`);
-  //   document.documentElement.style.setProperty('--mouse-y', `${y}px`);
-  // };
-
+export const Card: React.FC<CardProps> = props => {
+  const { hover, className } = props
+  const baseStyle = hover == null ? `card` : `card card-hoverable`
+  const style = `${baseStyle} ${className}`
   return (
-    <div {...props} className={classes}>{props.children}</div>
-  );
-};
+    <div {...props} className={style}>{props.children}</div>
+  )
+}

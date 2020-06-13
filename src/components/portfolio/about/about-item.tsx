@@ -1,5 +1,4 @@
 import React, { CSSProperties } from "react"
-import { boxShadow } from "../../../utils/styles"
 import { Card } from "../../subcomponents/card"
 
 export interface AboutItemProps {
@@ -19,14 +18,15 @@ export const AboutItem: React.FC<AboutItemProps> = ({ title, description, image 
 }
 
 const aboutItem: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  maxWidth: '300px',
-  margin: '12px',
-  padding: '12px',
-  background: 'whitesmoke',
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  maxWidth: "350px",
+  minWidth: "320px",
+  margin: "12px",
+  padding: "12px",
+  background: "whitesmoke",
   // ...boxShadow,
 }
 
@@ -41,4 +41,5 @@ const headerStyle: CSSProperties = {
 
 const descriptionStyle: CSSProperties = {
   color: 'black',
+  // textAlign: 'center',
 }

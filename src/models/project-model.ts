@@ -4,9 +4,11 @@ import {
   gatsbyTechStack,
   googleAnalytics,
   reactNativeTechStack,
-  reactTechStack, reduxTechStack,
+  reactTechStack,
+  reduxTechStack,
   sqlTechStack,
-  TechStackModel, typescriptTechStack,
+  TechStackModel,
+  typescriptTechStack,
 } from "./tech-stack-model"
 import archiesPizzeriaImage from "../assets/images/projects/archies-pizzeria-project.png"
 import pipImage from "../assets/images/projects/pip-project.png"
@@ -20,24 +22,24 @@ export interface ProjectModel {
 }
 
 export const archiesProject: ProjectModel = {
-  name: 'Archies Pizzeria Website',
+  name: "Archies Pizzeria Website",
   image: archiesPizzeriaImage,
   technologies: [reactTechStack, typescriptTechStack, gatsbyTechStack, googleAnalytics],
-  content: 'This projects was created to help design a restaurant website for the Archies Pizzeria team in Newmarket, New Zealand. I worked on this projet using Gastby for server side rendering a React projects. This was hosted on Netlify.',
+  content: "During the New Zealand lock down due to COVID-19, I created this website for Archie's Pizzeria to provide them with a source of web traffic. Proving online access to their menus allowed people to safely purchase food while keeping socially distant. It is now used as their full time website at archiespizzeria.co.nz.",
 }
 
 export const pipProject: ProjectModel = {
-  name: 'PiP IoT Mobile App',
+  name: "PiP IoT Mobile App",
   image: pipImage,
   technologies: [reactNativeTechStack, typescriptTechStack, dotNetTechStack, cSharpTechStack, sqlTechStack],
-  content: 'This projects was created to help design a resturant website for the Archies Pizzeria team in Newmarket, New Zealand. I worked on this projet using Gastby for server side rendering a React projects. This was hosted on Netlify.',
+  content: "PiP manufacture IoT devices and required software to manage device installations. I played a key role in developing the full stack of software from server side to the mobile app to be used as an on field tool for installations.",
 }
 
 export const circuitStatsProject: ProjectModel = {
-  name: 'Circuit Stats Mobile App',
+  name: "Circuit Stats Mobile App",
   image: circuitStatsImage,
   technologies: [reactNativeTechStack, reduxTechStack, typescriptTechStack],
-  content: 'This projects was created to help design a resturant website for the Archies Pizzeria team in Newmarket, New Zealand. I worked on this projet using Gastby for server side rendering a React projects. This was hosted on Netlify.',
+  content: "This project involved creating a mobile app to present Cinema executives with realtime key statistics for their circuits. This provides easy access for insight into key performance indicators for each cinema and the ability to drill down into specific metrics.",
 }
 
 export const allProjects: ProjectModel[] = [

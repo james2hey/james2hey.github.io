@@ -30,7 +30,7 @@ const PlaygroundPage: React.FC = () => {
               <p>Here is a bunch of text on the card.</p>
               <p>Here is a bunch more of text on the card.</p>
             </Card>
-            <Card className={"playground-card"} link={'hello'} onClick={handleOnClick}>
+            <Card className={"playground-card"} hover={true} onClick={handleOnClick}>
               <h4 className={"highlight"}>Hover Card</h4>
               <p>Here is a bunch of text on the card.</p>
               <p>Here is a bunch more of text on the card.</p>

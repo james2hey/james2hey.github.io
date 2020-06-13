@@ -3,7 +3,7 @@ import { Card } from "./card"
 import { TechItem } from "./tech-item"
 import "../../scss/subcomponents/_tech-stack.scss"
 import { Cross } from "./cross"
-import { TechDescription } from "./tech-description"
+import { TechStackDescription } from "./tech-stack-description"
 import { TechStackModel } from "../../models/tech-stack-model"
 
 export interface TechStackProps {
@@ -16,20 +16,19 @@ export const TechStack: React.FC<TechStackProps> = ({ header, techStacks }) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const handleOnClick = () => setIsExpanded(!isExpanded);
-  const style = isExpanded ? modalStyle : {}
   const techStackItemsCss = isExpanded ? modalTechStackItemsStyle : {}
   return (
-    <div style={style}>
-      <Card style={isExpanded ? stickyStyle : {}} className={"tech-stack"} onClick={handleOnClick}>
+    <div style={{ position: "relative" }}>
+      <Card style={isExpanded ? stickyStyle : {}} className={"tech-stack"} onClick={handleOnClick} hover={true}>
         <h3>{header}</h3>
-        <div style={crossStyle}><Cross isOpen={isExpanded} /></div>
+        {isExpanded && <div style={crossStyle}><Cross isOpen={isExpanded}/></div>}
         {isExpanded ? (
-          <div>
-            {techStacks.map(techStack => <TechDescription {...techStack}/>)}
-          </div>
-        ) :
+            <div>
+              {techStacks.map(techStack => <TechStackDescription {...techStack} key={techStack.name}/>)}
+            </div>
+          ) :
           <div style={techStackItemsCss} className={"tech-stack__items"}>
-            {techStacks.map(techStack => <TechItem image={techStack.image}/>)}
+            {techStacks.map(techStack => <TechItem image={techStack.image} key={techStack.name}/>)}
           </div>
         }
 
@@ -38,12 +37,6 @@ export const TechStack: React.FC<TechStackProps> = ({ header, techStacks }) => {
   )
 }
 
-const modalStyle: CSSProperties = {
-  // position: 'absolute',
-  // zIndex: 10000,
-}
-
-
 const stickyStyle: CSSProperties = {
   position: '-webkit-sticky',
   // @ts-ignore
@@ -51,8 +44,6 @@ const stickyStyle: CSSProperties = {
   top: 0,
   bottom: 0,
   maxWidth: '1000px',
-  // maxHeight: '800px',
-  // height: '90vh',
   width: '90vw',
 }
 
@@ -62,6 +53,6 @@ const modalTechStackItemsStyle: CSSProperties = {
 
 const crossStyle: CSSProperties = {
   position: "absolute",
-  top: '0',
-  right: '0'
+  top: 12,
+  right: 12,
 }

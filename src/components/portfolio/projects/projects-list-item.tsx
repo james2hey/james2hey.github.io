@@ -1,78 +1,43 @@
-import React, { CSSProperties, useState } from "react"
+import React from "react"
+import "../../../scss/portfolio/projects/_projects-list-item.scss"
 import { ProjectModel } from "../../../models/project-model"
 import { Card } from "../../subcomponents/card"
-import { TechItem } from "../../subcomponents/tech-item"
+import { TechItem, TechItemSize } from "../../subcomponents/tech-item"
 
 export interface ProjectsListItemProps {
   project: ProjectModel
-  rhs?: boolean // display on the right hand side.
+  rightHandSide?: boolean
 }
 
-export const ProjectsListItem: React.FC<ProjectsListItemProps> = ({ project, rhs, children }) => {
-  // const style = { ...projectStyle, alignSelf: rhs ? 'flex-end' : 'flex-start' }
-
+export const ProjectsListItem: React.FC<ProjectsListItemProps> = ({ project, rightHandSide, children }) => {
   const description = (
-    <div style={projectDescriptionStyle}>
+    <div>
       <p>{project.content}</p>
-      <div style={technologiesListStyle}>
-        {project.technologies.map(technology => <TechItem image={technology.image} name={technology.name} />)}
+      <div>
+        <h4 style={{ textAlign: "center", marginBottom: "12px" }}>Technologies Used</h4>
+        <div className={"projects-list-item__technologies"}>
+          {project.technologies.map(technology => <TechItem image={technology.image} name={technology.name}
+                                                            size={TechItemSize.Small} key={technology.name}/>)}
+        </div>
       </div>
     </div>
   )
 
   return (
-    <Card style={projectStyle}>
+    <Card className={"projects-list-item"}>
       <h3>{project.name}</h3>
-      <div style={projectContentStyle}>
-        {rhs ?
+      <div className={"projects-list-item__details"}>
+        {rightHandSide ?
           <>
-            <img src={project.image} alt={project.name} style={imageStyle}/>
+            <img src={project.image} alt={project.name} className={"projects-list-item__image"}/>
             {description}
           </> :
           <>
             {description}
-            <img src={project.image} alt={project.name} style={imageStyle}/>
+            <img src={project.image} alt={project.name} className={"projects-list-item__image"}/>
           </>
         }
       </div>
     </Card>
   )
-}
-
-export const projectStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  // alignSelf: 'flex-start',
-  width: '80%',
-  maxWidth: '1600px',
-  color: "black",
-  marginBottom: '48px',
-  padding: '12px',
-}
-
-export const projectContentStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-around',
-}
-
-export const imageStyle: CSSProperties = {
-  objectFit: 'cover',
-  width: '30vw',
-  maxHeight: '400px'
-}
-
-export const projectDescriptionStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  // alignItems: 'center'
-}
-
-export const technologiesListStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'center',
 }

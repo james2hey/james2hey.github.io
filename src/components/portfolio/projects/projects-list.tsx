@@ -1,4 +1,5 @@
-import React, { CSSProperties, useState } from "react"
+import React, { useState } from "react"
+import "../../../scss/portfolio/projects/_projects-list.scss"
 import { ProjectModel } from "../../../models/project-model"
 import { ProjectsListItem } from "./projects-list-item"
 import { Button } from "../../subcomponents/button"
@@ -8,7 +9,8 @@ export interface ProjectsListProps {
   initialVisibleProjectCount: number
 }
 
-const increment = 2;
+const increment = 2
+const isOdd = (num: number) => num % 2 === 1
 
 export const ProjectsList: React.FC<ProjectsListProps> = props => {
   const [visibleProjectsCount, setVisibleProjectsCount] = useState(props.initialVisibleProjectCount)
@@ -20,18 +22,12 @@ export const ProjectsList: React.FC<ProjectsListProps> = props => {
 
   // todo change to ul li.
   return (
-    <div style={projectsListStyle}>
+    <div className={"projects-list"}>
       {visibleProjects.map((project, i) =>
-        <ProjectsListItem project={project} rhs={(i%2 === 1)} />
+        <ProjectsListItem key={project.name} project={project} rightHandSide={isOdd(i)}/>,
       )}
-      {visibleProjects < props.projects && <Button kind={"secondary"} onClick={makeMoreProjectsVisible}>View More</Button>}
+      {visibleProjects < props.projects &&
+      <Button kind={"secondary"} onClick={makeMoreProjectsVisible}>View More</Button>}
     </div>
   )
-}
-
-const projectsListStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  // width: '100%'
 }
