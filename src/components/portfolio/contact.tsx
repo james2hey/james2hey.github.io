@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="Contact-container" id={"contact"}>
       <div className='Brief-container'>
-        <h3>Let's talk</h3>
+        <h3>Let's talk!</h3>
         <p>Got a question about my projects? Want to hear more about me? I'd love to have a chat.
           Feel free to connect with me on LinkedIn or send an email!</p>
       </div>

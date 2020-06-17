@@ -22,13 +22,13 @@ export interface TechStackModel {
 
 export const reactTechStack: TechStackModel = {
   name: "React",
-  description: `I've heavily been using React for front end development over the last 3 years. In 2020 I joined my companies React Tech Council where we discuss best practices about the framework and set company standards. I enjoy using the declarative framework which can help rapidly build testable and predictive applications.`,
+  description: `I've heavily been using React for front end development over the last 3 years. In 2020 I joined my companies React Tech Council where we discuss best practices about the framework and set company standards. I enjoy using the declarative framework which can help rapidly build testable and predictable applications.`,
   image: reactImage,
 }
 
 export const typescriptTechStack: TechStackModel = {
   name: "TypeScript",
-  description: `For the last few years I've also extensively been using TypeScript. It has shown me how in large code bases how powerful its static type checking can be to catch out errors at compile time rather than runtime.`,
+  description: `For the last few years I've also extensively been using TypeScript. It has shown me in large code bases how powerful its static type checking can be for catching errors at compile time rather than runtime.`,
   image: typescriptImage,
 }
 
@@ -60,7 +60,7 @@ export const reactNativeTechStack: TechStackModel = {
 }
 export const kotlinTechStack: TechStackModel = {
   name: "Kotlin",
-  description: `To date, Kotlin is my favourite language. While having the same capabilities as Java, it provides a much cleaner syntax with less boilerplate. I've created a couple of personal projects using Kotlin that are now on the Google Play Store. I would really like to used Kotlin in a professional environment.`,
+  description: `To date, Kotlin is my favourite object-oriented language. While having the same capabilities as Java, it provides a much cleaner syntax with less boilerplate. I've created a couple of personal projects using Kotlin that are now on the Google Play Store. I would love to be involved with projects using Kotlin in the future.`,
   image: kotlinImage,
 }
 
@@ -68,13 +68,13 @@ export const mobileDevTechStacks: TechStackModel[] = [reactNativeTechStack, kotl
 
 export const dotNetTechStack: TechStackModel = {
   name: ".NET",
-  description: `Most of my experience with .NET has been using the ASP.NET extension. Having this integrated with the Azure platform also eased the dev ops when it comes to continuous integration. Stored procedures.`,
+  description: `Most of my experience with .NET has been using the ASP.NET extension. I've mainly used the MVC architecture pattern with stored procedures on the data facing level.`,
   image: dotNetImage,
 }
 
 export const cSharpTechStack: TechStackModel = {
   name: "C#",
-  description: `TODO`,
+  description: `Coming from a Java background allowed me to quickly pick up C# due to its similar syntax. I've used it primarily with object-oriented programming.`,
   image: cSharpImage,
 }
 
@@ -101,13 +101,13 @@ export const pyTorchTechStack: TechStackModel = {
 
 export const javaTechStack: TechStackModel = {
   name: "Java",
-  description: `TODO`,
+  description: `In University Java was the main language I used for my projects. Projects involved using backend Java frameworks like Spring Boot, creating frontend apps with JavaFX, etc.`,
   image: javaImage,
 }
 
 export const cPlusPlusTechStack: TechStackModel = {
   name: "C++",
-  description: `TODO`,
+  description: `In computer graphics courses I used C++ to crete ray tracing algorithms, use memory allocation, create mesh models, and much more! Learning a lower level language like this taught me a lot about data structures and how to write robust programs.`,
   image: cPlusPlusImage,
 }
 

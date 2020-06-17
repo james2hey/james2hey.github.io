@@ -1,6 +1,6 @@
 import React from "react";
 import '../../scss/subcomponents/_profile-picture.scss'
-import profileImage from "../../assets/images/profile-picture.jpg";
+import profileImage from "../../assets/images/portrait.jpg";
 
 
 export enum ProfilePictureSize {

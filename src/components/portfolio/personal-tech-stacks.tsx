@@ -21,6 +21,7 @@ export const PersonalTechStacks: React.FC = () => {
   return (
     <Section className={'personal-tech-stacks'}>
       <h2>Personal Tech Stacks</h2>
+      <h4 className={'personal-tech-stacks__hint'}>(Click to expand)</h4>
       <div className={'personal-tech-stacks__list'} style={{ maxWidth: '1200px'}}>
         <TechStack
           key={'web'}

@@ -17,10 +17,10 @@ export const About: React.FC = () => {
       <h3 className={"about__title"}>My Principles</h3>
       <div className={"about__container"}>
         <AboutItem title={"Pragmatism"}
-                   description={`Take realistic approaches to software development. This enhances the frequency of deployments and releases.`}
+                   description={`Take realistic approaches to software development to increase deployment and release frequencies.`}
                    image={pragmaticImage}/>
         <AboutItem title={"Agility"}
-                   description={`Welcome changing requirements. Software should built to be flexible and adaptable.`}
+                   description={`Welcome changing requirements. Software should be flexible and adaptable.`}
                    image={agileImage}/>
         <AboutItem title={"Simplicity"}
                    description={"Less is more. Maximising the work not done increases productivity and decreases wasted time."}
