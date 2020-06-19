@@ -1,21 +1,13 @@
-import React from 'react';
-import '../../scss/portfolio/_personal-tech-stacks.scss';
-import c from '../../assets/images/technologies/c-plus-plus.svg';
-import java from '../../assets/images/technologies/java.svg';
-import kotlin from '../../assets/images/technologies/kotlin.svg';
-import node from '../../assets/images/technologies/node.svg';
-import python from '../../assets/images/technologies/python.svg';
-import react from '../../assets/images/technologies/react.svg';
-import reactNative from '../../assets/images/technologies/react-native.svg';
-import sql from '../../assets/images/technologies/sql.svg';
-import { TechItem } from "../subcomponents/tech-item";
-import { TechStack} from "../subcomponents/tech-stack"
-import { Section } from "./section"
+import React from 'react'
+import '../../scss/portfolio/_personal-tech-stacks.scss'
+import { TechStack } from '../subcomponents/tech-stack'
+import { Section } from './section'
 import {
-  backendDevTechStacks, miscTechStacks,
+  backendDevTechStacks,
+  miscTechStacks,
   mobileDevTechStacks,
   webDevTechStacks,
-} from "../../models/tech-stack-model"
+} from '../../models/tech-stack-model'
 
 export const PersonalTechStacks: React.FC = () => {
   return (

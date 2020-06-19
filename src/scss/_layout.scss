@@ -1,12 +1,12 @@
 @import "colors";
 
-//.gatsby-remark-autolink-header {
-//  color: $color-blue;
-//}
+code {
+  color: $color-white;
+}
 
-.gatsby-highlight {
-  margin: 0 12px;
-  width: 100% !important;
+pre {
+  white-space: pre-wrap !important;
+  background-color: red;
 }
 
 .layout {
@@ -20,11 +20,6 @@
   flex-direction: column;
   align-items: center;
   min-height: 96vh; /* will cover the 100% of viewport */
-
-  //overflow: hidden;
-  //display: flex;
-  //position: relative;
-  //padding-bottom: 100px; /* height of your footer */
 }
 
 .footer {
@@ -72,7 +67,6 @@ a:hover {
 }
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
   text-decoration: underline dotted;
 }
 
@@ -371,32 +365,35 @@ th:last-child,
 td:last-child {
   padding-right: 0;
 }
+
 tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0.2em 0;
-}
-pre code {
-  background: none;
-  line-height: 1.42;
-  width: 50px;
-}
-code:before,
-code:after,
+  //code {
+  //  background-color: hsla(0, 0%, 0%, 0.04);
+  //  border-radius: 3px;
+  //  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+  //    "Liberation Mono", Menlo, Courier, monospace;
+  //  padding: 0.2em 0;
+  //}
+  //pre code {
+  //  background: none;
+  //  line-height: 1.42;
+  //  width: 50px;
+  //}
+  //code:before,
+  //code:after,
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
   content: " ";
 }
-pre code:before,
-pre code:after,
+
+//pre code:before,
+//pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

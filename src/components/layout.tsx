@@ -1,7 +1,7 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
-import "../scss/_layout.scss"
-import { Nav } from "./nav";
+import { graphql, useStaticQuery } from 'gatsby'
+import '../scss/_layout.scss'
+import { Nav } from './nav'
 
 export interface LayoutProps {
   hideFooter?: boolean;
@@ -17,12 +17,12 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter, hideNav }) => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <>
       <div className={'layout'}>
-        {!hideNav && <Nav />}
+        {!hideNav && <Nav/>}
         <main className={'main'}>{children}</main>
         {!hideFooter && <footer className={'footer'}>
           <p className={'footer__text'}>Designed - Developed - Written - by James Toohey</p>
@@ -30,6 +30,6 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter, hideNav }) => {
       </div>
     </>
   )
-};
+}
 
 export default Layout

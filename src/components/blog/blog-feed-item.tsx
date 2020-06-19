@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import '../../scss/blog/_blog-feed-item.scss'
-import { Link } from "gatsby";
+import { Link } from 'gatsby'
 
 export interface BlogFeedItemProps {
   id: string;
@@ -11,7 +11,7 @@ export interface BlogFeedItemProps {
 }
 
 export const BlogFeedItem: React.FC<BlogFeedItemProps> = props => {
-  const { id, title, excerpt, date, path } = props;
+  const { id, title, excerpt, date, path } = props
   return (
     <div className="blog-feed-item" key={id}>
       <h1 className={'blog-feed-item__title'}>
@@ -20,5 +20,5 @@ export const BlogFeedItem: React.FC<BlogFeedItemProps> = props => {
       <h3 className={'blog-feed-item__date'}>{date}</h3>
       <p>{excerpt}</p>
     </div>
-  );
-};
+  )
+}

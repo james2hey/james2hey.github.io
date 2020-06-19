@@ -1,5 +1,5 @@
-import React, { CSSProperties } from "react"
-import { TechItem } from "./tech-item"
+import React, { CSSProperties } from 'react'
+import { TechItem } from './tech-item'
 
 export interface TechDescriptionProps {
   name: string;
@@ -19,8 +19,8 @@ export const TechStackDescription: React.FC<TechDescriptionProps> = ({ name, des
 }
 
 const style: CSSProperties = {
-  display: "flex",
-  flexDirection: "row",
+  display: 'flex',
+  flexDirection: 'row',
 }
 
 const techItemStyle: CSSProperties = {
@@ -28,8 +28,7 @@ const techItemStyle: CSSProperties = {
 }
 
 const textStyle: CSSProperties = {
-  display: "flex",
-  flexDirection: "row",
-  // alignItems: 'center',
+  display: 'flex',
+  flexDirection: 'row',
 }
 

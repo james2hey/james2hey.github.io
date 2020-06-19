@@ -1,5 +1,5 @@
-import React, { CSSProperties } from "react"
-import { Card } from "../../subcomponents/card"
+import React, { CSSProperties } from 'react'
+import { Card } from '../../subcomponents/card'
 
 export interface AboutItemProps {
   title: string;
@@ -18,15 +18,15 @@ export const AboutItem: React.FC<AboutItemProps> = ({ title, description, image 
 }
 
 const aboutItem: CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  maxWidth: "350px",
-  minWidth: "320px",
-  margin: "12px",
-  padding: "12px",
-  background: "whitesmoke",
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  maxWidth: '350px',
+  minWidth: '320px',
+  margin: '12px',
+  padding: '12px',
+  background: 'whitesmoke',
   // ...boxShadow,
 }
 

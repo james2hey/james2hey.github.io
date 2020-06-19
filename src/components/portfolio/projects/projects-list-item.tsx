@@ -1,8 +1,8 @@
-import React from "react"
-import "../../../scss/portfolio/projects/_projects-list-item.scss"
-import { ProjectModel } from "../../../models/project-model"
-import { Card } from "../../subcomponents/card"
-import { TechItem, TechItemSize } from "../../subcomponents/tech-item"
+import React from 'react'
+import '../../../scss/portfolio/projects/_projects-list-item.scss'
+import { ProjectModel } from '../../../models/project-model'
+import { Card } from '../../subcomponents/card'
+import { TechItem, TechItemSize } from '../../subcomponents/tech-item'
 
 export interface ProjectsListItemProps {
   project: ProjectModel
@@ -14,8 +14,8 @@ export const ProjectsListItem: React.FC<ProjectsListItemProps> = ({ project, rig
     <div>
       <p>{project.content}</p>
       <div>
-        <h4 style={{ textAlign: "center", marginBottom: "12px" }}>Technologies Used</h4>
-        <div className={"projects-list-item__technologies"}>
+        <h4 style={{ textAlign: 'center', marginBottom: '12px' }}>Technologies Used</h4>
+        <div className={'projects-list-item__technologies'}>
           {project.technologies.map(technology => <TechItem image={technology.image} name={technology.name}
                                                             size={TechItemSize.Small} key={technology.name}/>)}
         </div>
@@ -24,17 +24,17 @@ export const ProjectsListItem: React.FC<ProjectsListItemProps> = ({ project, rig
   )
 
   return (
-    <Card className={"projects-list-item"}>
+    <Card className={'projects-list-item'}>
       <h3>{project.name}</h3>
-      <div className={"projects-list-item__details"}>
+      <div className={'projects-list-item__details'}>
         {rightHandSide ?
           <>
-            <img src={project.image} alt={project.name} className={"projects-list-item__image"}/>
+            <img src={project.image} alt={project.name} className={'projects-list-item__image'}/>
             {description}
           </> :
           <>
             {description}
-            <img src={project.image} alt={project.name} className={"projects-list-item__image"}/>
+            <img src={project.image} alt={project.name} className={'projects-list-item__image'}/>
           </>
         }
       </div>

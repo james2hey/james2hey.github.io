@@ -1,11 +1,9 @@
-import "../scss/blog/_blog-post.scss";
-import { graphql, Link, PageProps } from "gatsby";
-import React from "react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import { ProfilePicture, ProfilePictureSize } from "../components/subcomponents/profile-picture";
-import { BlogTitle } from "../components/blog/blog-title";
-import { BlogFeed } from "../components/blog/blog-feed";
+import '../scss/blog/_blog-post.scss'
+import { graphql, PageProps } from 'gatsby'
+import React from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { BlogFeed, BlogTitle } from '../components/blog'
 
 interface BlogPageProps {
   allMarkdownRemark: {

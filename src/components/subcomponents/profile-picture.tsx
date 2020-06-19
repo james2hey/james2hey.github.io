@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 import '../../scss/subcomponents/_profile-picture.scss'
-import profileImage from "../../assets/images/portrait.jpg";
+import profileImage from '../../assets/images/portrait.jpg'
 
 
 export enum ProfilePictureSize {
@@ -16,5 +16,5 @@ export interface ProfilePictureProps {
 export const ProfilePicture: React.FC<ProfilePictureProps> = ({ size }) => {
   return <img
     src={profileImage} alt={`profile picture`}
-    className={`profile-picture profile-picture--${size.toString()}`} />
-};
+    className={`profile-picture profile-picture--${size.toString()}`}/>
+}
