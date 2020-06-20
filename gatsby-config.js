@@ -3,7 +3,8 @@ module.exports = {
     title: `James Toohey`,
     description: `James Toohey's portfolio website.`,
     author: `@james2hey`,
-    siteUrl: 'https://toohey.dev',
+    siteUrl: "https://toohey.dev",
+    image: `/icons/icon-512x512.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -38,7 +39,7 @@ module.exports = {
         background_color: `#0288d1`,
         theme_color: `#0288d1`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/jt-logo.jpg`, // This path is relative to the root of the site.
       },
     },
     {
