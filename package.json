@@ -5,44 +5,41 @@
   "version": "0.1.0",
   "author": "James Toohey <jamestoohey97@gmail.com>",
   "dependencies": {
-    "@types/react-helmet": "^5.0.15",
-    "gatsby": "^2.19.45",
-    "gatsby-image": "^2.2.44",
-    "gatsby-plugin-catch-links": "^2.2.1",
-    "gatsby-plugin-google-analytics": "^2.2.5",
-    "gatsby-plugin-manifest": "^2.2.48",
-    "gatsby-plugin-offline": "^3.0.41",
-    "gatsby-plugin-react-helmet": "^3.1.24",
-    "gatsby-plugin-sass": "^2.2.1",
-    "gatsby-plugin-sharp": "^2.5.4",
-    "gatsby-plugin-sitemap": "^2.4.2",
-    "gatsby-plugin-typescript": "^2.3.1",
-    "gatsby-remark-autolink-headers": "^2.3.1",
-    "gatsby-remark-prismjs": "^3.5.1",
-    "gatsby-source-filesystem": "^2.1.56",
-    "gatsby-transformer-remark": "^2.7.1",
-    "gatsby-transformer-sharp": "^2.4.4",
-    "node-sass": "^4.13.1",
-    "prismjs": "^1.20.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-transition-group": "^4.4.1"
+    "@types/react-helmet": "6.1.4",
+    "gatsby": "3.14.3",
+    "gatsby-image": "3.11.0",
+    "gatsby-plugin-catch-links": "3.14.0",
+    "gatsby-plugin-google-analytics": "3.14.0",
+    "gatsby-plugin-manifest": "3.14.0",
+    "gatsby-plugin-offline": "3.10.2",
+    "gatsby-plugin-react-helmet": "3.10.0",
+    "gatsby-plugin-sass": "3.2.0",
+    "gatsby-plugin-sharp": "3.14.1",
+    "gatsby-plugin-sitemap": "3.3.0",
+    "gatsby-plugin-typescript": "3.14.0",
+    "gatsby-remark-autolink-headers": "3.2.0",
+    "gatsby-remark-prismjs": "3.13.0",
+    "gatsby-source-filesystem": "3.14.0",
+    "gatsby-transformer-remark": "3.2.0",
+    "gatsby-transformer-sharp": "3.14.0",
+    "node-sass": "6.0.1",
+    "prismjs": "1.25.0",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-helmet": "6.1.0",
+    "react-transition-group": "4.4.1"
   },
   "devDependencies": {
     "@types/react-transition-group": "^4.4.0",
-    "gh-pages": "^2.2.0",
-    "prettier": "^1.19.1",
-    "typescript": "^3.8.3"
+    "gh-pages": "3.2.3",
+    "prettier": "2.4.1",
+    "typescript": "4.4.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build && yarn run add-cname",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -50,12 +47,5 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "add-cname": "echo toohey.dev > public/CNAME"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

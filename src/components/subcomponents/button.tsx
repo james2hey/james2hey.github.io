@@ -1,5 +1,4 @@
 import React from 'react';
-import "./../../scss/subcomponents/_button.scss"
 
 export interface ButtonProps {
   kind: 'primary' | 'secondary'

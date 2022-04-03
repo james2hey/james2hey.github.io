@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/portfolio/_contact.scss'
 import mail from '../../assets/images/links/mail.svg'
 import linkedin from '../../assets/images/links/linkedin.svg'
 import github from '../../assets/images/links/github.svg'

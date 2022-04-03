@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "../../scss/subcomponents/_bar.scss"
 
 export interface BarProps {
   level: number;

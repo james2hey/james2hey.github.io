@@ -1,5 +1,4 @@
 import React, { CSSProperties } from 'react'
-import '../../scss/subcomponents/_cross.scss'
 
 export interface CrossProps {
   isOpen: boolean;

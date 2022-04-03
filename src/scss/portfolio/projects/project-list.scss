@@ -1,0 +1,6 @@
+.project-list {
+    @include remove-list-style();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

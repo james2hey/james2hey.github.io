@@ -7,7 +7,7 @@ export interface SectionProps extends DetailedHTMLProps<React.HTMLAttributes<HTM
 export const Section: React.FC<SectionProps> = props => {
   const style: CSSProperties = { ...sectionStyle, ...props.style }
   return (
-    <div {...props} style={style}>{props.children}</div>
+    <section {...props} style={style}>{props.children}</section>
   )
 }
 

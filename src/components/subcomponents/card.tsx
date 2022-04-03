@@ -1,5 +1,4 @@
 import React from 'react'
-import './../../scss/subcomponents/_card.scss'
 
 export interface CardProps extends React.HTMLProps<HTMLDivElement> {
   hover?: boolean;

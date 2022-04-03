@@ -1,7 +1,6 @@
 import React, { CSSProperties, useState } from 'react'
 import { Card } from './card'
 import { TechItem } from './tech-item'
-import '../../scss/subcomponents/_tech-stack.scss'
 import { Cross } from './cross'
 import { TechStackDescription } from './tech-stack-description'
 import { TechStackModel } from '../../models/tech-stack-model'
@@ -12,13 +11,12 @@ export interface TechStackProps {
 }
 
 export const TechStack: React.FC<TechStackProps> = ({ header, techStacks }) => {
-  const [isExpanded, setIsExpanded] = useState(false)
+    const [isExpanded, setIsExpanded] = useState(false)
 
-  const handleOnClick = () => setIsExpanded(!isExpanded)
-  const techStackItemsCss = isExpanded ? modalTechStackItemsStyle : {}
-  return (
-    <div style={{ position: 'relative' }}>
-      <Card style={isExpanded ? stickyStyle : {}} className={'tech-stack'} onClick={handleOnClick} hover={true}>
+    const handleOnClick = () => setIsExpanded(!isExpanded)
+    const techStackItemsCss = isExpanded ? modalTechStackItemsStyle : {}
+    return (
+      <Card style={isExpanded ? stickyStyle : {}} className={`tech-stack${isExpanded ? '--expanded' : ''}`} onClick={handleOnClick} hover={true}>
         <h3>{header}</h3>
         {isExpanded && <div style={crossStyle}><Cross isOpen={isExpanded}/></div>}
         {isExpanded ? (
@@ -32,8 +30,7 @@ export const TechStack: React.FC<TechStackProps> = ({ header, techStacks }) => {
         }
 
       </Card>
-    </div>
-  )
+    )
 }
 
 const stickyStyle: CSSProperties = {

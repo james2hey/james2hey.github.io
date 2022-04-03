@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/blog/_blog-feed-item.scss'
 import { Link } from 'gatsby'
 
 export interface BlogFeedItemProps {

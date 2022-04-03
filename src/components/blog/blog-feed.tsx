@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../scss/blog/_blog-feed.scss'
+import '../../scss/blog/blog-feed.scss'
 import { BlogFeedItem } from './blog-feed-item'
 
 export interface BlogFeedProps {

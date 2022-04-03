@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import '../scss/_nav.scss'
 
 export const Nav: React.FC = () => {
   return (

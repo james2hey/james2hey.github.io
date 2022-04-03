@@ -4,6 +4,7 @@
 
 ### TODO
 
+- [ ] Improve markup.
 - [x] Add tech stack images
 - [x] "Click me" on first tech stack item?
 - [x] Responsive the bottom 3.

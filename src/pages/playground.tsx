@@ -1,7 +1,6 @@
 import Layout from "../components/layout"
 import React from "react"
 import { Card } from "../components/subcomponents/card"
-import "./../scss/_playground.scss"
 import { Button } from "../components/subcomponents/button"
 import SEO from "../components/seo"
 import { Code } from "../components/subcomponents/code"
@@ -46,7 +45,7 @@ const PlaygroundPage: React.FC = () => {
         </PlaygroundSection>
         <PlaygroundSection title={'Code'}>
           <Code>
-            playground.components.forEach(component => console.log(`lookin good!`);
+            playground.components.forEach(component ={">"} console.log(`lookin good!`);
           </Code>
           <br/>
         </PlaygroundSection>
@@ -56,6 +55,24 @@ const PlaygroundPage: React.FC = () => {
             <TechItem name={'Python'} image={python}/>
             <TechItem name={'Kotlin'} image={kotlin}/>
           </div>
+        </PlaygroundSection>
+        <PlaygroundSection title="Colors">
+          <h5>Primary</h5>
+          <ul className="playground-colors">
+            {[...Array(10).keys()].map(index => {
+              const value = index + 1;
+              const color = `${value}00`;
+              return <li className={`playground-color playground-color--primary-${color}`}>{color}</li>;
+            })}
+          </ul>
+          <h5>Secondary</h5>
+          <ul className="playground-colors">
+            {[...Array(10).keys()].map(index => {
+              const value = index + 1;
+              const color = `${value}00`;
+              return <li className={`playground-color playground-color--secondary-${color}`}>{color}</li>;
+            })}
+          </ul>
         </PlaygroundSection>
         <PlaygroundSection title={'Profile Picture'}>
           {Object.values(ProfilePictureSize).map(size => <ProfilePicture size={size}/>)}
@@ -80,9 +97,9 @@ interface PlaygroundSectionProps {
 const PlaygroundSection: React.FC<PlaygroundSectionProps> = props => {
   const { title, children } = props;
   return (
-    <div className={'playground__section'}>
+    <section className={'playground__section'}>
       <h3>{title}</h3>
       {children}
-    </div>
+    </section>
   )
 };

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/portfolio/_intro.scss'
 import { navigate } from 'gatsby'
 import { Button } from '../subcomponents/button'
 import { ProfilePicture, ProfilePictureSize } from '../subcomponents/profile-picture'

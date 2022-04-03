@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../../scss/portfolio/about/_about.scss'
 import agileImage from '../../../assets/images/icons/agile.svg'
 import computerImage from '../../../assets/images/icons/computer.svg'
 import pragmaticImage from '../../../assets/images/icons/pragmatic.svg'

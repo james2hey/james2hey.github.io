@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/subcomponents/_tech-item.scss'
 
 export enum TechItemSize {
   Small = 'small',

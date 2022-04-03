@@ -1,0 +1,40 @@
+@import "../base/colors";
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  margin-bottom: 0;
+
+
+  &__image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+
+    &--small {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 6px;
+    }
+
+    &--medium {
+      width: 60px;
+      height: 60px;
+    }
+
+    &--large {
+      width: 80px;
+      height: 80px;
+    }
+
+
+  }
+
+  &__text {
+    text-align: center;
+    color: $color-primary-500;
+  }
+}

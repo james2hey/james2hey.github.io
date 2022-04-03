@@ -1,0 +1,30 @@
+.blog-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left {
+
+  }
+
+  &__heading {
+    color: $color-white;
+    text-decoration: none;
+  }
+  h1 {
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    margin-top: 0;
+  }
+  margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-title {
+    flex-direction: column;
+  }
+
+}

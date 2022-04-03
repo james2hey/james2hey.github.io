@@ -6,6 +6,7 @@ import { About } from "../components/portfolio/about/about";
 import { Projects } from "../components/portfolio/projects/projects";
 import { Contact } from "../components/portfolio/contact";
 import { PersonalTechStacks } from "../components/portfolio/personal-tech-stacks"
+// import './../scss/all.scss';
 
 const IndexPage: React.FC = () => {
   return (

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/blog/_blog-title.scss'
 import { Link } from 'gatsby'
 import { ProfilePicture, ProfilePictureSize } from '../subcomponents/profile-picture'
 

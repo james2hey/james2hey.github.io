@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import '../scss/_layout.scss'
+import '../scss/layout.scss'
 import { Nav } from './nav'
 
 export interface LayoutProps {
@@ -20,7 +20,6 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter, hideNav }) => {
   `)
 
   return (
-    <>
       <div className={'layout'}>
         {!hideNav && <Nav/>}
         <main className={'main'}>{children}</main>
@@ -28,7 +27,6 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter, hideNav }) => {
           <p className={'footer__text'}>Designed - Developed - Written - by James Toohey</p>
         </footer>}
       </div>
-    </>
   )
 }
 

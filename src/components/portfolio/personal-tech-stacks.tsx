@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/portfolio/_personal-tech-stacks.scss'
 import { TechStack } from '../subcomponents/tech-stack'
 import { Section } from './section'
 import {

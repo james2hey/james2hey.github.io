@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/subcomponents/project.scss'
 import { Card } from './card'
 
 export interface ProjectProps {

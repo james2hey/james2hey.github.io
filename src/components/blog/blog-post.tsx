@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link, PageProps } from 'gatsby'
-import '../../scss/blog/_blog-post.scss'
 import Layout from '../layout'
 import SEO from '../seo'
 
