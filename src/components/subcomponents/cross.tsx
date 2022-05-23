@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react'
 
 export interface CrossProps {
-  isOpen: boolean;
+  isOpen?: boolean;
   onClick?: () => void;
 }
 

@@ -1,5 +1,6 @@
 import React, {ReactNode} from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
+import {Cross} from "./cross";
 
 export interface ModalContentProps {
     title: string;
@@ -49,7 +50,7 @@ export const Modal: React.FC<ModalProps> = props => {
                 <div className="modal">
                     {props.title && <Dialog.Title>{props.title}</Dialog.Title>}
                     {props.description && <Dialog.Description>{props.description}</Dialog.Description>}
-                    <Dialog.Close className="modal__close-button" />
+                    <Dialog.Close className="modal__close-button"><Cross /></Dialog.Close>
                     {props.children}
                 </div>
                 </Dialog.Content>

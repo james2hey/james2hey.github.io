@@ -3,6 +3,7 @@ import typescriptImage from '../assets/images/technologies/typescript.svg'
 import reduxImage from '../assets/images/technologies/redux.svg'
 import ionicImage from '../assets/images/technologies/ionic.svg'
 import nodeImage from '../assets/images/technologies/node.svg'
+import jestImage from '../assets/images/technologies/jest.svg'
 import swiftImage from '../assets/images/technologies/swift.svg'
 import pythonImage from '../assets/images/technologies/python.svg'
 import reactNativeImage from '../assets/images/technologies/react-native.svg'
@@ -45,13 +46,13 @@ export const nodeTechStack: TechStackModel = {
   image: nodeImage,
 }
 
-export const reduxTechStack: TechStackModel = {
-  description: `When creating large scale applications, I've often used Redux for state management. This has helped produce predictable, centralised state containers which complement frameworks like React and React Native.`,
-  name: 'Redux',
-  image: reduxImage,
+export const jestTechStack: TechStackModel = {
+  name: 'Jest',
+  description: `I've used node's npm for most package management when web developing. I've also done studies towards looking at potential vulnerabilities that using such package managers can introduce into codebases.`,
+  image: jestImage,
 }
 
-export const webDevTechStacks: TechStackModel[] = [reactTechStack, typescriptTechStack, sassTechStack, nodeTechStack]
+export const webDevTechStacks: TechStackModel[] = [reactTechStack, typescriptTechStack, sassTechStack, nodeTechStack, jestTechStack]
 
 export const reactNativeTechStack: TechStackModel = {
   name: 'React Native',
@@ -90,6 +91,12 @@ export const sqlTechStack: TechStackModel = {
 }
 
 export const backendDevTechStacks: TechStackModel[] = [dotNetTechStack, cSharpTechStack, sqlTechStack]
+
+export const reduxTechStack: TechStackModel = {
+  description: `When creating large scale applications, I've often used Redux for state management. This has helped produce predictable, centralised state containers which complement frameworks like React and React Native.`,
+  name: 'Redux',
+  image: reduxImage,
+}
 
 // Consider removing the below:
 export const pythonTechStack: TechStackModel = {

@@ -13,7 +13,7 @@ export const PersonalTechStacks: React.FC = () => {
             <h2>Personal Tech Stacks</h2>
             <div className="personal-tech-stacks__list">
                 <TechStack
-                    header={'Web Dev'}
+                    header={'Web'}
                     techStacks={webDevTechStacks}
                 />
                 <TechStack

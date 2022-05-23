@@ -36,14 +36,12 @@
         align-items: center;
         justify-content: flex-start;
 
+        border-top: 1px $color-grey-lightest solid;
+        padding-top: 12px;
+
         &-description {
             margin-left: 24px;
             width: fit-content;
-        }
-
-        &:not(:last-child) {
-            padding-bottom: 12px;
-            border-bottom: 1px $color-grey-lightest solid;
         }
     }
 }

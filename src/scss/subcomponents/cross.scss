@@ -1,13 +1,12 @@
-@import "../base/colors";
-
 $length: 36px;
-$thickness: 4px;
+$thickness: 2px;
 
 .cross {
+    @include icon-size(24px);
     display: inline-block;
-    width: $length;
-    height: $length;
     border: none;
+    transform: rotate(45deg);
+    cursor: pointer;
 
     background: linear-gradient($color-primary-500, $color-primary-500),
     linear-gradient($color-primary-500, $color-primary-500);
