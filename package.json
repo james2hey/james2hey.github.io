@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "James Toohey <jamestoohey97@gmail.com>",
   "dependencies": {
+    "@radix-ui/react-dialog": "0.1.7",
     "@types/react-helmet": "6.1.4",
     "gatsby": "3.14.3",
     "gatsby-image": "3.11.0",
@@ -31,6 +32,7 @@
     "react-transition-group": "4.4.1"
   },
   "devDependencies": {
+    "@types/react-dom": "^17.0.11",
     "@types/react-transition-group": "^4.4.0",
     "gh-pages": "3.2.3",
     "prettier": "2.4.1",
@@ -41,7 +43,6 @@
     "build": "gatsby build && yarn run add-cname",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "clean": "gatsby clean",

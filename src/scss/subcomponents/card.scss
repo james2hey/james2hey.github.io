@@ -5,7 +5,11 @@
   --mouse-y: 0px;
 }
 
-@mixin box-shadow-card {
+@mixin box-shadow-card-dark {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
+}
+
+@mixin box-shadow-card-light {
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
     0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -15,9 +19,31 @@
 }
 
 @mixin card {
-  @include box-shadow-card();
+  @include box-shadow-card-light();
   border: 1px $color-grey-lightest solid;
   border-radius: 5px;
+}
+
+@mixin card-hover-effect() {
+    background-color: $color-grey-light;
+    box-sizing: border-box;
+
+    &:hover {
+        //background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
+
+        cursor: pointer;
+        @keyframes hover-animation {
+            from {
+                background: $color-grey-light
+            }
+            to {
+                background: $color-grey-lightest
+            }
+        }
+        background: $color-grey-lightest;
+        animation: hover-animation;
+        animation-duration: 0.5s;
+    }
 }
 
 .card {
@@ -28,25 +54,6 @@
 }
 
 .card-hoverable {
-    @include card();
-    background-color: $color-grey-light;
-    box-sizing: border-box;
-    width: 50vw;
-
-    &:hover {
-        //background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
-
-        cursor: pointer;
-        @keyframes hover-animation {
-          from {
-            background: $color-grey-light
-          }
-          to {
-            background: $color-grey-lightest
-          }
-        }
-        background: $color-grey-lightest;
-        animation: hover-animation;
-        animation-duration: 0.5s;
-    }
+    @include card;
+    @include card-hover-effect;
 }

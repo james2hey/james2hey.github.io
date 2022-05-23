@@ -32,10 +32,6 @@ pre {
     margin: 0;
     font-size: 14px;
   }
-
-  //position: absolute;
-  //bottom: 0;
-  //width: 100%;
 }
 
 html {
@@ -47,9 +43,6 @@ html {
 
   //my stuff
   scroll-behavior: smooth;
-  transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  //-webkit-overflow-scrolling: touch;
 }
 body {
   margin: 0;
@@ -215,7 +208,7 @@ dd {
 }
 p {
   padding: 0;
-  margin: 0 0 1.45rem;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: $heading-color;

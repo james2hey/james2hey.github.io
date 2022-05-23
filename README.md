@@ -4,13 +4,17 @@
 
 ### TODO
 
+#### Must:
+- [x] Fix tech stack modal fixed position issue.
+- [ ] Update projects content.
+
+#### Nice to have:
+- [ ] Animation on landing section.
+- [ ] Modal animation for Personal Tech Stacks.
+- [ ] Some cool animation between Personal Tech Stacks and Recent Projects
 - [ ] Improve markup.
-- [x] Add tech stack images
-- [x] "Click me" on first tech stack item?
-- [x] Responsive the bottom 3.
-- [x] Fix code formatting in blog
-- [x] Add favicon
+- [ ] Install bem util.
 - [ ] Look into dynamic SVG `fill`.
-- [ ] Photoshop more images for projects
-- [ ] Add theme
+- [ ] Photoshop more images for projects.
+- [ ] Add theme.
 

@@ -16,14 +16,14 @@
   flex-grow: 0;
 }
 
-.button--primary {
+.button--color-primary {
   @extend .button;
   background-color: $color-primary-500;
   border: 2px $color-primary-500 solid;
   color: $color-white;
 }
 
-.button--secondary {
+.button--color-secondary {
   @extend .button;
   background-color: transparent;
   border: 2px $color-primary-500 solid;

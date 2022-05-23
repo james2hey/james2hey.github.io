@@ -7,5 +7,5 @@ export interface CrossProps {
 
 export const Cross: React.FC<CrossProps> = ({ isOpen, onClick }) => {
   const style: CSSProperties = isOpen ? { transform: 'rotate(45deg)' } : {}
-  return <div className={'cross'} style={style} onClick={onClick}/>
+  return <button className={'cross'} style={style} onClick={onClick}/>
 }

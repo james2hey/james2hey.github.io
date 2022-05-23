@@ -1,40 +1,14 @@
 @import "../base/colors";
 
 .tech-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  margin-bottom: 0;
+    @include icon-size(60px);
 
-
-  &__image {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 12px;
-
-    &--small {
-      width: 45px;
-      height: 45px;
-      margin-bottom: 6px;
+    &__icon {
+        @include icon-size(60px);
     }
 
-    &--medium {
-      width: 60px;
-      height: 60px;
+    &__text {
+        text-align: center;
+        color: $color-primary-500;
     }
-
-    &--large {
-      width: 80px;
-      height: 80px;
-    }
-
-
-  }
-
-  &__text {
-    text-align: center;
-    color: $color-primary-500;
-  }
 }

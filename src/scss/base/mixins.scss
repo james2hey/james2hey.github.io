@@ -1,5 +1,36 @@
+$breakpoint-mobile: 600px !default;
+
 @mixin remove-list-style() {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin icon-size($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin from($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+@mixin until($device) {
+    @media screen and (max-width: $device - 1px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+  @include until($breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+    @include from($breakpoint-mobile) {
+        @content;
+    }
 }

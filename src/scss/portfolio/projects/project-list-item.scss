@@ -1,21 +1,27 @@
 .project-list-item {
-    @include card();
+    @include card;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: $color-grey-light;
     margin-bottom: 24px;
     max-width: 880px;
+
+    @include desktop {
+        flex-direction: row;
+    }
 
     &__brief {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-width: 240px;
-        max-width: 240px;
         text-align: center;
-        border-right: 1px $color-grey-lightest solid;
-        padding: 4px;
+        border-bottom: 1px $color-grey-lightest solid;
+        padding: 12px;
+
+        @include desktop {
+            border-right: 1px $color-grey-lightest solid;
+        }
     }
 
     &__image {
@@ -24,7 +30,14 @@
     }
 
     &__details {
-        padding: 8px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px 12px 12px;
+
+        &-content {
+            margin-bottom: 8px;
+        }
     }
 
     &__technologies {
@@ -33,8 +46,16 @@
         align-items: center;
     }
 
+    &__technologies-heading {
+        margin-bottom: 12px;
+    }
+
     &__technology-item-list {
         display: flex;
         flex-direction: row;
+
+        .tech-item {
+            margin: 0 6px;
+        }
     }
 }

@@ -37,8 +37,8 @@ const PlaygroundPage: React.FC = () => {
           </div>
         </PlaygroundSection>
         <PlaygroundSection title={'Buttons'}>
-          <Button kind={"primary"} onClick={handleOnClick}>Primary</Button>
-          <Button kind={"secondary"} onClick={handleOnClick}>Secondary</Button>
+          <Button color={"primary"} onClick={handleOnClick}>Primary</Button>
+          <Button color={"secondary"} onClick={handleOnClick}>Secondary</Button>
         </PlaygroundSection>
         <PlaygroundSection title={'Bar'}>
           <Bar level={6} />

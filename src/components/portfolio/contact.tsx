@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
                                                                                            className="Social-image"/></a>
         </div>
       </div>
-      <p>And don't forget to checkout my <Link to={'/blog'}>blog</Link>!</p>
+      {/*<p>And don't forget to checkout my <Link to={'/blog'}>blog</Link>!</p>*/}
     </div>
   )
 }
