@@ -40,13 +40,13 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && npm run add-cname",
+    "add-cname": "echo toohey.dev > public/CNAME",
     "dev": "gatsby develop",
+    "build": "gatsby build && npm run add-cname",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "add-cname": "echo toohey.dev > public/CNAME"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }
