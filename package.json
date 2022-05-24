@@ -3,7 +3,7 @@
   "private": true,
   "description": "James Toohey's portfolio and blog",
   "version": "0.1.0",
-  "author": "James Toohey <jamestoohey97@gmail.com>",
+  "author": "James Toohey <james@toohey.dev>",
   "dependencies": {
     "@radix-ui/react-dialog": "0.1.7",
     "@types/react-helmet": "6.1.4",
@@ -40,7 +40,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build && yarn run add-cname",
+    "build": "gatsby build && npm run add-cname",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",

@@ -42,13 +42,13 @@ export const sassTechStack: TechStackModel = {
 
 export const nodeTechStack: TechStackModel = {
   name: 'Node',
-  description: `Node and NPM underpin these web tools I have experience with. I have a very strong understanding of Node and have used it for over four years now. I've also done research studies investigation potential vulnerabilities that using such package managers can introduce.`,
+  description: `Node and NPM underpin these web tools I have experience with. I have a very strong understanding of Node and have used it for over four years now. I've also done research studies investigation potential vulnerabilities that using NPM can introduce.`,
   image: nodeImage,
 }
 
 export const jestTechStack: TechStackModel = {
   name: 'Jest',
-  description: `When testing React based applications I've been using Jest as the primary testing framework. Its proven a useful tool and great when used with libraries such as the react testing library.`,
+  description: `When testing React based applications I've been using Jest as the primary testing framework. Its proven a useful tool and great when used with libraries such as the React Testing Library.`,
   image: jestImage,
 }
 
@@ -56,7 +56,7 @@ export const webDevTechStacks: TechStackModel[] = [reactTechStack, typescriptTec
 
 export const swiftTechStack: TechStackModel = {
   name: 'Swift',
-  description: `I've worked on a native iOS application at Vista for a couple of years. This was primarily using the SwiftUI framework. I enjoy learning about the lower level details of how the native code performs vs web cross platform frameworks, and have found it useful for applying optimisations to web based products.`,
+  description: `I've worked on a native iOS application at Vista for a couple of years. This was primarily using the SwiftUI framework. I enjoy learning about the lower level details of how the native code performs vs web cross platform frameworks, and have found it useful for applying optimisations to web based mobile apps.`,
   image: swiftImage,
 }
 export const ionicTechStack: TechStackModel = {
@@ -74,13 +74,13 @@ export const mobileDevTechStacks: TechStackModel[] = [swiftTechStack, ionicTechS
 
 export const dotNetTechStack: TechStackModel = {
   name: '.NET',
-  description: `Most of my experience with .NET has been using the ASP.NET extension. I've mainly used the MVC architecture pattern with stored procedures on the data facing level.`,
+  description: `Most of my experience with .NET has been using the ASP.NET extension. I've been involved with using the standard MVC architecture patterns including stored procedures on the data facing level.`,
   image: dotNetImage,
 }
 
 export const cSharpTechStack: TechStackModel = {
   name: 'C#',
-  description: `Coming from a Java background allowed me to quickly pick up C# due to its similar syntax. I've also used it at Vista when helping build a content management system for our front-end applications.`,
+  description: `Coming from a Java background allowed me to quickly pick up C# due to its similar syntax. I've used it at Vista when helping build a content management system API for our front-end applications.`,
   image: cSharpImage,
 }
 
