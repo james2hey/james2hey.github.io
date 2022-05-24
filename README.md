@@ -20,7 +20,7 @@ Follow [these docs](https://docs.github.com/en/pages/getting-started-with-github
 - [ ] Animation on landing section.
 - [ ] Add "interests" section.
 - [ ] Modal animation for Personal Tech Stacks.
-- [ ] Some cool animation between Personal Tech Stacks and Recent Projects
+- [ ] Some cool animation between Personal Tech Stacks and Recent Projects.
 - [ ] Improve logo asset.
 - [ ] Improve markup.
 - [ ] Install bem util.
