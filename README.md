@@ -1,6 +1,6 @@
 # My Website
 
-
+My personal website.
 
 ### TODO
 
@@ -12,6 +12,7 @@
 - [ ] Animation on landing section.
 - [ ] Modal animation for Personal Tech Stacks.
 - [ ] Some cool animation between Personal Tech Stacks and Recent Projects
+- [ ] Improve logo asset.
 - [ ] Improve markup.
 - [ ] Install bem util.
 - [ ] Look into dynamic SVG `fill`.

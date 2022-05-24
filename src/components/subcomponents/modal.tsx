@@ -2,35 +2,6 @@ import React, {ReactNode} from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import {Cross} from "./cross";
 
-export interface ModalContentProps {
-    title: string;
-    description?: string;
-    children: ReactNode;
-}
-
-export const ModalContent: React.FC<ModalContentProps> = props => {
-    return (
-        <Dialog.Content>
-            <div className="modal">
-                <Dialog.Title>{props.title}</Dialog.Title>
-                {props.description && <Dialog.Description>{props.description}</Dialog.Description>}
-                <Dialog.Close className="modal__close-button" />
-                {props.children}
-            </div>
-        </Dialog.Content>
-    )
-}
-
-export interface ModalTriggerProps {
-    children: ReactNode
-}
-
-export const ModalTrigger: React.FC<ModalTriggerProps> = props => {
-    return (
-        <Dialog.Trigger asChild={true}>{props.children}</Dialog.Trigger>
-    )
-}
-
 export interface ModalProps {
     className?: string;
     children: ReactNode;
@@ -48,7 +19,7 @@ export const Modal: React.FC<ModalProps> = props => {
                 <Dialog.Overlay className="modal-overlay" />
                 <Dialog.Content>
                 <div className="modal">
-                    {props.title && <Dialog.Title>{props.title}</Dialog.Title>}
+                    {props.title && <Dialog.Title className="modal__title">{props.title}</Dialog.Title>}
                     {props.description && <Dialog.Description>{props.description}</Dialog.Description>}
                     <Dialog.Close className="modal__close-button"><Cross /></Dialog.Close>
                     {props.children}

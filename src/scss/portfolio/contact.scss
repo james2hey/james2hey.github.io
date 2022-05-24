@@ -1,8 +1,11 @@
 .contact {
-    justify-content: center;
     text-align: center;
-    max-width: 800px;
-    user-select: text;
+    padding-top: 0;
+
+    &__details {
+        max-width: 800px;
+
+    }
 
     &__brief {
         align-self: center;

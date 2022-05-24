@@ -30,47 +30,47 @@ export const reactTechStack: TechStackModel = {
 
 export const typescriptTechStack: TechStackModel = {
   name: 'TypeScript',
-  description: `I've also extensively been using TypeScript. Its powerful static type checking has made it a great technology for building large scale applications, and it is a go-to tool for me.`,
+  description: `I've also extensively been using TypeScript. Its powerful static type checking has made it a go-to technology for me, especially when building large scale applications.`,
   image: typescriptImage,
 }
 
 export const sassTechStack: TechStackModel = {
   name: 'Sass',
-  description: `As a premier extension of CSS, I've found Sass as a powerful tool for styling. I've been using it for a couple of years and found that it is especially useful for maintaining stylesheets. It is easy enough to style components initially, but maintainable is usually the harder part. Sass makes this a lot easier.`,
+  description: `I've used Sass as a primary way to style web based applications for a few years and believe it is a great option for managing CSS. Alongside BEM methodologies it can ease the maintenance of styling significantly.`,
   image: sassImage,
 }
 
 export const nodeTechStack: TechStackModel = {
   name: 'Node',
-  description: `I've used node's npm for most package management when web developing. I've also done studies towards looking at potential vulnerabilities that using such package managers can introduce into codebases.`,
+  description: `Node and NPM underpin these web tools I have experience with. I have a very strong understanding of Node and have used it for over four years now. I've also done research studies investigation potential vulnerabilities that using such package managers can introduce.`,
   image: nodeImage,
 }
 
 export const jestTechStack: TechStackModel = {
   name: 'Jest',
-  description: `I've used node's npm for most package management when web developing. I've also done studies towards looking at potential vulnerabilities that using such package managers can introduce into codebases.`,
+  description: `When testing React based applications I've been using Jest as the primary testing framework. Its proven a useful tool and great when used with libraries such as the react testing library.`,
   image: jestImage,
 }
 
 export const webDevTechStacks: TechStackModel[] = [reactTechStack, typescriptTechStack, sassTechStack, nodeTechStack, jestTechStack]
 
-export const reactNativeTechStack: TechStackModel = {
-  name: 'React Native',
-  description: `Coming from a strong background in React has made using React Native second nature to me. I've built two mobile applications in production in React Native, and also created some personal projects. During university I also quantitatively researched into React Native in comparision with alternative state of the art cross-platform frameworks.`,
-  image: reactNativeImage,
+export const swiftTechStack: TechStackModel = {
+  name: 'Swift',
+  description: `I've worked on a native iOS application at Vista for a couple of years. This was primarily using the SwiftUI framework. I enjoy learning about the lower level details of how the native code performs vs web cross platform frameworks, and have found it useful for applying optimisations to web based products.`,
+  image: swiftImage,
 }
 export const ionicTechStack: TechStackModel = {
   name: 'Ionic',
-  description: `I have used Swift for contributing to a legacy native iOS application at Vista. It`,
+  description: `I created a new mobile app from the ground up at Vista using React, Ionic and Capacitor. This took us just over a year, and the product is now used by multiple customers. These were powerful tools that helped us rapidly create a product that could be built on both iOS and Android platforms.`,
   image: ionicImage,
 }
-export const swiftTechStack: TechStackModel = {
-  name: 'Swift',
-  description: `I have used Swift for contributing to a legacy native iOS application at Vista. It`,
-  image: swiftImage,
+export const reactNativeTechStack: TechStackModel = {
+  name: 'React Native',
+  description: `I've got a strong background in React, making React Native fairly second nature to me. I've built two mobile applications in production using React Native, and also created some personal projects. During university I quantitatively researched into React Native in comparision with alternative cross-platform frameworks (Flutter, Xamarin, etc).`,
+  image: reactNativeImage,
 }
 
-export const mobileDevTechStacks: TechStackModel[] = [swiftTechStack, reactNativeTechStack, ionicTechStack]
+export const mobileDevTechStacks: TechStackModel[] = [swiftTechStack, ionicTechStack, reactNativeTechStack]
 
 export const dotNetTechStack: TechStackModel = {
   name: '.NET',
@@ -80,13 +80,13 @@ export const dotNetTechStack: TechStackModel = {
 
 export const cSharpTechStack: TechStackModel = {
   name: 'C#',
-  description: `Coming from a Java background allowed me to quickly pick up C# due to its similar syntax. I've used it at Vista when helping build a content management system for our front end apps.`,
+  description: `Coming from a Java background allowed me to quickly pick up C# due to its similar syntax. I've also used it at Vista when helping build a content management system for our front-end applications.`,
   image: cSharpImage,
 }
 
 export const sqlTechStack: TechStackModel = {
   name: 'SQL',
-  description: `I've been involved with multiple projects requiring traditional relational databases. This has involved full database design - from EER diagrams to performing subroutines like stored procedures.`,
+  description: `I've been involved with a few projects requiring SQL relational databases. This has involved full database design - from EER diagrams to performing subroutines like stored procedures. I aim to improve my knowledge in this area further as I keep developing my skill set.`,
   image: sqlImage,
 }
 

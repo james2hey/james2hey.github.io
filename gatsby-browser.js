@@ -4,5 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import './src/scss/all.scss';
+import './src/scss/_all.scss';
 // require("prismjs/themes/prism-tomorrow.css");

@@ -6,19 +6,21 @@ import {About} from "../components/portfolio/about/about";
 import {Projects} from "../components/portfolio/projects/projects";
 import {Contact} from "../components/portfolio/contact";
 import {PersonalTechStacks} from "../components/portfolio/personal-tech-stacks"
-// import './../scss/all.scss';
+import {Interests} from "../components/interests";
+// import './../scss/_all.scss';
 
 const IndexPage: React.FC = () => {
-  return (
-    <Layout hideFooter={true} hideNav={true}>
-      <SEO title="Portfolio" />
-      <Intro />
-      <About />
-      <PersonalTechStacks />
-      <Projects />
-      <Contact />
-    </Layout>
-  );
+    return (
+        <Layout hideFooter={true} hideNav={true}>
+            <SEO title="Portfolio" />
+            <Intro />
+            <About />
+            <PersonalTechStacks />
+            {/*<Interests />*/}
+            <Projects />
+            <Contact />
+        </Layout>
+    );
 };
 
 export default IndexPage;

@@ -24,7 +24,7 @@ export const TechStack: React.FC<TechStackProps> = props => {
             <ul className="tech-stack-overview">
                 {props.techStacks.map(techStack =>
                     <li className="tech-stack-overview__list-item">
-                        <TechItem image={techStack.image} key={techStack.name} name={techStack.name} />
+                        <TechItem image={techStack.image} key={techStack.name} name={techStack.name} showName />
                         <p className="tech-stack-overview__list-item-description">{techStack.description}</p>
                     </li>
                 )}
