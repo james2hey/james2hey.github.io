@@ -1,4 +1,3 @@
-import '../scss/blog/_blog-post.scss'
 import { graphql, PageProps } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'

@@ -1,0 +1,35 @@
+.Experience-left {
+  flex-grow: 2;
+  background: $color-secondary-500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100%;
+}
+
+.Experience-header {
+  font-size: calc(10px + 6vmin);
+  font-family: 'Segoe Print', serif;
+  font-weight: bold;
+}
+
+.Experience-right {
+  flex-grow: 1;
+  /*height: 200vh;*/
+  margin-top: 20px;
+  width: 100%;
+  /*background: #fffccf;*/
+}
+
+
+@media only screen and (min-width: 975px) {
+  .Experience-left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+

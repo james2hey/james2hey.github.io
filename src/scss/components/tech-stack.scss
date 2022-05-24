@@ -1,0 +1,48 @@
+.tech-stack-preview {
+    @include card;
+    @include card-hover-effect;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 12px;
+    padding: 12px;
+    max-width: 450px;
+    width: 85%;
+    height: 150px;
+    background-color: $color-grey-light;
+
+    &__list-items {
+        @include remove-list-style;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__list-item {
+        margin: 0 12px;
+    }
+}
+
+.tech-stack-overview {
+    @include remove-list-style;
+
+    &__list-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        border-top: 1px $color-grey-lightest solid;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        &-description {
+            margin-left: 24px;
+            width: fit-content;
+        }
+    }
+}

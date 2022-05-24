@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/subcomponents/_profile-picture.scss'
 import profileImage from '../../assets/images/portrait.jpg'
 
 
@@ -14,7 +13,13 @@ export interface ProfilePictureProps {
 }
 
 export const ProfilePicture: React.FC<ProfilePictureProps> = ({ size }) => {
-  return <img
-    src={profileImage} alt={`profile picture`}
-    className={`profile-picture profile-picture--${size.toString()}`}/>
+  return (
+      <div className="profile-picture">
+        <img
+            src={profileImage}
+            alt={`profile picture`}
+            className="profile-picture__image"
+        />
+      </div>
+  )
 }

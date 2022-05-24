@@ -1,0 +1,32 @@
+.contact {
+    text-align: center;
+    padding-top: 0;
+
+    &__details {
+        max-width: 800px;
+
+    }
+
+    &__brief {
+        align-self: center;
+    }
+
+    &__external-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+    }
+
+    &__external-link {
+        &-wrapper {
+            margin: 12px;
+            width: 80px;
+            height: 80px;
+        }
+
+        &-image {
+            @include icon-size(80px);
+        }
+    }
+}

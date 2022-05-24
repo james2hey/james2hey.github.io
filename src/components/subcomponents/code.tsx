@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../scss/subcomponents/_code.scss'
 
 export interface CodeProps {}
 

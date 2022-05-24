@@ -1,0 +1,16 @@
+$length: 36px;
+$thickness: 2px;
+
+.cross {
+    @include icon-size(24px);
+    display: inline-block;
+    border: none;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    background: linear-gradient($color-primary-500, $color-primary-500),
+    linear-gradient($color-primary-500, $color-primary-500);
+    background-position: center;
+    background-size: 50% $thickness, $thickness 50%; /*thickness = 2px, length = 50% (25px)*/
+    background-repeat: no-repeat;
+}

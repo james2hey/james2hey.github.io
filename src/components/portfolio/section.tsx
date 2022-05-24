@@ -1,19 +1,10 @@
-import React, { CSSProperties, DetailedHTMLProps } from 'react'
+import React, { DetailedHTMLProps } from 'react'
 
-export interface SectionProps extends DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-
-}
+export type SectionProps = DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 
 export const Section: React.FC<SectionProps> = props => {
-  const style: CSSProperties = { ...sectionStyle, ...props.style }
+  const className = props.className ? `section ${props.className}` : 'section';
   return (
-    <div {...props} style={style}>{props.children}</div>
+    <section {...props} className={className}>{props.children}</section>
   )
-}
-
-const sectionStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  padding: '36px 0',
 }

@@ -1,11 +1,15 @@
 import React from 'react';
-import "./../../scss/subcomponents/_button.scss"
+
+export enum ButtonColor {
+  Primary = 'primary',
+  Secondary = 'secondary'
+}
 
 export interface ButtonProps {
-  kind: 'primary' | 'secondary'
+  color: ButtonColor;
 }
 
 export const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = props => {
-  const classes = `button--${props.kind} ${props.className}`;
+  const classes = `button--color-${props.color} ${props.className}`;
   return <button {...props} className={classes}>{props.children}</button>;
 };

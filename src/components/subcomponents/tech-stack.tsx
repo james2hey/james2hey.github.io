@@ -1,57 +1,34 @@
-import React, { CSSProperties, useState } from 'react'
-import { Card } from './card'
-import { TechItem } from './tech-item'
-import '../../scss/subcomponents/_tech-stack.scss'
-import { Cross } from './cross'
-import { TechStackDescription } from './tech-stack-description'
-import { TechStackModel } from '../../models/tech-stack-model'
+import React from 'react'
+import {TechItem} from './tech-item'
+import {TechStackModel} from '../../models/tech-stack-model'
+import {Modal} from "./modal";
 
 export interface TechStackProps {
-  header: string;
-  techStacks: TechStackModel[];
+    header: string;
+    techStacks: TechStackModel[];
 }
 
-export const TechStack: React.FC<TechStackProps> = ({ header, techStacks }) => {
-  const [isExpanded, setIsExpanded] = useState(false)
-
-  const handleOnClick = () => setIsExpanded(!isExpanded)
-  const techStackItemsCss = isExpanded ? modalTechStackItemsStyle : {}
-  return (
-    <div style={{ position: 'relative' }}>
-      <Card style={isExpanded ? stickyStyle : {}} className={'tech-stack'} onClick={handleOnClick} hover={true}>
-        <h3>{header}</h3>
-        {isExpanded && <div style={crossStyle}><Cross isOpen={isExpanded}/></div>}
-        {isExpanded ? (
-            <div>
-              {techStacks.map(techStack => <TechStackDescription {...techStack} key={techStack.name}/>)}
-            </div>
-          ) :
-          <div style={techStackItemsCss} className={'tech-stack__items'}>
-            {techStacks.map(techStack => <TechItem image={techStack.image} key={techStack.name}/>)}
-          </div>
-        }
-
-      </Card>
-    </div>
-  )
-}
-
-const stickyStyle: CSSProperties = {
-  position: '-webkit-sticky',
-  // @ts-ignore
-  position: 'sticky',
-  top: 0,
-  bottom: 0,
-  maxWidth: '1000px',
-  width: '90vw',
-}
-
-const modalTechStackItemsStyle: CSSProperties = {
-  flexDirection: 'column',
-}
-
-const crossStyle: CSSProperties = {
-  position: 'absolute',
-  top: 12,
-  right: 12,
+export const TechStack: React.FC<TechStackProps> = props => {
+    return (
+        <Modal title={props.header} trigger={
+            <button className="tech-stack-preview">
+                <h3>{props.header}</h3>
+                <ul className="tech-stack-preview__list-items">
+                    {props.techStacks.map(techStack =>
+                        <li className="tech-stack-preview__list-item">
+                            <TechItem image={techStack.image} key={techStack.name} name={techStack.name} />
+                        </li>)}
+                </ul>
+            </button>
+        }>
+            <ul className="tech-stack-overview">
+                {props.techStacks.map(techStack =>
+                    <li className="tech-stack-overview__list-item">
+                        <TechItem image={techStack.image} key={techStack.name} name={techStack.name} showName />
+                        <p className="tech-stack-overview__list-item-description">{techStack.description}</p>
+                    </li>
+                )}
+            </ul>
+        </Modal>
+    )
 }

@@ -1,0 +1,61 @@
+.project-list-item {
+    @include card;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-grey-light;
+    margin-bottom: 24px;
+    max-width: 880px;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    &__brief {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 1px $color-grey-lightest solid;
+        padding: 12px;
+
+        @include desktop {
+            border-right: 1px $color-grey-lightest solid;
+        }
+    }
+
+    &__image {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px 12px 12px;
+
+        &-content {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__technologies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__technologies-heading {
+        margin-bottom: 12px;
+    }
+
+    &__technology-item-list {
+        display: flex;
+        flex-direction: row;
+
+        .tech-item {
+            margin: 0 8px;
+        }
+    }
+}
