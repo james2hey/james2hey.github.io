@@ -15,20 +15,20 @@ export const TechStack: React.FC<TechStackProps> = props => {
                 <h3>{props.header}</h3>
                 <ul className="tech-stack-preview__list-items">
                     {props.techStacks.map(techStack =>
-                        <li className="tech-stack-preview__list-item">
-                            <TechItem image={techStack.image} key={techStack.name} name={techStack.name} />
+                        <li className="tech-stack-preview__list-item" key={techStack.name}>
+                            <TechItem image={techStack.image} name={techStack.name} />
                         </li>)}
                 </ul>
             </button>
         }>
-            <ul className="tech-stack-overview">
-                {props.techStacks.map(techStack =>
-                    <li className="tech-stack-overview__list-item">
-                        <TechItem image={techStack.image} key={techStack.name} name={techStack.name} showName />
-                        <p className="tech-stack-overview__list-item-description">{techStack.description}</p>
-                    </li>
-                )}
-            </ul>
+                <ul className="tech-stack-overview">
+                    {props.techStacks.map(techStack =>
+                        <li className="tech-stack-overview__list-item" key={techStack.name}>
+                            <TechItem image={techStack.image} name={techStack.name} showName />
+                            <p className="tech-stack-overview__list-item-description">{techStack.description}</p>
+                        </li>
+                    )}
+                </ul>
         </Modal>
     )
 }

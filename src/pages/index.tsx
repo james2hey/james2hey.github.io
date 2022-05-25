@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import {Intro} from "../components/portfolio/intro";
@@ -7,7 +7,6 @@ import {Projects} from "../components/portfolio/projects/projects";
 import {Contact} from "../components/portfolio/contact";
 import {PersonalTechStacks} from "../components/portfolio/personal-tech-stacks"
 import {Interests} from "../components/interests";
-// import './../scss/_all.scss';
 
 const IndexPage: React.FC = () => {
     return (

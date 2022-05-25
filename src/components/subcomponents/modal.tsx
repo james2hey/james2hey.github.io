@@ -1,6 +1,7 @@
 import React, {ReactNode} from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import {Cross} from "./cross";
+import {AnimatePresence, motion, LayoutGroup} from "framer-motion"
 
 export interface ModalProps {
     className?: string;
@@ -14,16 +15,18 @@ export interface ModalProps {
 export const Modal: React.FC<ModalProps> = props => {
     return (
         <Dialog.Root onOpenChange={props.onOpenChange}>
-            <Dialog.Trigger asChild={true}>{props.trigger}</Dialog.Trigger>
+            <Dialog.Trigger asChild={true}>
+                {props.trigger}
+            </Dialog.Trigger>
             <Dialog.Portal>
-                <Dialog.Overlay className="modal-overlay" />
+                <Dialog.Overlay className="modal-overlay"/>
                 <Dialog.Content>
-                <div className="modal">
-                    {props.title && <Dialog.Title className="modal__title">{props.title}</Dialog.Title>}
-                    {props.description && <Dialog.Description>{props.description}</Dialog.Description>}
-                    <Dialog.Close className="modal__close-button"><Cross /></Dialog.Close>
-                    {props.children}
-                </div>
+                    <motion.div className="modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: "spring" }}>
+                        {props.title && <Dialog.Title className="modal__title">{props.title}</Dialog.Title>}
+                        {props.description && <Dialog.Description>{props.description}</Dialog.Description>}
+                        <Dialog.Close className="modal__close-button"><Cross/></Dialog.Close>
+                        {props.children}
+                    </motion.div>
                 </Dialog.Content>
             </Dialog.Portal>
         </Dialog.Root>
