@@ -1,59 +1,56 @@
 @import '../base/colors';
 
 :root {
-  --mouse-x: 0px;
-  --mouse-y: 0px;
+	--mouse-x: 0px;
+	--mouse-y: 0px;
 }
 
 @mixin box-shadow-card-dark {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
 }
 
 @mixin box-shadow-card-light {
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+		0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 @mixin card {
-  @include box-shadow-card-light();
-  border: 1px $color-grey-lightest solid;
-  border-radius: 5px;
+	@include box-shadow-card-light();
+	border: 1px $color-grey-lightest solid;
+	border-radius: 5px;
 }
 
 @mixin card-hover-effect() {
-    background-color: $color-grey-light;
-    box-sizing: border-box;
+	background-color: $color-grey-light;
+	box-sizing: border-box;
 
-    &:hover {
-        //background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
+	&:hover {
+		//background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
 
-        cursor: pointer;
-        @keyframes hover-animation {
-            from {
-                background: $color-grey-light
-            }
-            to {
-                background: $color-grey-lightest
-            }
-        }
-        background: $color-grey-lightest;
-        animation: hover-animation;
-        animation-duration: 0.5s;
-    }
+		cursor: pointer;
+		@keyframes hover-animation {
+			from {
+				background: $color-grey-light;
+			}
+			to {
+				background: $color-grey-lightest;
+			}
+		}
+		background: $color-grey-lightest;
+		animation: hover-animation;
+		animation-duration: 0.5s;
+	}
 }
 
 .card {
-    @include card();
-    background-color: $color-grey-light;
-    //box-sizing: border-box;
-    width: 50vw;
+	@include card();
+	background-color: $color-grey-light;
+	//box-sizing: border-box;
+	width: 50vw;
 }
 
 .card-hoverable {
-    @include card;
-    @include card-hover-effect;
+	@include card;
+	@include card-hover-effect;
 }

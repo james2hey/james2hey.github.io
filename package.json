@@ -4,6 +4,18 @@
     "description": "James Toohey's portfolio and blog",
     "version": "0.1.0",
     "author": "James Toohey <james@toohey.dev>",
+    "scripts": {
+        "add-cname": "echo toohey.dev > public/CNAME",
+        "clean": "gatsby clean",
+        "dev": "gatsby develop",
+        "build": "gatsby build && npm run add-cname",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+        "lint": "eslint --ext .tsx,.ts ./",
+        "lint:fix": "npm run lint -- --fix",
+        "serve": "gatsby serve",
+        "deploy": "gatsby build && gh-pages -d public -b master",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
     "dependencies": {
         "@radix-ui/react-dialog": "0.1.7",
         "@types/react-helmet": "6.1.4",
@@ -35,19 +47,17 @@
     "devDependencies": {
         "@types/react-dom": "^17.0.11",
         "@types/react-transition-group": "^4.4.0",
+        "@typescript-eslint/eslint-plugin": "^5.27.0",
+        "@typescript-eslint/parser": "^5.27.0",
+        "eslint": "^8.16.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-react": "^7.30.0",
+        "eslint-plugin-react-hooks": "^4.5.0",
         "gh-pages": "3.2.3",
-        "prettier": "2.4.1",
+        "prettier": "2.6.2",
         "typescript": "4.4.4"
     },
-    "license": "MIT",
-    "scripts": {
-        "add-cname": "echo toohey.dev > public/CNAME",
-        "clean": "gatsby clean",
-        "dev": "gatsby develop",
-        "build": "gatsby build && npm run add-cname",
-        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-        "serve": "gatsby serve",
-        "deploy": "gatsby build && gh-pages -d public -b master",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-    }
+    "license": "MIT"
 }

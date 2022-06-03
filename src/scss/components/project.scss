@@ -1,21 +1,21 @@
 @import '../base/colors';
 
 .project {
-  width: 70%;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+	width: 70%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
 
-  &--image {
-    width: 60px;
-    height: 60px;
-    margin: 0 8px;
-  }
+	&--image {
+		width: 60px;
+		height: 60px;
+		margin: 0 8px;
+	}
 
-  &--details {
-    align-items: flex-start;
-    text-align: left;
-  }
+	&--details {
+		align-items: flex-start;
+		text-align: left;
+	}
 }

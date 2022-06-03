@@ -1,34 +1,34 @@
 .intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    padding: 40px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	padding: 40px 0;
 
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 12px;
-        margin-right: 12px;
-    }
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 12px;
+		margin-right: 12px;
+	}
 
-    &__main-heading {
-        margin-bottom: 8px;
-    }
+	&__main-heading {
+		margin-bottom: 8px;
+	}
 
-    &__flag {
-        margin-left: 4px;
-    }
+	&__flag {
+		margin-left: 4px;
+	}
 
-    .profile-picture {
-        margin-bottom: 24px;
-    }
+	.profile-picture {
+		margin-bottom: 24px;
+	}
 }
 
 .highlight {
-    color: $color-primary-500;
+	color: $color-primary-500;
 }

@@ -1,30 +1,30 @@
 .profile-picture {
-    @include icon-size(160px);
+	@include icon-size(160px);
 
-    border-radius: 50%;
-    margin: 0;
-    border-color: $color-white;
-    border-width: 2px;
-    border-style: solid;
-    box-shadow: 0 0 25px #000;
-    overflow: hidden;
+	border-radius: 50%;
+	margin: 0;
+	border-color: $color-white;
+	border-width: 2px;
+	border-style: solid;
+	box-shadow: 0 0 25px #000;
+	overflow: hidden;
 
-    &__image {
-        @include icon-size(160px);
-    }
+	&__image {
+		@include icon-size(160px);
+	}
 
-    &--small {
-        height: 80px;
-        width: 80px;
-    }
+	&--small {
+		height: 80px;
+		width: 80px;
+	}
 
-    &--medium {
-        height: 160px;
-        width: 160px;
-    }
+	&--medium {
+		height: 160px;
+		width: 160px;
+	}
 
-    &--large {
-        height: 240px;
-        width: 240px;
-    }
+	&--large {
+		height: 240px;
+		width: 240px;
+	}
 }

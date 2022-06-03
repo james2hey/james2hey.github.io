@@ -1,44 +1,44 @@
-$default-font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$default-font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+	Helvetica Neue, sans-serif;
 $default-font-color: $color-white;
 
 @mixin heading-style() {
-    margin: 0 0 1.45rem;
-    font-weight: bold;
-    text-rendering: optimizeLegibility;
-    color: $default-font-color;
+	margin: 0 0 1.45rem;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+	color: $default-font-color;
 }
 
 h1 {
-    @include heading-style;
-    font-size: 2.25rem;
+	@include heading-style;
+	font-size: 2.25rem;
 }
 
 h2 {
-    @include heading-style;
-    font-size: 1.62671rem;
+	@include heading-style;
+	font-size: 1.62671rem;
 }
 
 h3 {
-    @include heading-style;
-    font-size: 1.38316rem;
+	@include heading-style;
+	font-size: 1.38316rem;
 }
 
 h4 {
-    @include heading-style;
-    font-size: 1rem;
+	@include heading-style;
+	font-size: 1rem;
 }
 
 h5 {
-    @include heading-style;
-    font-size: 0.85028rem;
+	@include heading-style;
+	font-size: 0.85028rem;
 }
 
 h6 {
-    @include heading-style;
-    font-size: 0.78405rem;
+	@include heading-style;
+	font-size: 0.78405rem;
 }
 
 p {
-    color: $default-font-color;
+	color: $default-font-color;
 }
