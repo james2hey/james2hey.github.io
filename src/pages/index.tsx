@@ -8,14 +8,16 @@ import { Contact } from '../components/portfolio/contact';
 import { PersonalTechStacks } from '../components/portfolio/personal-tech-stacks';
 
 const IndexPage: React.FC = () => (
-	<Layout hideFooter hideNav>
+	<Layout>
 		<SEO title='Portfolio' />
 		<Intro />
-		<About />
-		<PersonalTechStacks />
-		{/* <Interests /> */}
-		<Projects />
-		<Contact />
+		<main>
+			<About />
+			<PersonalTechStacks />
+			{/* <Interests /> */}
+			<Projects />
+			<Contact />
+		</main>
 	</Layout>
 );
 

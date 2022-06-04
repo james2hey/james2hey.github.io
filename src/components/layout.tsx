@@ -1,13 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Nav } from './nav';
 
-export interface LayoutProps {
-	hideFooter?: boolean;
-	hideNav?: boolean;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children, hideFooter, hideNav }) => {
+const Layout: React.FC = props => {
 	useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -20,13 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children, hideFooter, hideNav }) => {
 
 	return (
 		<div className='layout'>
-			{!hideNav && <Nav />}
-			<main className='main'>{children}</main>
-			{!hideFooter && (
-				<footer className='footer'>
-					<p className='footer__text'>Designed - Developed - Written - by James Toohey</p>
-				</footer>
-			)}
+			{props.children}
 		</div>
 	);
 };

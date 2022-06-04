@@ -7,13 +7,11 @@ export enum ButtonColor {
 
 export interface ButtonProps {
 	color: ButtonColor;
-	className?: string;
 }
 
 export const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = props => {
-	const classes = `button--color-${props.color} ${props.className}`;
 	return (
-		<button {...props} className={classes}>
+		<button {...props} className={`button--color-${props.color}`}>
 			{props.children}
 		</button>
 	);

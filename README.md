@@ -20,7 +20,7 @@ The `gastby` branch is being used for most dev at the moment. Deploy locally by 
 -   [x] Modal animation for Personal Tech Stacks.
 -   [ ] Some cool animation between Personal Tech Stacks and Recent Projects.
 -   [ ] Improve logo asset.
--   [ ] Improve markup.
+-   [x] Improve markup.
 -   [ ] Install bem util.
 -   [ ] Look into dynamic SVG `fill`.
 -   [ ] Photoshop more images for projects.

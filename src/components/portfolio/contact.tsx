@@ -6,7 +6,7 @@ import { Section } from './section';
 
 export const Contact: React.FC = () => (
 	<Section className='contact' id='contact'>
-		<div className='contact__details'>
+		<address className='contact__details'>
 			<div className='contact__brief'>
 				<h3>{"Let's talk!"}</h3>
 				<p>
@@ -31,6 +31,6 @@ export const Contact: React.FC = () => (
 					</a>
 				</div>
 			</div>
-		</div>
+		</address>
 	</Section>
 );

@@ -22,7 +22,9 @@ export const ProjectList: React.FC<ProjectsListProps> = props => {
 		<div className='project-list'>
 			<ul className='project-list__items'>
 				{visibleProjects.map((project) => (
-					<ProjectListItem key={project.name} project={project} />
+					<li>
+						<ProjectListItem key={project.name} project={project} />
+					</li>
 				))}
 			</ul>
 			{visibleProjects < props.projects && (
