@@ -1,6 +1,6 @@
 import React from 'react';
 import { TechItem } from '../tech-item';
-import { ProjectData } from "./projects";
+import { ProjectData } from './project-data';
 
 export interface ProjectListItemProps {
 	project: ProjectData;
@@ -11,7 +11,7 @@ export const ProjectListItem: React.FC<ProjectListItemProps> = ({ project }) => 
 		<article className='project-list-item'>
 			<div className='project-list-item__brief'>
 				<h3>{project.name}</h3>
-				<img className='project-list-item__image' src={project.image} alt={project.name}/>
+				<img className='project-list-item__image' src={project.image} alt={project.name} />
 			</div>
 			<div className='project-list-item__details'>
 				<p className='project-list-item__details-content'>{project.content}</p>
@@ -19,11 +19,11 @@ export const ProjectListItem: React.FC<ProjectListItemProps> = ({ project }) => 
 					<h4 className='project-list-item__technologies-heading'>Tech Stack</h4>
 					<div className='project-list-item__technology-item-list'>
 						{project.technologies.map(technology => (
-							<TechItem image={technology.image} name={technology.name} key={technology.name}/>
+							<TechItem image={technology.image} name={technology.name} key={technology.name} />
 						))}
 					</div>
 				</div>
 			</div>
 		</article>
 	);
-}
+};

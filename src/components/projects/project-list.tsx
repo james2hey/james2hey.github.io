@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ProjectListItem } from './project-list-item';
 import { Button, ButtonColor } from '../button';
-import { ProjectData } from "./projects";
+import { ProjectData } from './project-data';
 
 export interface ProjectsListProps {
 	projects: ProjectData[];

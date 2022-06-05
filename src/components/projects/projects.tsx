@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section } from '../section';
 import { ProjectList } from './project-list';
-import { allProjectData } from "./project-data";
+import { allProjectData } from './project-data';
 
 export const Projects: React.FC = () => (
 	<Section id='projects' className='projects'>
