@@ -11,7 +11,7 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = props => {
 	return (
-		<button {...props} className={`button--color-${props.color}`}>
+		<button {...props} className={`button button--color-${props.color}`}>
 			{props.children}
 		</button>
 	);
