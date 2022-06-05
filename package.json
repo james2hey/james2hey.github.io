@@ -48,7 +48,7 @@
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.30.0",
         "eslint-plugin-react-hooks": "^4.5.0",
-        "gh-pages": "3.2.3",
+        "gh-pages": "4.0.0",
         "pre-commit": "1.2.2",
         "prettier": "2.6.2",
         "sass": "1.52.2",
