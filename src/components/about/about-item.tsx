@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '../../subcomponents/icon';
+import { Icon } from '../icon';
 
 export interface AboutItemProps {
 	title: string;

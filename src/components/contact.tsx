@@ -1,7 +1,7 @@
 import React from 'react';
-import mail from '../../assets/images/links/mail.svg';
-import linkedin from '../../assets/images/links/linkedin.svg';
-import github from '../../assets/images/links/github.svg';
+import mail from '../assets/images/links/mail.svg';
+import linkedin from '../assets/images/links/linkedin.svg';
+import github from '../assets/images/links/github.svg';
 import { Section } from './section';
 
 export const Contact: React.FC = () => (

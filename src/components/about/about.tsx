@@ -1,7 +1,7 @@
 import React from 'react';
-import agileImage from '../../../assets/images/icons/agile.svg';
-import computerImage from '../../../assets/images/icons/computer.svg';
-import pragmaticImage from '../../../assets/images/icons/pragmatic.svg';
+import agileImage from '../../assets/images/icons/agile.svg';
+import computerImage from '../../assets/images/icons/computer.svg';
+import pragmaticImage from '../../assets/images/icons/pragmatic.svg';
 import { AboutItem } from './about-item';
 import { Section } from '../section';
 

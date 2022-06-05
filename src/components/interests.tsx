@@ -1,6 +1,7 @@
 import React from 'react';
-import { Section } from './portfolio/section';
+import { Section } from './section';
 
+// TODO
 export const Interests: React.FC = () => (
 	<Section className='interest' id='interest'>
 		<h2 className='about__title'>Interests</h2>

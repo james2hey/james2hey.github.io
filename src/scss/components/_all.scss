@@ -1,17 +1,12 @@
-// Base stuff
-@import 'layout';
-@import 'section';
-@import 'card';
-
-// Stuff that overrides base.
-@import 'about-item';
-@import 'modal';
+@import 'about/all';
+@import 'projects/all';
+@import 'tech-stacks/all';
 @import 'button';
-@import 'code';
+@import 'contact';
 @import 'cross';
-@import 'nav';
-@import 'portfolio-nav';
+@import 'interests';
+@import 'intro';
+@import 'modal';
 @import 'profile-picture';
-@import 'project';
+@import 'section';
 @import 'tech-item';
-@import 'tech-stack';

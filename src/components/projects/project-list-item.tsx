@@ -1,9 +1,9 @@
 import React from 'react';
-import { ProjectModel } from '../../../models/project-model';
-import { TechItem } from '../../subcomponents/tech-item';
+import { TechItem } from '../tech-item';
+import { ProjectData } from "./projects";
 
 export interface ProjectListItemProps {
-	project: ProjectModel;
+	project: ProjectData;
 }
 
 export const ProjectListItem: React.FC<ProjectListItemProps> = ({ project }) => {

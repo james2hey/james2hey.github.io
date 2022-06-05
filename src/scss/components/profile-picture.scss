@@ -12,19 +12,4 @@
 	&__image {
 		@include icon-size(160px);
 	}
-
-	&--small {
-		height: 80px;
-		width: 80px;
-	}
-
-	&--medium {
-		height: 160px;
-		width: 160px;
-	}
-
-	&--large {
-		height: 240px;
-		width: 240px;
-	}
 }

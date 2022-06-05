@@ -1,11 +1,11 @@
 import React from 'react';
-import { TechItem } from './tech-item';
-import { TechStackModel } from '../../models/tech-stack-model';
-import { Modal } from './modal';
+import { TechItem } from '../tech-item';
+import { TechStackData } from './tech-stack-data';
+import { Modal } from '../modal';
 
 export interface TechStackProps {
 	header: string;
-	techStacks: TechStackModel[];
+	techStacks: TechStackData[];
 }
 
 export const TechStack: React.FC<TechStackProps> = props => (

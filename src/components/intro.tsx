@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { navigate } from 'gatsby';
-import { Button, ButtonColor } from '../subcomponents/button';
-import { ProfilePicture } from '../subcomponents/profile-picture';
+import { Button, ButtonColor } from './button';
+import { ProfilePicture } from './profile-picture';
 
 export const Intro = () => {
 	const handleOnClick = useCallback(() => navigate('#about'), []);

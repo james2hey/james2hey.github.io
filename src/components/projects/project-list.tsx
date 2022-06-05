@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { ProjectModel } from '../../../models/project-model';
 import { ProjectListItem } from './project-list-item';
-import { Button, ButtonColor } from '../../subcomponents/button';
+import { Button, ButtonColor } from '../button';
+import { ProjectData } from "./projects";
 
 export interface ProjectsListProps {
-	projects: ProjectModel[];
+	projects: ProjectData[];
 	initialVisibleProjectCount: number;
 }
 
@@ -21,8 +21,8 @@ export const ProjectList: React.FC<ProjectsListProps> = props => {
 	return (
 		<div className='project-list'>
 			<ul className='project-list__items'>
-				{visibleProjects.map((project) => (
-					<li>
+				{visibleProjects.map((project, index) => (
+					<li key={index}>
 						<ProjectListItem key={project.name} project={project} />
 					</li>
 				))}
