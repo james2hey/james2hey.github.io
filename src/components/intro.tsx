@@ -4,24 +4,24 @@ import { Button, ButtonColor } from './button';
 import { ProfilePicture } from './profile-picture';
 
 export const Intro = () => {
-	const handleOnClick = useCallback(() => navigate('#about'), []);
+    const handleOnClick = useCallback(() => navigate('#about'), []);
 
-	return (
-		<header className='intro'>
-			<div className='intro__container'>
-				<ProfilePicture />
-				<h1 className='intro__main-heading'>
-					{"Kia ora, I'm "}
-					<span className='highlight'>James Toohey</span>.
-				</h1>
-				<h2>
-					{"I'm a Software Engineer from New Zealand"}
-					<span className='intro__flag'>🇳🇿</span>
-				</h2>
-			</div>
-			<Button color={ButtonColor.Secondary} onClick={handleOnClick}>
-				About Me
-			</Button>
-		</header>
-	);
+    return (
+        <header className='intro'>
+            <div className='intro__container'>
+                <ProfilePicture />
+                <h1 className='intro__main-heading'>
+                    {"Kia ora, I'm "}
+                    <span className='highlight'>James Toohey</span>.
+                </h1>
+                <h2>
+                    {"I'm a Software Engineer from New Zealand"}
+                    <span className='intro__flag'>🇳🇿</span>
+                </h2>
+            </div>
+            <Button color={ButtonColor.Secondary} onClick={handleOnClick}>
+                About Me
+            </Button>
+        </header>
+    );
 };

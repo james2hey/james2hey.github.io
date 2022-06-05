@@ -8,17 +8,17 @@ import { Contact } from '../components/contact';
 import { TechStacksSection } from '../components/tech-stacks/tech-stacks-section';
 
 const IndexPage: React.FC = () => (
-	<Layout>
-		<SEO title='Portfolio' />
-		<Intro />
-		<main>
-			<About />
-			<TechStacksSection />
-			{/* TODO <Interests /> */}
-			<Projects />
-			<Contact />
-		</main>
-	</Layout>
+    <Layout>
+        <SEO title='Portfolio' />
+        <Intro />
+        <main>
+            <About />
+            <TechStacksSection />
+            {/* TODO <Interests /> */}
+            <Projects />
+            <Contact />
+        </main>
+    </Layout>
 );
 
 export default IndexPage;

@@ -11,7 +11,7 @@
         "dev": "gatsby develop",
         "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
         "lint": "eslint --ext .tsx,.ts ./",
-        "lint:fix": "npm run format && npm run lint -- --fix",
+        "lint:fix": "npm run lint -- --fix",
         "build": "gatsby build && npm run add-cname",
         "serve": "gatsby serve",
         "deploy": "gatsby build && gh-pages -d public -b master"
@@ -45,10 +45,11 @@
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.30.0",
         "eslint-plugin-react-hooks": "^4.5.0",
         "gh-pages": "3.2.3",
-        "pre-commit": "^1.2.2",
+        "pre-commit": "1.2.2",
         "prettier": "2.6.2",
         "sass": "1.52.2",
         "typescript": "4.7.3"
