@@ -27,14 +27,3 @@
 		justify-content: center;
 	}
 }
-
-@media only screen and (min-width: 975px) {
-	.about-large {
-		flex-direction: row;
-	}
-	.about-left {
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0;
-	}
-}

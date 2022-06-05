@@ -5,7 +5,7 @@ import { Intro } from '../components/intro';
 import { About } from '../components/about/about';
 import { Projects } from '../components/projects/projects';
 import { Contact } from '../components/contact';
-import { TechStacksSection } from '../components/tech-stacks/tech-stacks-section';
+import { TechStackSection } from '../components/tech-stacks/tech-stack-section';
 
 const IndexPage: React.FC = () => (
     <Layout>
@@ -13,7 +13,7 @@ const IndexPage: React.FC = () => (
         <Intro />
         <main>
             <About />
-            <TechStacksSection />
+            <TechStackSection />
             {/* TODO <Interests /> */}
             <Projects />
             <Contact />

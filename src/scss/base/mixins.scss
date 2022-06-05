@@ -90,3 +90,10 @@ $breakpoint-mobile: 600px !default;
 		@content;
 	}
 }
+
+@mixin layout-horizontal-margins($margin: 12px) {
+	@include desktop {
+		margin-left: $margin;
+		margin-right: $margin;
+	}
+}
