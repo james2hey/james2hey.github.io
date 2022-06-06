@@ -17,7 +17,7 @@ export const TechStack: React.FC<TechStackProps> = props => (
                 <ul className='tech-stack-preview__list-items'>
                     {props.techStacks.map(techStack => (
                         <li className='tech-stack-preview__list-item' key={techStack.name}>
-                            <TechItem image={techStack.image} name={techStack.name} />
+                            <TechItem iconName={techStack.iconName} name={techStack.name} />
                         </li>
                     ))}
                 </ul>
@@ -27,7 +27,7 @@ export const TechStack: React.FC<TechStackProps> = props => (
         <ul className='tech-stack-overview'>
             {props.techStacks.map(techStack => (
                 <li className='tech-stack-overview__list-item' key={techStack.name}>
-                    <TechItem image={techStack.image} name={techStack.name} showName />
+                    <TechItem iconName={techStack.iconName} name={techStack.name} showName />
                     <p className='tech-stack-overview__list-item-description'>{techStack.description}</p>
                 </li>
             ))}

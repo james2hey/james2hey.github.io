@@ -19,7 +19,7 @@ export const ProjectListItem: React.FC<ProjectListItemProps> = ({ project }) => 
                     <h4 className='project-list-item__technologies-heading'>Tech Stack</h4>
                     <div className='project-list-item__technology-item-list'>
                         {project.technologies.map(technology => (
-                            <TechItem image={technology.image} name={technology.name} key={technology.name} />
+                            <TechItem iconName={technology.iconName} name={technology.name} key={technology.name} />
                         ))}
                     </div>
                 </div>

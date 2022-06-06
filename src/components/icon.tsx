@@ -1,12 +1,17 @@
 import React from 'react';
+import sprite from './../assets/icons/sprite.svg';
 
 export interface IconProps {
-    src: string;
-    alt: string;
+    name: string;
     className?: string;
 }
 
 export const Icon: React.FC<IconProps> = props => {
-    const { src, alt, className } = props;
-    return <img src={src} alt={alt} className={`icon ${className}`} />;
+    const { name, className } = props;
+    const svgClassName = className ? `icon icon__${name} ${className}` : `icon__${name}`;
+    return (
+        <svg name={name} className={svgClassName}>
+            <use href={sprite + `#${name}`} />
+        </svg>
+    );
 };

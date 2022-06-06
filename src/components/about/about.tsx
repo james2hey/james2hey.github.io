@@ -1,7 +1,4 @@
 import React from 'react';
-import agileImage from '../../assets/images/icons/agile.svg';
-import computerImage from '../../assets/images/icons/computer.svg';
-import pragmaticImage from '../../assets/images/icons/pragmatic.svg';
 import { AboutItem } from './about-item';
 import { Section } from '../section';
 
@@ -18,17 +15,17 @@ export const About: React.FC = () => (
             <AboutItem
                 title='Agility'
                 description='Welcoming new requirements. Software should be flexible and adaptable.'
-                image={agileImage}
+                iconName='agile'
             />
             <AboutItem
                 title='High quality tests'
-                description='Using tests to drive the implementation of software based on user experience.'
-                image={pragmaticImage}
+                description='Using tests to drive the implementation of software to ensure confidence.'
+                iconName='pragmatic'
             />
             <AboutItem
                 title='Accessibility'
                 description='Creating front-end applications that are inclusive for everyone to use.'
-                image={computerImage}
+                iconName='computer'
             />
         </div>
     </Section>

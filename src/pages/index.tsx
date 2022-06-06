@@ -7,18 +7,20 @@ import { Projects } from '../components/projects/projects';
 import { Contact } from '../components/contact';
 import { TechStackSection } from '../components/tech-stacks/tech-stack-section';
 
-const IndexPage: React.FC = () => (
-    <Layout>
-        <SEO title='Portfolio' />
-        <Intro />
-        <main>
-            <About />
-            <TechStackSection />
-            {/* TODO <Interests /> */}
-            <Projects />
-            <Contact />
-        </main>
-    </Layout>
-);
+const IndexPage: React.FC = () => {
+    return (
+        <Layout>
+            <SEO title='Portfolio' />
+            <Intro />
+            <main>
+                <About />
+                <TechStackSection />
+                {/* TODO <Interests /> */}
+                <Projects />
+                <Contact />
+            </main>
+        </Layout>
+    );
+};
 
 export default IndexPage;
