@@ -11,5 +11,6 @@
         "noUnusedLocals": false,
         "typeRoots": ["./src/@types", "./node_modules/@types"]
     },
+    "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"],
     "exclude": ["node_modules", "public", ".cache"]
 }

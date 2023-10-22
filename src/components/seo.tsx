@@ -9,19 +9,18 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({ description, lang, title }) => {
-    const { site } = useStaticQuery(
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        title
-                        description
-                        author
-                    }
+    const { site } = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                    description
+                    author
                 }
             }
-        `
-    );
+        }
+    `);
+    console.log(site);
     const metaDescription = description || site.siteMetadata.description;
 
     return (

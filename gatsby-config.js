@@ -1,4 +1,5 @@
 module.exports = {
+    graphqlTypegen: true,
     siteMetadata: {
         title: `James Toohey`,
         description: `James Toohey's portfolio website.`,
