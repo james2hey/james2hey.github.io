@@ -2,6 +2,12 @@
 
 My personal website.
 
+### Local development
+
+| Package | Version |
+|---------|---------|
+| `node`  | 18      |
+
 ### Publishing
 
 The `gastby` branch is being used for most dev at the moment. Deploy locally by running the `npm run deploy` script rather than using the generic GitHub pages method.
