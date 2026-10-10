@@ -10,7 +10,11 @@ interface Props {
     noindex?: boolean;
 }
 
-const { title, description = "James Toohey's portfolio website.", noindex = false } = Astro.props;
+const {
+    title,
+    description = 'James Toohey, Senior Software Engineer at Twilio in London, working on frontend platform, micro-frontends and CI/CD.',
+    noindex = false
+} = Astro.props;
 
 const fullTitle = `${title} | James Toohey`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);

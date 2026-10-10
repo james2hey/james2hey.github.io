@@ -1,13 +1,14 @@
 ---
 import Section from './Section.astro';
 import TechStack from './TechStack.astro';
-import { backendDevTechStacks, mobileDevTechStacks, webDevTechStacks } from '../data/tech-stacks';
+import { backendTechStacks, earlierTechnologies, frontendTechStacks, platformTechStacks } from '../data/tech-stacks';
 ---
 
-<Section class="tech-stack-section" number="02" title="Personal Tech Stacks">
+<Section class="tech-stack-section" number="02" title="Tech stacks">
     <div class="tech-stack-section__list">
-        <TechStack header="Web" techStacks={webDevTechStacks} />
-        <TechStack header="Mobile" techStacks={mobileDevTechStacks} />
-        <TechStack header="Backend" techStacks={backendDevTechStacks} />
+        <TechStack header="Frontend" techStacks={frontendTechStacks} />
+        <TechStack header="Platform" techStacks={platformTechStacks} />
+        <TechStack header="Backend" techStacks={backendTechStacks} />
     </div>
+    <p class="tech-stack-section__earlier reveal">Earlier: {earlierTechnologies.join(' · ')}</p>
 </Section>

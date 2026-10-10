@@ -3,10 +3,10 @@ import ProjectListItem from './ProjectListItem.astro';
 import Section from './Section.astro';
 import { allProjectData } from '../data/projects';
 
-const initialVisibleProjectCount = 3;
+const initialVisibleProjectCount = 2;
 ---
 
-<Section id="projects" class="projects" number="03" title="Recent Projects">
+<Section id="projects" class="projects" number="03" title="Earlier projects">
     <div class="project-list">
         <ul class="project-list__items">
             {allProjectData.map((project, index) => (

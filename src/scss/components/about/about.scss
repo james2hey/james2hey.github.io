@@ -2,11 +2,17 @@
 
 .about {
 	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
 		max-width: 720px;
 		margin-bottom: 64px;
 		text-align: center;
 		font-size: 1.125rem;
-		color: $color-text-muted;
+
+		p {
+			color: $color-text-muted;
+		}
 	}
 
 	&__subtitle {

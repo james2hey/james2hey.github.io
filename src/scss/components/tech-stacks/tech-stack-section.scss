@@ -1,3 +1,5 @@
+@use '../../base/colors' as *;
+
 .tech-stack-section {
 	// Flex rather than grid so an incomplete last row is centred instead of left-aligned.
 	&__list {
@@ -12,5 +14,11 @@
 			flex: 1 1 300px;
 			max-width: 400px;
 		}
+	}
+
+	&__earlier {
+		margin-top: 32px;
+		font-size: 0.875rem;
+		color: $color-text-muted;
 	}
 }
