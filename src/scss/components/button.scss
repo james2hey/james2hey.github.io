@@ -5,6 +5,7 @@ $button-glow: 0 0 24px rgba($color-primary-500, 0.35);
 .button {
 	padding: 14px 28px;
 	text-align: center;
+	font-family: var(--font-display);
 	font-weight: bold;
 	text-decoration: none;
 	display: inline-block;

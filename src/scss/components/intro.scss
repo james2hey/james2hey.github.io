@@ -33,8 +33,21 @@ $mesh-spotlight-size: 320px;
 	// Small viewport units, so mobile browser toolbars don't cover the bottom of the intro.
 	min-height: 100svh;
 	text-align: center;
-	// Extra room at the bottom for the scroll cue.
-	padding: 40px 0 96px;
+	// Extra room at the bottom for the scroll cue and the curve into the About section.
+	padding: 40px 0 136px;
+
+	// A broad curve in the About section's colour, so the dark intro eases into it instead of a hard edge.
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -1px;
+		height: 56px;
+		background: $color-white;
+		clip-path: ellipse(75% 100% at 50% 100%);
+		pointer-events: none;
+	}
 
 	&__container {
 		display: flex;
@@ -66,7 +79,7 @@ $mesh-spotlight-size: 320px;
 
 	&__scroll-cue {
 		position: absolute;
-		bottom: 24px;
+		bottom: 64px;
 		left: 0;
 		right: 0;
 		display: grid;
@@ -232,4 +245,10 @@ $mesh-spotlight-size: 320px;
 
 .highlight {
 	color: $color-primary-500;
+
+	@supports (background-clip: text) {
+		background: linear-gradient(90deg, $color-primary-300, $color-primary-600);
+		background-clip: text;
+		color: transparent;
+	}
 }
