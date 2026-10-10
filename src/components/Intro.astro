@@ -28,9 +28,18 @@ import portrait from '../assets/images/portrait.jpg';
         <h2 class="intro__subheading">
             I'm a Software Engineer from New Zealand<span class="intro__flag">🇳🇿</span>
         </h2>
+        <div class="intro__actions">
+            <a class="button button--color-primary" href="#about">
+                About Me
+            </a>
+            <a class="button button--color-secondary" href="#contact">
+                Get in touch
+            </a>
+        </div>
     </div>
-    <a class="button button--color-secondary intro__button" href="#about">
-        About Me
+    <!-- A mouse affordance only: "About Me" already goes to the same place for keyboard and screen reader users. -->
+    <a class="intro__scroll-cue" href="#about" aria-hidden="true" tabindex="-1">
+        <span class="intro__scroll-cue-arrow"></span>
     </a>
 </header>
 
