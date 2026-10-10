@@ -1,0 +1,28 @@
+version: 2
+
+updates:
+    - package-ecosystem: npm
+      directory: /
+      schedule:
+          interval: weekly
+      # Wait a week before proposing a new release, so compromised or broken versions have time to be pulled.
+      # Security updates ignore this.
+      cooldown:
+          default-days: 7
+      groups:
+          # Minor and patch bumps arrive as one PR; majors still get their own PR each.
+          npm-minor-and-patch:
+              update-types: [minor, patch]
+          npm-security:
+              applies-to: security-updates
+              patterns: ['*']
+
+    - package-ecosystem: github-actions
+      directory: /
+      schedule:
+          interval: weekly
+      cooldown:
+          default-days: 7
+      groups:
+          github-actions:
+              patterns: ['*']
