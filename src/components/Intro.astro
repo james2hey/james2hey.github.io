@@ -58,38 +58,66 @@ import portrait from '../assets/images/portrait.jpg';
             x: event.pageX - intro.offsetLeft,
             y: event.pageY - intro.offsetTop
         });
+        // A pause longer than this between moves means the pointer went somewhere else (e.g. out of the window)
+        // without us being told, so the next move is treated as a fresh entry.
+        const reentryGap = 150;
         let target = { x: 0, y: 0 };
         let current = { x: 0, y: 0 };
         let frame = 0;
+        let active = false;
+        let lastMove = 0;
+
+        const place = () => {
+            spotlight.style.transform = `translate(${current.x - radius}px, ${current.y - radius}px)`;
+            layer.style.transform = `translate(${radius - current.x}px, ${radius - current.y}px)`;
+        };
 
         const render = () => {
             current.x += (target.x - current.x) * easing;
             current.y += (target.y - current.y) * easing;
-            spotlight.style.transform = `translate(${current.x - radius}px, ${current.y - radius}px)`;
-            layer.style.transform = `translate(${radius - current.x}px, ${radius - current.y}px)`;
+            place();
 
             const settled = Math.abs(target.x - current.x) < 0.5 && Math.abs(target.y - current.y) < 0.5;
             frame = settled ? 0 : requestAnimationFrame(render);
         };
 
-        let active = false;
+        // Jump straight to the pointer and fade in from nothing, rather than sliding over from wherever the
+        // spotlight was last (or reappearing mid fade-out).
+        const enter = () => {
+            active = true;
+            current = { ...target };
+            spotlight.style.transition = 'none';
+            spotlight.classList.remove('is-active');
+            place();
+            void spotlight.offsetWidth; // Apply the hidden state before turning the transition back on.
+            spotlight.style.transition = '';
+            spotlight.classList.add('is-active');
+        };
 
-        // Activated on the first move rather than on pointerenter: if the pointer is already over the intro when
-        // the page loads, some browsers (Safari) never fire pointerenter.
+        const leave = () => {
+            active = false;
+            spotlight.classList.remove('is-active');
+        };
+
+        // Started from pointermove rather than pointerenter: if the pointer is already over the intro when the
+        // page loads, Safari never fires pointerenter.
         intro.addEventListener('pointermove', event => {
+            if (event.pointerType === 'touch') return;
             target = toLocal(event);
-            if (!active) {
-                // Start at the pointer rather than sliding over from the last position.
-                active = true;
-                current = { ...target };
-                spotlight.classList.add('is-active');
-            }
+            if (!active || event.timeStamp - lastMove > reentryGap) enter();
+            lastMove = event.timeStamp;
             if (!frame) frame = requestAnimationFrame(render);
         });
 
-        intro.addEventListener('pointerleave', () => {
-            active = false;
-            spotlight.classList.remove('is-active');
+        // Browsers don't all fire pointerleave when the pointer leaves the window, so also listen for the window
+        // itself being left, losing focus, or being hidden.
+        intro.addEventListener('pointerleave', leave);
+        document.addEventListener('pointerout', event => {
+            if (!event.relatedTarget) leave();
+        });
+        window.addEventListener('blur', leave);
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) leave();
         });
     }
 </script>
