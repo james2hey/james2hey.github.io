@@ -6,11 +6,13 @@ My personal website.
 
 | Package | Version |
 |---------|---------|
-| `node`  | 18      |
+| `node`  | 24      |
+
+The Node version is pinned in `.nvmrc`.
 
 ### Publishing
 
-The `gastby` branch is being used for most dev at the moment. Deploy locally by running the `npm run deploy` script rather than using the generic GitHub pages method.
+Every push to `main` is built and deployed to GitHub Pages by the [Build and deploy](.github/workflows/deploy.yml) workflow. Pull requests are linted and built but not deployed. The custom domain is set in the repo's Pages settings.
 
 ### TODO
 

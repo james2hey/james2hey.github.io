@@ -6,7 +6,6 @@
     "author": "James Toohey <james@toohey.dev>",
     "license": "MIT",
     "scripts": {
-        "add-cname": "echo toohey.dev > public/CNAME",
         "clean": "gatsby clean",
         "generate-sprite": "node src/build/generate-sprite.js",
         "predev": "npm run generate-sprite",
@@ -15,26 +14,25 @@
         "lint": "eslint --ext .tsx,.ts ./",
         "lint:fix": "npm run lint -- --fix",
         "prebuild": "npm run generate-sprite",
-        "build": "gatsby build && npm run add-cname",
-        "serve": "gatsby serve",
-        "deploy": "gatsby build && gh-pages -d public -b master"
+        "build": "gatsby build",
+        "serve": "gatsby serve"
     },
     "dependencies": {
         "@radix-ui/react-dialog": "1.0.5",
         "framer-motion": "^10.16.4",
-        "gatsby": "5.12.8",
+        "gatsby": "5.16.1",
         "gatsby-image": "3.11.0",
-        "gatsby-plugin-catch-links": "5.12.0",
-        "gatsby-plugin-google-analytics": "5.12.0",
-        "gatsby-plugin-manifest": "5.12.2",
-        "gatsby-plugin-offline": "6.12.2",
-        "gatsby-plugin-react-helmet": "6.12.0",
-        "gatsby-plugin-sass": "6.12.2",
-        "gatsby-plugin-sharp": "5.12.2",
-        "gatsby-plugin-sitemap": "6.12.2",
-        "gatsby-plugin-typescript": "5.12.0",
-        "gatsby-source-filesystem": "5.12.0",
-        "gatsby-transformer-sharp": "5.12.2",
+        "gatsby-plugin-catch-links": "5.16.0",
+        "gatsby-plugin-google-analytics": "5.16.0",
+        "gatsby-plugin-manifest": "5.16.0",
+        "gatsby-plugin-offline": "6.16.0",
+        "gatsby-plugin-react-helmet": "6.16.0",
+        "gatsby-plugin-sass": "6.16.0",
+        "gatsby-plugin-sharp": "5.16.0",
+        "gatsby-plugin-sitemap": "6.16.0",
+        "gatsby-plugin-typescript": "5.16.0",
+        "gatsby-source-filesystem": "5.16.0",
+        "gatsby-transformer-sharp": "5.16.0",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-helmet": "6.1.0"
@@ -51,7 +49,6 @@
         "eslint-plugin-prettier": "^5.0.1",
         "eslint-plugin-react": "^7.33.2",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "gh-pages": "6.0.0",
         "pre-commit": "1.2.2",
         "prettier": "3.0.3",
         "sass": "1.69.4",
@@ -60,5 +57,18 @@
     },
     "pre-commit": [
         "lint:fix"
-    ]
+    ],
+    "allowScripts": {
+        "lmdb@2.5.2": true,
+        "lmdb@2.5.3": true,
+        "msgpackr-extract@3.0.2": true,
+        "sharp@0.32.6": true,
+        "@parcel/watcher@2.6.0": true
+    },
+    "overrides": {
+        "msgpackr": "^1.12.1"
+    },
+    "engines": {
+        "node": "24.x"
+    }
 }
