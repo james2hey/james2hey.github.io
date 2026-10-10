@@ -1,0 +1,36 @@
+---
+import { Picture } from 'astro:assets';
+import TechItem from './TechItem.astro';
+import type { ProjectData } from '../data/projects';
+
+interface Props {
+    project: ProjectData;
+}
+
+const { project } = Astro.props;
+---
+
+<article class="project-list-item">
+    <div class="project-list-item__brief">
+        <h3>{project.name}</h3>
+        <Picture
+            class="project-list-item__image"
+            src={project.image}
+            alt={project.name}
+            width={180}
+            densities={[1, 2]}
+            formats={['avif', 'webp']}
+        />
+    </div>
+    <div class="project-list-item__details">
+        <p class="project-list-item__details-content">{project.content}</p>
+        <div class="project-list-item__technologies">
+            <h4 class="project-list-item__technologies-heading">Tech Stack</h4>
+            <div class="project-list-item__technology-item-list">
+                {project.technologies.map(technology => (
+                    <TechItem iconName={technology.iconName} name={technology.name} />
+                ))}
+            </div>
+        </div>
+    </div>
+</article>

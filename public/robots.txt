@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toohey.dev/sitemap-index.xml

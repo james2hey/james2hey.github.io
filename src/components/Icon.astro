@@ -1,0 +1,17 @@
+---
+interface Props {
+    name: string;
+    class?: string;
+    /** Accessible name. Omit for decorative icons next to visible text. */
+    label?: string;
+}
+
+const { name, class: className, label } = Astro.props;
+---
+
+<svg
+    class:list={['icon', `icon__${name}`, className]}
+    {...(label ? { role: 'img', 'aria-label': label } : { 'aria-hidden': 'true' })}
+>
+    <use href={`/sprite.svg#${name}`}></use>
+</svg>

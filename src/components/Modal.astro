@@ -1,0 +1,47 @@
+---
+interface Props {
+    id: string;
+    title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<!--
+    Opened and closed declaratively by buttons with `commandfor`/`command` (Invoker Commands),
+    and closed by clicking the backdrop via `closedby="any"`. The script below fills the gaps
+    in browsers that don't support those yet.
+-->
+<dialog class="modal" id={id} aria-labelledby={`${id}-title`} closedby="any">
+    <div class="modal__content">
+        <h2 class="modal__title" id={`${id}-title`}>
+            {title}
+        </h2>
+        <button class="modal__close-button" commandfor={id} command="close" aria-label="Close">
+            <span class="cross"></span>
+        </button>
+        <slot />
+    </div>
+</dialog>
+
+<script>
+    if (!('command' in HTMLButtonElement.prototype)) {
+        document.addEventListener('click', event => {
+            const button = (event.target as Element).closest<HTMLButtonElement>('button[commandfor]');
+            if (!button) return;
+            const dialog = document.getElementById(button.getAttribute('commandfor')!);
+            if (!(dialog instanceof HTMLDialogElement)) return;
+
+            const command = button.getAttribute('command');
+            if (command === 'show-modal') dialog.showModal();
+            if (command === 'close') dialog.close();
+        });
+    }
+
+    if (!('closedBy' in HTMLDialogElement.prototype)) {
+        // The dialog's content fills it edge to edge, so a click on the dialog itself is a click on the backdrop.
+        document.addEventListener('click', event => {
+            if (event.target instanceof HTMLDialogElement && event.target.open) event.target.close();
+        });
+    }
+</script>

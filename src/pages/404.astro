@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404: Not found" noindex>
+    <meta slot="head" http-equiv="refresh" content="0; url=/" />
+    <h1>Redirecting</h1>
+    <p>
+        This page doesn't exist, <a href="/">redirecting home</a>...
+    </p>
+</Layout>
