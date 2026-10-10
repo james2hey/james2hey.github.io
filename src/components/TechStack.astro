@@ -1,0 +1,35 @@
+---
+import Modal from './Modal.astro';
+import TechItem from './TechItem.astro';
+import type { TechStackData } from '../data/tech-stacks';
+
+interface Props {
+    header: string;
+    techStacks: TechStackData[];
+}
+
+const { header, techStacks } = Astro.props;
+const modalId = `tech-stack-${header.toLowerCase()}`;
+---
+
+<button class="tech-stack-preview" commandfor={modalId} command="show-modal">
+    <h3>{header}</h3>
+    <ul class="tech-stack-preview__list-items">
+        {techStacks.map(techStack => (
+            <li class="tech-stack-preview__list-item">
+                <TechItem iconName={techStack.iconName} name={techStack.name} />
+            </li>
+        ))}
+    </ul>
+</button>
+
+<Modal id={modalId} title={header}>
+    <ul class="tech-stack-overview">
+        {techStacks.map(techStack => (
+            <li class="tech-stack-overview__list-item">
+                <TechItem iconName={techStack.iconName} name={techStack.name} showName />
+                <p class="tech-stack-overview__list-item-description">{techStack.description}</p>
+            </li>
+        ))}
+    </ul>
+</Modal>

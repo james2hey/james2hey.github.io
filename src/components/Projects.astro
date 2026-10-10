@@ -1,0 +1,38 @@
+---
+import ProjectListItem from './ProjectListItem.astro';
+import Section from './Section.astro';
+import { allProjectData } from '../data/projects';
+
+const initialVisibleProjectCount = 3;
+---
+
+<Section id="projects" class="projects">
+    <h2>Recent Projects</h2>
+    <div class="project-list">
+        <ul class="project-list__items">
+            {allProjectData.map((project, index) => (
+                <li hidden={index >= initialVisibleProjectCount}>
+                    <ProjectListItem project={project} />
+                </li>
+            ))}
+        </ul>
+        {allProjectData.length > initialVisibleProjectCount && (
+            <button class="button button--color-secondary" data-show-more-projects>
+                View More
+            </button>
+        )}
+    </div>
+</Section>
+
+<script>
+    const increment = 2;
+    const button = document.querySelector<HTMLButtonElement>('[data-show-more-projects]');
+
+    button?.addEventListener('click', () => {
+        const hiddenProjects = document.querySelectorAll<HTMLLIElement>('.project-list__items > li[hidden]');
+        hiddenProjects.forEach((project, index) => {
+            if (index < increment) project.hidden = false;
+        });
+        if (hiddenProjects.length <= increment) button.remove();
+    });
+</script>

@@ -7,17 +7,18 @@ import {
     reduxTechStack,
     sassTechStack,
     sqlTechStack,
-    TechStackData,
+    type TechStackData,
     typescriptTechStack
-} from '../tech-stacks/tech-stack-data';
-import lumosMobileImage from '../../assets/images/projects/lumos-mobile.png';
-import archiesPizzeriaImage from '../../assets/images/projects/archies-pizzeria-project.png';
-import circuitStatsImage from '../../assets/images/projects/circuit-stats-project.png';
-import pipImage from '../../assets/images/projects/pip-project.png';
+} from './tech-stacks';
+import type { ImageMetadata } from 'astro';
+import lumosMobileImage from '../assets/images/projects/lumos-mobile.png';
+import archiesPizzeriaImage from '../assets/images/projects/archies-pizzeria-project.png';
+import circuitStatsImage from '../assets/images/projects/circuit-stats-project.png';
+import pipImage from '../assets/images/projects/pip-project.png';
 
 export interface ProjectData {
     name: string;
-    image: string;
+    image: ImageMetadata;
     content: string;
     technologies: TechStackData[];
 }

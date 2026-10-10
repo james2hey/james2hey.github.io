@@ -1,0 +1,14 @@
+---
+import Section from './Section.astro';
+import TechStack from './TechStack.astro';
+import { backendDevTechStacks, mobileDevTechStacks, webDevTechStacks } from '../data/tech-stacks';
+---
+
+<Section class="tech-stack-section">
+    <h2>Personal Tech Stacks</h2>
+    <div class="tech-stack-section__list">
+        <TechStack header="Web" techStacks={webDevTechStacks} />
+        <TechStack header="Mobile" techStacks={mobileDevTechStacks} />
+        <TechStack header="Backend" techStacks={backendDevTechStacks} />
+    </div>
+</Section>
