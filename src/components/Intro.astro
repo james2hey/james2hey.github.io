@@ -63,18 +63,24 @@ import portrait from '../assets/images/portrait.jpg';
             frame = settled ? 0 : requestAnimationFrame(render);
         };
 
-        intro.addEventListener('pointerenter', event => {
-            // Start where the pointer came in rather than sliding over from the last position.
-            target = current = toLocal(event);
-            spotlight.classList.add('is-active');
-            render();
-        });
+        let active = false;
 
+        // Activated on the first move rather than on pointerenter: if the pointer is already over the intro when
+        // the page loads, some browsers (Safari) never fire pointerenter.
         intro.addEventListener('pointermove', event => {
             target = toLocal(event);
+            if (!active) {
+                // Start at the pointer rather than sliding over from the last position.
+                active = true;
+                current = { ...target };
+                spotlight.classList.add('is-active');
+            }
             if (!frame) frame = requestAnimationFrame(render);
         });
 
-        intro.addEventListener('pointerleave', () => spotlight.classList.remove('is-active'));
+        intro.addEventListener('pointerleave', () => {
+            active = false;
+            spotlight.classList.remove('is-active');
+        });
     }
 </script>
