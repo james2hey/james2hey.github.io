@@ -1,3 +1,7 @@
+@use '../../base/colors' as *;
+@use '../../base/mixins' as *;
+@use '../../base/typography' as *;
+
 .tech-stack-preview {
 	@include card;
 	@include card-hover-effect;
@@ -20,8 +24,12 @@
 		margin-right: 12px;
 	}
 
+	&__title {
+		@include heading-style;
+		font-size: 1.38316rem;
+	}
+
 	&__list-items {
-		@include remove-list-style;
 		display: flex;
 		flex-direction: row;
 		align-items: center;

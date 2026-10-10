@@ -12,15 +12,16 @@ const { header, techStacks } = Astro.props;
 const modalId = `tech-stack-${header.toLowerCase()}`;
 ---
 
+<!-- Buttons may only contain phrasing content, so the card uses spans rather than a heading and list. -->
 <button class="tech-stack-preview" commandfor={modalId} command="show-modal">
-    <h3>{header}</h3>
-    <ul class="tech-stack-preview__list-items">
+    <span class="tech-stack-preview__title">{header}</span>
+    <span class="tech-stack-preview__list-items">
         {techStacks.map(techStack => (
-            <li class="tech-stack-preview__list-item">
+            <span class="tech-stack-preview__list-item">
                 <TechItem iconName={techStack.iconName} name={techStack.name} />
-            </li>
+            </span>
         ))}
-    </ul>
+    </span>
 </button>
 
 <Modal id={modalId} title={header}>

@@ -1,3 +1,6 @@
+@use '../base/colors' as *;
+@use '../base/mixins' as *;
+
 $modal-transition: 0.2s ease-out;
 
 .modal {
