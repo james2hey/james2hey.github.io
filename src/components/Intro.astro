@@ -51,7 +51,6 @@ import portrait from '../assets/images/portrait.jpg';
     const layer = spotlight?.firstElementChild as HTMLElement | null;
 
     if (intro && spotlight && layer && matchMedia('(hover: hover) and (pointer: fine)').matches) {
-        const radius = spotlight.offsetWidth / 2;
         const easing = 0.15;
         // Page coordinates, so the position stays right if the page scrolls while the pointer is over the intro.
         const toLocal = (event: PointerEvent) => ({
@@ -66,6 +65,9 @@ import portrait from '../assets/images/portrait.jpg';
         let frame = 0;
         let active = false;
         let lastMove = 0;
+        // Measured on each entry, not when the script first runs: Safari can run this before the stylesheet has
+        // applied, when the spotlight is still a full-width block rather than a 320px circle.
+        let radius = 0;
 
         const place = () => {
             spotlight.style.transform = `translate(${current.x - radius}px, ${current.y - radius}px)`;
@@ -88,8 +90,9 @@ import portrait from '../assets/images/portrait.jpg';
             current = { ...target };
             spotlight.style.transition = 'none';
             spotlight.classList.remove('is-active');
+            // Reading the size also applies the hidden state before the transition is turned back on.
+            radius = spotlight.offsetWidth / 2;
             place();
-            void spotlight.offsetWidth; // Apply the hidden state before turning the transition back on.
             spotlight.style.transition = '';
             spotlight.classList.add('is-active');
         };
