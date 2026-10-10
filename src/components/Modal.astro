@@ -31,16 +31,28 @@ const { id, title } = Astro.props;
     // The dialog is opened (or kept open) at its final size and animated with a transform that starts it exactly
     // over the card; its contents fade in once it's nearly full size, so they never look squashed. Only transform
     // and opacity animate. With reduced motion, dialogs just use their CSS fade.
-    // Material's "emphasized" curves: a gentle start so the grow is visible, then a long settle (and the reverse).
+    // Opening uses a damped spring (damping ratio 0.55): it accelerates straight out of the card, overshoots by about
+    // 12% and settles. Sampled into a linear() easing; browsers without linear() get a simpler overshoot curve.
+    const spring =
+        'linear(0, 0.034, 0.12, 0.24, 0.378, 0.52, 0.655, 0.778, 0.883, 0.968, 1.033, 1.079, 1.108, 1.123, 1.126, ' +
+        '1.12, 1.108, 1.092, 1.075, 1.057, 1.04, 1.025, 1.012, 1.002, 0.994, 0.989, 0.986, 0.984, 0.984, 0.985, ' +
+        '0.987, 0.989, 0.991, 0.993, 0.995, 0.997, 0.999, 1, 1.001, 1.001, 1)';
+    const supportsLinearEasing = CSS.supports('transition-timing-function', 'linear(0, 1)');
     const timing = {
-        open: { duration: 550, easing: 'cubic-bezier(0.2, 0, 0, 1)' },
-        close: { duration: 350, easing: 'cubic-bezier(0.3, 0, 0.8, 0.15)' }
+        open: { duration: 600, easing: supportsLinearEasing ? spring : 'cubic-bezier(0.34, 1.56, 0.64, 1)' },
+        // A slight swell outwards, then a fast accelerate back into the card.
+        close: { duration: 320, easing: 'cubic-bezier(0.36, 0, 0.66, -0.56)' }
     };
     // Keyframe offsets are applied after an effect's easing, so the content fades use linear time to make their
-    // offsets mean real time: only fade in during the second half of opening, out in the first third of closing.
+    // offsets mean real time: fade in once the spring has reached full size, out at the start of closing.
     const contentFade = {
-        open: [{ opacity: 0 }, { opacity: 0, offset: 0.5, easing: 'ease-out' }, { opacity: 1 }],
-        close: [{ opacity: 1, easing: 'ease-in' }, { opacity: 0, offset: 0.3 }, { opacity: 0 }]
+        open: [
+            { opacity: 0 },
+            { opacity: 0, offset: 0.25, easing: 'ease-out' },
+            { opacity: 1, offset: 0.6 },
+            { opacity: 1 }
+        ],
+        close: [{ opacity: 1, easing: 'ease-in' }, { opacity: 0, offset: 0.35 }, { opacity: 0 }]
     };
     const closing = new WeakSet<HTMLDialogElement>();
 
