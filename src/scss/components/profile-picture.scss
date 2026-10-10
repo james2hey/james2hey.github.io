@@ -1,3 +1,6 @@
+@use '../base/colors' as *;
+@use '../base/mixins' as *;
+
 .profile-picture {
 	@include icon-size(160px);
 

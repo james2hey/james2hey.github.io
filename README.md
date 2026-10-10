@@ -36,8 +36,10 @@ Every push to `main` is built and deployed to GitHub Pages by the [Build and dep
 #### Tech debt:
 
 - [ ] Remove `public/sw.js` (the kill switch for the old Gatsby service worker) a few months after the Astro launch.
-- [ ] Migrate the SCSS from `@import` to `@use`, then drop `silenceDeprecations` in `astro.config.mjs`.
-- [ ] Replace the traced React / React Native icons with clean vector logos (they're most of the sprite's size).
+- [x] Migrate the SCSS from `@import` to `@use`.
+- [x] Replace the traced React / React Native icons with clean vector logos.
+- [ ] Bump Node to 26 (`.nvmrc` and `engines` in `package.json`) once it becomes LTS in late October 2026. Dependabot doesn't update these.
+- [ ] Upgrade to TypeScript 7 once `@astrojs/check` supports it, then remove the `typescript` ignore rule in `.github/dependabot.yml`.
 - [x] Set up linting and grouped dependency updates.
 
 #### Nice to have:

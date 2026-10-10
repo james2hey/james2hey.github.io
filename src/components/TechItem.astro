@@ -10,7 +10,8 @@ interface Props {
 const { name, iconName, showName = false } = Astro.props;
 ---
 
-<div class:list={['tech-item', { 'tech-item--show-name': showName }]}>
+<!-- Spans rather than div/p so a tech item can sit inside a button. -->
+<span class:list={['tech-item', { 'tech-item--show-name': showName }]}>
     <Icon name={iconName} class="tech-item__icon" label={showName ? undefined : name} />
-    {showName && <p class="tech-item__text">{name}</p>}
-</div>
+    {showName && <span class="tech-item__text">{name}</span>}
+</span>
