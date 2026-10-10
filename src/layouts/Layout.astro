@@ -1,5 +1,5 @@
 ---
-import { getImage } from 'astro:assets';
+import { Font, getImage } from 'astro:assets';
 import logo from '../assets/images/jt-logo.jpg';
 import portrait from '../assets/images/portrait.jpg';
 import '../scss/_all.scss';
@@ -30,6 +30,7 @@ const socialImage = await getImage({ src: portrait, width: 600, height: 600, for
         <link rel="icon" href={favicon.src} type="image/png" />
         <link rel="apple-touch-icon" href={appleTouchIcon.src} />
         <link rel="sitemap" href="/sitemap-index.xml" />
+        <Font cssVariable="--font-display" preload />
         <meta name="theme-color" content="#1b1e25" />
 
         <meta property="og:type" content="website" />

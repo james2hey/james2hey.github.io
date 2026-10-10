@@ -1,11 +1,23 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 
-type Props = HTMLAttributes<'section'>;
+type Props = HTMLAttributes<'section'> & {
+    /** Shown as a small cyan label above the title, e.g. "01". */
+    number?: string;
+    title?: string;
+};
 
-const { class: className, ...attributes } = Astro.props;
+const { class: className, number, title, ...attributes } = Astro.props;
 ---
 
 <section class:list={['section', className]} {...attributes}>
-    <slot />
+    <div class="section__inner">
+        {title && (
+            <header class="section__header reveal">
+                {number && <p class="section__eyebrow">{number}</p>}
+                <h2 class="section__title">{title}</h2>
+            </header>
+        )}
+        <slot />
+    </div>
 </section>

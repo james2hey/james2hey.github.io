@@ -1,34 +1,73 @@
+@use '../base/colors' as *;
+@use '../base/mesh' as *;
 @use '../base/mixins' as *;
 
 .contact {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
 	text-align: center;
-	padding-top: 0;
+
+	// A faint, still echo of the intro's mesh, so the page ends the way it starts.
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-image: mesh-tile('e0e0e0');
+		background-size: $mesh-tile-width $mesh-tile-height;
+		opacity: 0.06;
+		mask-image: radial-gradient(ellipse 70% 90% at 50% 100%, #000 20%, transparent 100%);
+		pointer-events: none;
+	}
 
 	&__details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 32px;
 		font-style: normal;
-		max-width: 800px;
 	}
 
 	&__brief {
-		align-self: center;
+		max-width: 560px;
+		font-size: 1.125rem;
+		color: $color-text-muted;
 	}
 
 	&__external-links {
 		display: flex;
-		flex-direction: row;
 		justify-content: center;
-		align-self: center;
+		gap: 24px;
 	}
 
 	&__external-link {
-		&-wrapper {
-			margin: 12px;
-			width: 80px;
-			height: 80px;
+		&-wrapper a {
+			display: block;
+			border-radius: 50%;
+			transition:
+				transform 0.2s ease-out,
+				filter 0.2s ease-out;
+
+			&:hover {
+				transform: translateY(-2px);
+				filter: drop-shadow(0 0 12px rgba($color-primary-500, 0.5));
+			}
+
+			&:focus-visible {
+				outline: 2px solid $color-primary-300;
+				outline-offset: 4px;
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				&:hover {
+					transform: none;
+				}
+			}
 		}
 
 		&-image {
-			@include icon-size(80px);
+			@include icon-size(64px);
 		}
 	}
 }

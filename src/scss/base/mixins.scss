@@ -35,41 +35,40 @@ $breakpoint-mobile: 600px !default;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
 }
 
-@mixin box-shadow-card-light {
-	box-shadow:
-		0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-		0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-		0 12.5px 10px rgba(0, 0, 0, 0.06),
-		0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-		0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-		0 100px 80px rgba(0, 0, 0, 0.12);
-}
+// Cyan glow shared by buttons and interactive cards.
+$glow-accent: 0 0 24px rgba($color-primary-500, 0.35);
 
-@mixin card {
-	@include box-shadow-card-light();
-	border: 1px $color-grey-lightest solid;
-	border-radius: 5px;
-}
-
-@mixin card-hover-effect() {
+// The one card style used across the site.
+@mixin surface-card {
 	background-color: $color-grey-light;
-	box-sizing: border-box;
+	border: 1px solid $color-grey-lightest;
+	border-radius: 8px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+// Hover and focus treatment for cards that are clickable, matching the buttons.
+@mixin interactive-card {
+	cursor: pointer;
+	transition:
+		border-color 0.2s ease-out,
+		box-shadow 0.2s ease-out,
+		transform 0.2s ease-out;
 
 	&:hover {
-		//background: radial-gradient(at var(--mouse-x) var(--mouse-y), $color-blue-dark, $color-grey-light);
+		border-color: rgba($color-primary-500, 0.6);
+		box-shadow: $glow-accent;
+		transform: translateY(-2px);
+	}
 
-		cursor: pointer;
-		@keyframes hover-animation {
-			from {
-				background: $color-grey-light;
-			}
-			to {
-				background: $color-grey-lightest;
-			}
+	&:focus-visible {
+		outline: 2px solid $color-primary-300;
+		outline-offset: 3px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		&:hover {
+			transform: none;
 		}
-		background: $color-grey-lightest;
-		animation: hover-animation;
-		animation-duration: 0.5s;
 	}
 }
 
@@ -94,12 +93,5 @@ $breakpoint-mobile: 600px !default;
 @mixin desktop() {
 	@include from($breakpoint-mobile) {
 		@content;
-	}
-}
-
-@mixin layout-horizontal-margins($margin: 12px) {
-	@include desktop {
-		margin-left: $margin;
-		margin-right: $margin;
 	}
 }

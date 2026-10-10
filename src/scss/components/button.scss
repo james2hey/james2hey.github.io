@@ -1,24 +1,63 @@
 @use '../base/colors' as *;
 
+$button-glow: 0 0 24px rgba($color-primary-500, 0.35);
+
 .button {
-	padding: 16px 32px;
+	padding: 14px 28px;
 	text-align: center;
+	font-family: var(--font-display);
 	font-weight: bold;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
 	cursor: pointer;
 	flex-grow: 0;
+	border: 2px solid $color-primary-500;
+	border-radius: 6px;
+	transition:
+		background-color 0.2s ease-out,
+		color 0.2s ease-out,
+		box-shadow 0.2s ease-out,
+		transform 0.2s ease-out;
+
+	&:hover {
+		box-shadow: $button-glow;
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		transform: none;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $color-primary-300;
+		outline-offset: 3px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		&:hover {
+			transform: none;
+		}
+	}
 
 	&--color-primary {
 		background-color: $color-primary-500;
-		border: 2px $color-primary-500 solid;
-		color: $color-white;
+		color: $color-grey-darkest;
+
+		&:hover {
+			background-color: $color-primary-300;
+			border-color: $color-primary-300;
+		}
 	}
 
+	// Solid rather than transparent, so the background mesh never shows through the text.
 	&--color-secondary {
-		background-color: transparent;
-		border: 2px $color-primary-500 solid;
+		background-color: $color-grey-dark;
 		color: $color-primary-500;
+
+		&:hover {
+			background-color: $color-primary-500;
+			color: $color-grey-darkest;
+		}
 	}
 }

@@ -1,37 +1,20 @@
 @use '../base/colors' as *;
-
-// Background mesh: a tiling triangle lattice (equilateral triangles with 60px sides) drawn as an inline SVG.
-// The lattice is offset so no line sits on a tile edge, which keeps every line the same thickness when tiled.
-$mesh-tile-width: 60px;
-$mesh-tile-height: 104px;
-$mesh-spotlight-size: 320px;
-
-// $stroke is a hex colour without the leading #.
-@function mesh-tile($stroke) {
-	@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104'%3E%3Cpath d='M0 26H60M0 78H60M-15 0L45 104M45 0L105 104M75 0L15 104M15 0L-45 104' fill='none' stroke='%23#{$stroke}'/%3E%3C/svg%3E");
-}
-
-// A layer of mesh, one tile larger up and left so it can drift one tile down-right and still cover everything.
-@mixin mesh-layer($stroke, $opacity) {
-	content: '';
-	position: absolute;
-	inset: (-$mesh-tile-height) 0 0 (-$mesh-tile-width);
-	background-image: mesh-tile($stroke);
-	background-size: $mesh-tile-width $mesh-tile-height;
-	opacity: $opacity;
-}
+@use '../base/mesh' as *;
 
 .intro {
 	position: relative;
 	isolation: isolate;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	// Small viewport units, so mobile browser toolbars don't cover the bottom of the intro.
+	min-height: 100svh;
 	text-align: center;
-	padding: 40px 0;
+	// Extra room at the bottom for the scroll cue.
+	padding: 40px 0 96px;
 
 	&__container {
 		display: flex;
@@ -52,6 +35,38 @@ $mesh-spotlight-size: 320px;
 
 	.profile-picture {
 		margin-bottom: 24px;
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 16px;
+	}
+
+	&__scroll-cue {
+		position: absolute;
+		bottom: 24px;
+		left: 0;
+		right: 0;
+		display: grid;
+		place-items: center;
+		width: 40px;
+		height: 40px;
+		margin: 0 auto;
+		opacity: 0.8;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__scroll-cue-arrow {
+		width: 14px;
+		height: 14px;
+		border-right: 2px solid $color-primary-500;
+		border-bottom: 2px solid $color-primary-500;
+		transform: translateY(-4px) rotate(45deg);
 	}
 
 	// The wrapper stays still and holds the fade-out mask; its ::before is the moving layer. Masking the moving
@@ -121,8 +136,14 @@ $mesh-spotlight-size: 320px;
 			animation: intro-rise 0.8s ease-out 0.4s both;
 		}
 
-		&__button {
+		&__actions {
 			animation: intro-fade-in 0.8s ease-out 0.8s both;
+		}
+
+		&__scroll-cue {
+			animation:
+				intro-fade-in 0.8s ease-out 1.6s both,
+				intro-bob 2s ease-in-out 2.4s infinite;
 		}
 
 		&__flag {
@@ -164,6 +185,12 @@ $mesh-spotlight-size: 320px;
 	}
 }
 
+@keyframes intro-bob {
+	50% {
+		transform: translateY(6px);
+	}
+}
+
 @keyframes intro-wave {
 	0%,
 	100% {
@@ -185,4 +212,10 @@ $mesh-spotlight-size: 320px;
 
 .highlight {
 	color: $color-primary-500;
+
+	@supports (background-clip: text) {
+		background: linear-gradient(90deg, $color-primary-300, $color-primary-600);
+		background-clip: text;
+		color: transparent;
+	}
 }

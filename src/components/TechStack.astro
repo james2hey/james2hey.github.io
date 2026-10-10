@@ -13,7 +13,7 @@ const modalId = `tech-stack-${header.toLowerCase()}`;
 ---
 
 <!-- Buttons may only contain phrasing content, so the card uses spans rather than a heading and list. -->
-<button class="tech-stack-preview" commandfor={modalId} command="show-modal">
+<button class="tech-stack-preview reveal" commandfor={modalId} command="show-modal">
     <span class="tech-stack-preview__title">{header}</span>
     <span class="tech-stack-preview__list-items">
         {techStacks.map(techStack => (
