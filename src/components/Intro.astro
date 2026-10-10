@@ -4,6 +4,10 @@ import portrait from '../assets/images/portrait.jpg';
 ---
 
 <header class="intro">
+    <div class="intro__mesh" aria-hidden="true"></div>
+    <div class="intro__spotlight" aria-hidden="true">
+        <div class="intro__spotlight-layer"></div>
+    </div>
     <div class="intro__container">
         <div class="profile-picture">
             <Picture
@@ -21,11 +25,56 @@ import portrait from '../assets/images/portrait.jpg';
         <h1 class="intro__main-heading">
             Kia ora, I'm <span class="highlight">James Toohey</span>.
         </h1>
-        <h2>
+        <h2 class="intro__subheading">
             I'm a Software Engineer from New Zealand<span class="intro__flag">🇳🇿</span>
         </h2>
     </div>
-    <a class="button button--color-secondary" href="#about">
+    <a class="button button--color-secondary intro__button" href="#about">
         About Me
     </a>
 </header>
+
+<script>
+    // Moves the mesh spotlight towards the cursor with a little easing. Only transforms change, so the browser
+    // just moves existing layers instead of repainting. Touch devices skip this and keep the plain drift.
+    const intro = document.querySelector<HTMLElement>('.intro');
+    const spotlight = document.querySelector<HTMLElement>('.intro__spotlight');
+    const layer = spotlight?.firstElementChild as HTMLElement | null;
+
+    if (intro && spotlight && layer && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        const radius = spotlight.offsetWidth / 2;
+        const easing = 0.15;
+        // Page coordinates, so the position stays right if the page scrolls while the pointer is over the intro.
+        const toLocal = (event: PointerEvent) => ({
+            x: event.pageX - intro.offsetLeft,
+            y: event.pageY - intro.offsetTop
+        });
+        let target = { x: 0, y: 0 };
+        let current = { x: 0, y: 0 };
+        let frame = 0;
+
+        const render = () => {
+            current.x += (target.x - current.x) * easing;
+            current.y += (target.y - current.y) * easing;
+            spotlight.style.transform = `translate(${current.x - radius}px, ${current.y - radius}px)`;
+            layer.style.transform = `translate(${radius - current.x}px, ${radius - current.y}px)`;
+
+            const settled = Math.abs(target.x - current.x) < 0.5 && Math.abs(target.y - current.y) < 0.5;
+            frame = settled ? 0 : requestAnimationFrame(render);
+        };
+
+        intro.addEventListener('pointerenter', event => {
+            // Start where the pointer came in rather than sliding over from the last position.
+            target = current = toLocal(event);
+            spotlight.classList.add('is-active');
+            render();
+        });
+
+        intro.addEventListener('pointermove', event => {
+            target = toLocal(event);
+            if (!frame) frame = requestAnimationFrame(render);
+        });
+
+        intro.addEventListener('pointerleave', () => spotlight.classList.remove('is-active'));
+    }
+</script>
