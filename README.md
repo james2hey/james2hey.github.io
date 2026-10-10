@@ -29,30 +29,18 @@ Every push to `main` is built and deployed to GitHub Pages by the [Build and dep
 
 #### Must:
 
-- [x] Fix tech stack modal fixed position issue.
-- [x] Update projects content.
+- [ ] Refresh the site content to match my current skills and experience. Most of it dates from 2020–2022:
+    - About: the summary and "Software Passions".
+    - Personal Tech Stacks: which technologies are listed and their descriptions (several reference roles and dates that have moved on).
+    - Recent Projects: the projects themselves and their write-ups (e.g. Lumos Mobile still says it "will be going into production … in 2022").
 - [ ] Delete the `master` branch once Actions deploys have been stable for a few days (it's archived as the `archive/master` tag).
 
 #### Tech debt:
 
 - [ ] Remove `public/sw.js` (the kill switch for the old Gatsby service worker) a few months after the Astro launch.
-- [x] Migrate the SCSS from `@import` to `@use`.
-- [x] Replace the traced React / React Native icons with clean vector logos.
 - [ ] Bump Node to 26 (`.nvmrc` and `engines` in `package.json`) once it becomes LTS in late October 2026. Dependabot doesn't update these.
 - [ ] Upgrade to TypeScript 7 once `@astrojs/check` supports it, then remove the `typescript` ignore rule in `.github/dependabot.yml`.
-- [x] Set up linting and grouped dependency updates.
 
 #### Nice to have:
 
-- [x] Generate SVG sprites.
-- [ ] Animation on landing section.
-- [ ] Add "interests" section.
-- [x] Modal animation for Personal Tech Stacks.
-- [ ] Some cool animation between Personal Tech Stacks and Recent Projects.
 - [ ] Improve logo asset.
-- [x] Improve markup.
-- [ ] Install bem util.
-- [ ] Look into dynamic SVG `fill`.
-- [ ] Photoshop more images for projects.
-- [ ] Theme sprites.
-- [ ] Add theme.
