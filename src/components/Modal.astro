@@ -8,11 +8,13 @@ const { id, title } = Astro.props;
 ---
 
 <!--
-    Opened and closed declaratively by buttons with `commandfor`/`command` (Invoker Commands),
-    and closed by clicking the backdrop via `closedby="any"`. The script below fills the gaps
-    in browsers that don't support those yet.
+    Opened and closed by buttons with `commandfor`/`command` (Invoker Commands), and by clicking the backdrop via
+    `closedby="any"`. `autofocus` puts focus on the dialog itself rather than the close button, so opening it with
+    the mouse doesn't show a focus ring. The script below adds the open/close animation and fills the gaps in
+    browsers that don't support those features yet.
 -->
-<dialog class="modal" id={id} aria-labelledby={`${id}-title`} closedby="any">
+{/* eslint-disable-next-line astro/jsx-a11y/no-autofocus -- On a dialog this only applies when it opens, and focusing the dialog itself is the recommended pattern when its first focusable element is a close button. */}
+<dialog class="modal" id={id} aria-labelledby={`${id}-title`} closedby="any" autofocus>
     <div class="modal__content">
         <h2 class="modal__title" id={`${id}-title`}>
             {title}
@@ -25,6 +27,119 @@ const { id, title } = Astro.props;
 </dialog>
 
 <script>
+    // "Container transform": the dialog grows out of the card that opened it, and shrinks back into it on close.
+    // The dialog is opened (or kept open) at its final size and animated with a transform that starts it exactly
+    // over the card; its contents fade in once it's nearly full size, so they never look squashed. Only transform
+    // and opacity animate. With reduced motion, dialogs just use their CSS fade.
+    // Material's "emphasized" curves: a gentle start so the grow is visible, then a long settle (and the reverse).
+    const timing = {
+        open: { duration: 550, easing: 'cubic-bezier(0.2, 0, 0, 1)' },
+        close: { duration: 350, easing: 'cubic-bezier(0.3, 0, 0.8, 0.15)' }
+    };
+    // Keyframe offsets are applied after an effect's easing, so the content fades use linear time to make their
+    // offsets mean real time: only fade in during the second half of opening, out in the first third of closing.
+    const contentFade = {
+        open: [{ opacity: 0 }, { opacity: 0, offset: 0.5, easing: 'ease-out' }, { opacity: 1 }],
+        close: [{ opacity: 1, easing: 'ease-in' }, { opacity: 0, offset: 0.3 }, { opacity: 0 }]
+    };
+    const closing = new WeakSet<HTMLDialogElement>();
+
+    const shouldAnimate = () => !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const openerOf = (dialog: HTMLDialogElement) =>
+        document.querySelector<HTMLElement>(`[commandfor="${dialog.id}"][command="show-modal"]`);
+
+    const contentOf = (dialog: HTMLDialogElement) => dialog.querySelector<HTMLElement>('.modal__content')!;
+
+    // The transform that makes the dialog (with transform-origin top left) cover the given element.
+    const coverTransform = (dialog: HTMLDialogElement, element: HTMLElement) => {
+        const d = dialog.getBoundingClientRect();
+        const e = element.getBoundingClientRect();
+        return `translate(${e.left - d.left}px, ${e.top - d.top}px) scale(${e.width / d.width}, ${e.height / d.height})`;
+    };
+
+    // Not every browser can animate ::backdrop with the Web Animations API; without it the backdrop just snaps.
+    const animateBackdrop = (dialog: HTMLDialogElement, opacity: number[], options: KeyframeAnimationOptions) => {
+        try {
+            dialog.animate({ opacity }, { ...options, pseudoElement: '::backdrop' });
+        } catch {
+            // Unsupported: skip.
+        }
+    };
+
+    const open = (dialog: HTMLDialogElement, opener: HTMLElement | null) => {
+        if (dialog.open) return;
+        // The dialog's own CSS fade would override these animations, so it's switched off while they run.
+        dialog.dataset.morphing = 'open';
+        dialog.showModal();
+
+        if (!opener || !shouldAnimate()) {
+            delete dialog.dataset.morphing;
+            return;
+        }
+
+        const grow = dialog.animate(
+            [
+                { transform: coverTransform(dialog, opener), opacity: 0 },
+                { opacity: 1, offset: 0.2 },
+                { transform: 'none', opacity: 1 }
+            ],
+            timing.open
+        );
+        contentOf(dialog).animate(contentFade.open, { duration: timing.open.duration });
+        animateBackdrop(dialog, [0, 1], timing.open);
+        grow.finished.finally(() => delete dialog.dataset.morphing);
+    };
+
+    const close = async (dialog: HTMLDialogElement) => {
+        if (!dialog.open || closing.has(dialog)) return;
+        const opener = openerOf(dialog);
+        if (!opener || !shouldAnimate()) {
+            dialog.close();
+            return;
+        }
+
+        closing.add(dialog);
+        dialog.dataset.morphing = 'close';
+        const options = { ...timing.close, fill: 'forwards' as const };
+        contentOf(dialog).animate(contentFade.close, { duration: timing.close.duration, fill: 'forwards' });
+        animateBackdrop(dialog, [1, 0], options);
+        const shrink = dialog.animate(
+            [
+                { transform: 'none', opacity: 1 },
+                { opacity: 1, offset: 0.7 },
+                { transform: coverTransform(dialog, opener), opacity: 0 }
+            ],
+            options
+        );
+
+        await shrink.finished.catch(() => {});
+        dialog.close();
+        // Clear the held end states so the dialog opens normally next time.
+        dialog.getAnimations({ subtree: true }).forEach(animation => animation.cancel());
+        delete dialog.dataset.morphing;
+        closing.delete(dialog);
+    };
+
+    for (const dialog of document.querySelectorAll<HTMLDialogElement>('dialog.modal')) {
+        // Invoker Commands fire a cancelable `command` event on the dialog before acting, so take over from there.
+        dialog.addEventListener('command', event => {
+            const { command, source } = event as Event & { command: string; source: HTMLElement | null };
+            if (command !== 'show-modal' && command !== 'close') return;
+            event.preventDefault();
+            if (command === 'show-modal') open(dialog, source);
+            else close(dialog);
+        });
+
+        // Escape and backdrop clicks fire `cancel`. Browsers don't always let it be cancelled; when they don't,
+        // the dialog closes straight away.
+        dialog.addEventListener('cancel', event => {
+            if (!event.cancelable) return;
+            event.preventDefault();
+            close(dialog);
+        });
+    }
+
     if (!('command' in HTMLButtonElement.prototype)) {
         document.addEventListener('click', event => {
             const button = (event.target as Element).closest<HTMLButtonElement>('button[commandfor]');
@@ -33,15 +148,15 @@ const { id, title } = Astro.props;
             if (!(dialog instanceof HTMLDialogElement)) return;
 
             const command = button.getAttribute('command');
-            if (command === 'show-modal') dialog.showModal();
-            if (command === 'close') dialog.close();
+            if (command === 'show-modal') open(dialog, button);
+            if (command === 'close') close(dialog);
         });
     }
 
     if (!('closedBy' in HTMLDialogElement.prototype)) {
         // The dialog's content fills it edge to edge, so a click on the dialog itself is a click on the backdrop.
         document.addEventListener('click', event => {
-            if (event.target instanceof HTMLDialogElement && event.target.open) event.target.close();
+            if (event.target instanceof HTMLDialogElement && event.target.open) close(event.target);
         });
     }
 </script>

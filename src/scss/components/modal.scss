@@ -19,6 +19,8 @@ $modal-transition: 0.2s ease-out;
 	height: 100%;
 
 	background-color: $color-grey-light;
+	// The open/close animation scales the dialog from the card that opened it.
+	transform-origin: top left;
 
 	@include desktop() {
 		width: fit-content;
@@ -76,25 +78,55 @@ $modal-transition: 0.2s ease-out;
 	}
 
 	&__close-button {
-		@include icon-size(28px);
+		@include icon-size(36px);
 		@include box-shadow-card-dark;
 
 		display: grid;
 		place-items: center;
 		position: absolute;
-		top: 18px;
-		right: 24px;
+		top: 16px;
+		right: 20px;
 
 		padding: 0;
 		background-color: $color-grey-lightest;
-		border: 1px $color-grey-lightest solid;
+		border: 1px solid $color-grey-lightest;
 		border-radius: 50%;
 		cursor: pointer;
+		transition:
+			background-color 0.2s ease-out,
+			border-color 0.2s ease-out;
+
+		.cross {
+			width: 18px;
+			height: 18px;
+		}
 
 		&:hover {
 			background-color: $color-grey-light;
+			border-color: rgba($color-primary-500, 0.6);
+		}
+
+		// An explicit ring that follows the circle (the browser default traced the rotated cross as well).
+		&:focus-visible {
+			outline: 2px solid $color-primary-300;
+			outline-offset: 3px;
 		}
 	}
+}
+
+// The dialog is focused when it opens (see Modal.astro); it's the container, so it doesn't need a ring.
+.modal:focus-visible {
+	outline: none;
+}
+
+// While the script animates a dialog open or closed (see Modal.astro), its CSS fade is switched off so it doesn't
+// override the animation. On close the script fades the backdrop too.
+.modal[data-morphing] {
+	transition: none;
+}
+
+.modal[data-morphing='close']::backdrop {
+	transition: none;
 }
 
 // Stop the page behind an open modal from scrolling.
