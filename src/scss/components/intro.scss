@@ -1,6 +1,29 @@
 @use '../base/colors' as *;
 
+// Background mesh: a tiling triangle lattice (equilateral triangles with 60px sides) drawn as an inline SVG.
+// The lattice is offset so no line sits on a tile edge, which keeps every line the same thickness when tiled.
+$mesh-tile-width: 60px;
+$mesh-tile-height: 104px;
+$mesh-spotlight-size: 320px;
+
+// $stroke is a hex colour without the leading #.
+@function mesh-tile($stroke) {
+	@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104'%3E%3Cpath d='M0 26H60M0 78H60M-15 0L45 104M45 0L105 104M75 0L15 104M15 0L-45 104' fill='none' stroke='%23#{$stroke}'/%3E%3C/svg%3E");
+}
+
+// A layer of mesh, one tile larger up and left so it can drift one tile down-right and still cover everything.
+@mixin mesh-layer($stroke, $opacity) {
+	content: '';
+	position: absolute;
+	inset: (-$mesh-tile-height) 0 0 (-$mesh-tile-width);
+	background-image: mesh-tile($stroke);
+	background-size: $mesh-tile-width $mesh-tile-height;
+	opacity: $opacity;
+}
+
 .intro {
+	position: relative;
+	isolation: isolate;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -23,11 +46,140 @@
 	}
 
 	&__flag {
+		display: inline-block;
 		margin-left: 4px;
 	}
 
 	.profile-picture {
 		margin-bottom: 24px;
+	}
+
+	// The wrapper stays still and holds the fade-out mask; its ::before is the moving layer. Masking the moving
+	// layer directly would make the fade drift with it.
+	&__mesh {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		overflow: hidden;
+		pointer-events: none;
+		mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 25%, transparent 100%);
+
+		&::before {
+			@include mesh-layer('e0e0e0', 0.1);
+		}
+	}
+
+	// A brighter copy of the mesh, seen through a soft circle that follows the cursor (see Intro.astro).
+	// The circle is moved with transform and the layer inside it is moved back the opposite way, so the bright
+	// lines stay exactly on top of the background mesh without anything being repainted.
+	&__spotlight {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: $mesh-spotlight-size;
+		height: $mesh-spotlight-size;
+		overflow: hidden;
+		pointer-events: none;
+		mask-image: radial-gradient(closest-side, #000, transparent);
+		opacity: 0;
+		transition: opacity 0.4s ease-out;
+
+		&.is-active {
+			opacity: 1;
+		}
+	}
+
+	&__spotlight-layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+
+		&::before {
+			@include mesh-layer('67daff', 0.5);
+		}
+	}
+}
+
+// Landing animation. CSS only, and only transform/opacity so it runs on the compositor.
+// The portrait and headings are the Largest Contentful Paint candidates, so they must be painted from the
+// first frame: the portrait only scales, and the headings start at 1% opacity rather than 0 (Chrome doesn't
+// count fully transparent elements as painted).
+@media (prefers-reduced-motion: no-preference) {
+	.intro {
+		.profile-picture {
+			animation: intro-pop 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+		}
+
+		&__main-heading {
+			animation: intro-rise 0.8s ease-out 0.2s both;
+		}
+
+		&__subheading {
+			animation: intro-rise 0.8s ease-out 0.4s both;
+		}
+
+		&__button {
+			animation: intro-fade-in 0.8s ease-out 0.8s both;
+		}
+
+		&__flag {
+			transform-origin: 70% 80%;
+			animation: intro-wave 1.4s ease-in-out 1.4s both;
+		}
+
+		// Moving exactly one tile per loop makes the drift seamless.
+		// Both layers start on the same frame, so they stay in step.
+		&__mesh::before,
+		&__spotlight-layer::before {
+			animation: intro-mesh-drift 40s linear infinite;
+		}
+	}
+}
+
+@keyframes intro-mesh-drift {
+	to {
+		transform: translate($mesh-tile-width, $mesh-tile-height);
+	}
+}
+
+@keyframes intro-pop {
+	from {
+		transform: scale(0.85);
+	}
+}
+
+@keyframes intro-rise {
+	from {
+		opacity: 0.01;
+		transform: translateY(16px);
+	}
+}
+
+@keyframes intro-fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes intro-wave {
+	0%,
+	100% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(14deg);
+	}
+	40% {
+		transform: rotate(-8deg);
+	}
+	60% {
+		transform: rotate(14deg);
+	}
+	80% {
+		transform: rotate(-4deg);
 	}
 }
 
