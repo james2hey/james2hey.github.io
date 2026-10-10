@@ -1,25 +1,5 @@
 @use '../base/colors' as *;
-
-// Background mesh: a tiling triangle lattice (equilateral triangles with 60px sides) drawn as an inline SVG.
-// The lattice is offset so no line sits on a tile edge, which keeps every line the same thickness when tiled.
-$mesh-tile-width: 60px;
-$mesh-tile-height: 104px;
-$mesh-spotlight-size: 320px;
-
-// $stroke is a hex colour without the leading #.
-@function mesh-tile($stroke) {
-	@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104'%3E%3Cpath d='M0 26H60M0 78H60M-15 0L45 104M45 0L105 104M75 0L15 104M15 0L-45 104' fill='none' stroke='%23#{$stroke}'/%3E%3C/svg%3E");
-}
-
-// A layer of mesh, one tile larger up and left so it can drift one tile down-right and still cover everything.
-@mixin mesh-layer($stroke, $opacity) {
-	content: '';
-	position: absolute;
-	inset: (-$mesh-tile-height) 0 0 (-$mesh-tile-width);
-	background-image: mesh-tile($stroke);
-	background-size: $mesh-tile-width $mesh-tile-height;
-	opacity: $opacity;
-}
+@use '../base/mesh' as *;
 
 .intro {
 	position: relative;
@@ -33,21 +13,8 @@ $mesh-spotlight-size: 320px;
 	// Small viewport units, so mobile browser toolbars don't cover the bottom of the intro.
 	min-height: 100svh;
 	text-align: center;
-	// Extra room at the bottom for the scroll cue and the curve into the About section.
-	padding: 40px 0 136px;
-
-	// A broad curve in the About section's colour, so the dark intro eases into it instead of a hard edge.
-	&::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: -1px;
-		height: 56px;
-		background: $color-white;
-		clip-path: ellipse(75% 100% at 50% 100%);
-		pointer-events: none;
-	}
+	// Extra room at the bottom for the scroll cue.
+	padding: 40px 0 96px;
 
 	&__container {
 		display: flex;
@@ -79,7 +46,7 @@ $mesh-spotlight-size: 320px;
 
 	&__scroll-cue {
 		position: absolute;
-		bottom: 64px;
+		bottom: 24px;
 		left: 0;
 		right: 0;
 		display: grid;

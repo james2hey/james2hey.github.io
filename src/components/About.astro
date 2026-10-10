@@ -21,17 +21,16 @@ const passions = [
 ];
 ---
 
-<Section class="about" id="about">
-    <h2 class="about__title">About</h2>
-    <p class="about__description">
+<Section class="about" id="about" number="01" title="About">
+    <p class="about__description reveal">
         A software engineer with experience across the full software development lifecycle. Driven to pragmatically
         deliver software solutions with agility to meet evolving client requirements. Strongly skilled with front end
         technologies and passionate about UX design.
     </p>
-    <h3 class="about__title">Software Passions</h3>
+    <h3 class="about__subtitle reveal">Software Passions</h3>
     <div class="about__container">
         {passions.map(({ title, description, iconName }) => (
-            <div class="about-item">
+            <div class="about-item reveal">
                 <Icon class="about-item__image" name={iconName} />
                 <h3 class="about-item__heading">{title}</h3>
                 <p class="about-item__description">{description}</p>
