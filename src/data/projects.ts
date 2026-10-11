@@ -1,15 +1,3 @@
-import {
-    cSharpTechStack,
-    dotNetTechStack,
-    ionicTechStack,
-    reactNativeTechStack,
-    reactTechStack,
-    reduxTechStack,
-    sassTechStack,
-    sqlTechStack,
-    type TechStackData,
-    typescriptTechStack
-} from './tech-stacks';
 import type { ImageMetadata } from 'astro';
 import lumosMobileImage from '../assets/images/projects/lumos-mobile.png';
 import archiesPizzeriaImage from '../assets/images/projects/archies-pizzeria-project.png';
@@ -20,44 +8,42 @@ export interface ProjectData {
     name: string;
     image: ImageMetadata;
     content: string;
-    technologies: TechStackData[];
+    technologies: string[];
 }
+
+export const archiesProjectData: ProjectData = {
+    name: "Archie's Pizzeria",
+    image: archiesPizzeriaImage,
+    technologies: ['React', 'TypeScript', 'Sass'],
+    content:
+        "A website I built for a local pizzeria during New Zealand's COVID-19 lockdown, putting their menu online. It became their main website."
+};
 
 export const lumosMobileProjectData: ProjectData = {
     name: 'Lumos Mobile',
     image: lumosMobileImage,
-    technologies: [reactTechStack, ionicTechStack, typescriptTechStack, sassTechStack],
+    technologies: ['React', 'Ionic', 'TypeScript'],
     content:
-        "I played a key role in createing a new mobile app for moviegoers to purchase tickets, concessions, and manage their loyalty accounts. This was a part of Vista's newest self-service sales channel offering, and will be going into production for multiple cinemas in 2022."
-};
-
-export const archiesProjectData: ProjectData = {
-    name: 'Archies Pizzeria',
-    image: archiesPizzeriaImage,
-    technologies: [reactTechStack, typescriptTechStack, sassTechStack],
-    content:
-        "During the New Zealand lock down due to COVID-19, I created this website for Archie's Pizzeria to give them a source of web traffic. By providing the menus online, customers could find what they wanted to eat without entering the store to maintain social distancing. It is now used as their full time website at archiespizzeria.co.nz."
+        "Vista's mobile app for moviegoers to buy tickets and concessions and manage their loyalty accounts. I played a key role in building it."
 };
 
 export const circuitStatsProjectData: ProjectData = {
     name: 'Circuit Stats',
     image: circuitStatsImage,
-    technologies: [reactNativeTechStack, typescriptTechStack, reduxTechStack],
-    content:
-        'This project involved creating a mobile app to present cinema executives with realtime key statistics for their circuits. This provides easy access for insight into key performance indicators for each cinema and the ability to drill down into specific metrics.'
+    technologies: ['React Native', 'TypeScript', 'Redux'],
+    content: 'A mobile app giving cinema executives real-time key statistics for each of their cinemas.'
 };
 
 export const pipProjectData: ProjectData = {
     name: 'PiP IoT App',
     image: pipImage,
-    technologies: [reactNativeTechStack, typescriptTechStack, dotNetTechStack, cSharpTechStack, sqlTechStack],
-    content:
-        'PiP manufacture IoT devices and required a system to installations and management. I played a key role in developing the full stack of software. This included developing an ASP.NET backend for consuming IoT device event data and writing it to a database. I also created a mobile app to render real-time client specific data of the IoT devices.'
+    technologies: ['React Native', 'ASP.NET', 'C#', 'SQL'],
+    content: 'An ASP.NET backend for IoT device events and a mobile app showing their data in real time.'
 };
 
 export const allProjectData: ProjectData[] = [
+    archiesProjectData,
     lumosMobileProjectData,
     circuitStatsProjectData,
-    archiesProjectData,
     pipProjectData
 ];

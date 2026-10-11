@@ -2,34 +2,35 @@
 import Icon from './Icon.astro';
 import Section from './Section.astro';
 
-const passions = [
+const values = [
     {
-        title: 'Agility',
-        description: 'Welcoming new requirements. Software should be flexible and adaptable.',
-        iconName: 'agile'
-    },
-    {
-        title: 'High quality tests',
-        description: 'Using tests to drive the implementation of software to ensure confidence.',
+        title: 'Developer experience',
+        description: 'Clear conventions and tooling, so the right way to build is also the easiest way.',
         iconName: 'pragmatic'
     },
     {
-        title: 'Accessibility',
-        description: 'Creating front-end applications that are inclusive for everyone to use.',
+        title: 'Shipping safely',
+        description: 'Every change tested and rolled out gradually, with a quick way back if something goes wrong.',
+        iconName: 'agile'
+    },
+    {
+        title: 'Automation',
+        description: 'Automating the repetitive parts, so people can focus on the work that matters.',
         iconName: 'computer'
     }
 ];
 ---
 
 <Section class="about" id="about" number="01" title="About">
-    <p class="about__description reveal">
-        A software engineer with experience across the full software development lifecycle. Driven to pragmatically
-        deliver software solutions with agility to meet evolving client requirements. Strongly skilled with front end
-        technologies and passionate about UX design.
-    </p>
-    <h3 class="about__subtitle reveal">Software Passions</h3>
+    <div class="about__description reveal">
+        <p>
+            I'm a senior software engineer at Twilio, based in London and originally from New Zealand. I work on
+            frontend platform, building the tools and foundations that help teams ship.
+        </p>
+    </div>
+    <h3 class="about__subtitle reveal">What I care about</h3>
     <div class="about__container">
-        {passions.map(({ title, description, iconName }) => (
+        {values.map(({ title, description, iconName }) => (
             <div class="about-item reveal">
                 <Icon class="about-item__image" name={iconName} />
                 <h3 class="about-item__heading">{title}</h3>
